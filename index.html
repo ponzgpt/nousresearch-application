@@ -29,7 +29,8 @@
   .shell{width:min(calc(100% - 48px),var(--max));margin:0 auto}
   a{color:var(--ink)}
 
-  nav{padding:26px 0 18px;text-align:center}
+  .navbar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
+  nav{padding:18px 0 14px;text-align:center}
   nav a{
     font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.03em;
     text-transform:uppercase;text-decoration:none;margin:0 18px;display:inline-block;line-height:2;
@@ -45,7 +46,7 @@
     letter-spacing:.01em;padding:2px 12px 6px;margin:0 0 40px;
   }
 
-  section{padding:52px 0 58px}
+  section{padding:52px 0 58px;scroll-margin-top:96px}
   .cols{display:grid;grid-template-columns:1fr 310px;gap:60px;align-items:start}
 
   .lead-in{
@@ -97,7 +98,9 @@
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
     .portrait{max-width:320px}
-    nav a{margin:0 10px;font-size:16px}
+    nav{padding:12px 0 10px}
+    nav a{margin:0 9px;font-size:15px;line-height:1.75}
+    section{scroll-margin-top:112px}
     section{padding:40px 0 44px}
     .tl-row{grid-template-columns:1fr;gap:8px}
   }
@@ -105,16 +108,19 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Javier Ponz Prado", "jobTitle": "AI systems and agent operations", "description": "Ten years of technical diagnosis and customer operations at Apple Retail; now operating open agent systems daily and shipping software to production. Applying to Nous Research for technical support engineering.", "email": "nerion89@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Aberdeen", "addressCountry": "GB"}, "url": "https://javierponz.technoir.cloud/", "sameAs": ["https://github.com/ponzgpt", "https://www.linkedin.com/in/javierponz"], "seeks": {"@type": "Demand", "name": "Technical Support Engineering at Nous Research"}, "knowsAbout": ["Hermes Agent", "OpenClaw", "Model Context Protocol", "MCP server development", "agent workflows", "technical support", "technical troubleshooting", "Docker", "Traefik", "nginx", "Linux", "VPS administration", "Python", "JavaScript", "TypeScript", "Astro", "Swift", "CI/CD"], "knowsLanguage": ["es", "en"]}</script>
 </head>
 <body>
-<div class="shell">
+<div class="navbar">
+  <div class="shell">
+    <nav>
+      <a class="home" href="https://javierponz.technoir.cloud/">Javier Ponz</a>
+      <a href="#thesis">Thesis</a>
+      <a href="#running">What I Run</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
 
-  <nav>
-    <a class="home" href="https://javierponz.technoir.cloud/">Javier Ponz</a>
-    <a href="#thesis">Thesis</a>
-    <a href="#running">What I Run</a>
-    <a href="#timeline">Timeline</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <hr class="rule" />
+<div class="shell">
 
   <section id="application">
     <h1 class="block">APPLICATION</h1>
