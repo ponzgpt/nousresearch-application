@@ -156,6 +156,8 @@
 
         <p>Two efforts seem to me to be converging on this from opposite ends. Hermes and MCP decompose capability into things you can inspect: a skill is a Markdown file, a tool is a server you can read. Omarchy approaches from the system side, treating the desktop as configuration its owner is expected to edit, and describing itself as an OS for the age of agents. Between them sits the machine I would like to use, one that is <span class="u">proactive and shapeable by the person living in it</span>.</p>
 
+        <p><span class="lead-in">I did not arrive here from ideology.</span> I grew up on Windows, because that is what a PC gamer had, then spent a decade on macOS because that was the company I worked for, and used both daily throughout. I am learning Arch and Fedora now, and running Omarchy, and the reason is not novelty. Those closed platforms spent that decade getting steadily worse for the people living inside them, and I would rather own the machine I work on.</p>
+
         <p>You cannot build a malleable machine on a stack you are forbidden to read, and whoever holds the primitives sets the ceiling on how far the agent may help. Open weights and open primitives are what keep that ceiling in the owner's hands, which is the practical reason I care about the position Nous has taken, beyond agreeing with it.</p>
 
         
@@ -180,6 +182,7 @@
       <li><span class="lead-in">An MCP server</span> I wrote for local Markdown vaults, with a filesystem-safety layer and tests covering the path-traversal cases that layer exists to refuse. <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">hermes-pkm-toolkit</a></li>
       <li><span class="lead-in">A skill pack</span> of thirty decision models, written to be read by an agent rather than by a person. <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">mental-models-toolkit</a></li>
       <li><span class="lead-in">A nightly newspaper</span> for Aberdeen, adapted from an open Hermes project, in which the data desks compute every figure in Python so that the model is never in a position to invent one. <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">aberdeen-daily</a></li>
+      <li><span class="lead-in">Local inference on my own hardware</span> — llama.cpp serving a quantised open-weights model from an RTX 5090 in this machine, exposed as an API and wired into Hermes. I have also run Ollama and LM Studio. Nothing in that loop leaves the house, which is most of the point of it.</li>
       <li><span class="lead-in">A small web application</span> in production, deployed by me with Docker, Traefik and TLS, behind a release gate that refuses to publish when a check comes back red. <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a></li>
     </ul>
     <p>I break these regularly, and the failure traces are the part I find most instructive.</p>
@@ -195,7 +198,7 @@
         <div>
           <p class="tl-what">Founder, Machines Do It Better</p>
           <p class="tl-where">Aberdeen, Scotland · independent</p>
-          <p class="tl-body">An early-stage solo practice helping small businesses adopt agentic AI where it genuinely returns time. Building agent workflows and internal tooling, and publishing an editorial newsletter on AI, robotics and fintech.</p>
+          <p class="tl-body">An agent consultancy for individuals and small businesses, built on privacy, data sovereignty and customisation to a specific use case rather than the deterministic workflow tooling most agencies are selling. My bet is that hand-wired workflows date badly as models and harnesses improve, and that the durable offer is helping people own their own capability. No clients yet: this is the bet, stated as a bet. Also publishing an editorial newsletter on AI, robotics and fintech.</p>
         </div>
       </div>
 
@@ -269,6 +272,8 @@
   <section id="contact">
     <h2 class="mono-head">Contact</h2>
     <p>The most useful reply would tell me which of these directions is worth pursuing and what stands between me and being obviously qualified for it. I would rather close a specific gap than guess at one.</p>
+
+    <p>Your careers page offers long months of complete focus and constant danger, with honor and glory in the event of success. I have read that page more than once. I would take the trade.</p>
     <p><a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">Download CV (PDF)</a> · <a class="u" href="mailto:nerion89@gmail.com?subject=Technical%20Support%20Engineering%20—%20open%20application">nerion89@gmail.com</a> · <a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://www.linkedin.com/in/javierponz">LinkedIn</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a></p>
     <p class="notice">A personal application, published on a domain of my own. I am not affiliated with, employed by, sponsored by or speaking for Nous Research, and this is not an official Nous page. Their careers page is at <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>.</p>
   </section>

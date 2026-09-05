@@ -21,6 +21,7 @@
 - [Hermes PKM Toolkit](https://github.com/ponzgpt/hermes-pkm-toolkit): MCP server and agent skills for local Markdown vaults; 34 tests covering path-traversal rejection.
 - [The Aberdeen Daily](https://github.com/ponzgpt/aberdeen-daily): nightly local newspaper agent forked from an open Hermes project; data desks compute every figure in Python so the model cannot invent one.
 - [Mental Models Toolkit](https://github.com/ponzgpt/mental-models-toolkit): thirty machine-readable decision models, schema-validated in CI.
+- Local inference: llama.cpp serving a quantised open-weights model from an RTX 5090 on his own machine, exposed as an API and wired into Hermes. Has also run Ollama and LM Studio.
 - [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf): single-column, text-extractable.
 - [Portfolio](https://javierponz.technoir.cloud/): general site, CV and a case study.
 
@@ -33,7 +34,16 @@
 
 ## Tools he actually operates
 
-Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux, GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift.
+Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, llama.cpp, Ollama, LM Studio, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux (Arch, Fedora, Omarchy), GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift, Cursor, Claude Code.
+
+## Position he argues from
+
+Machines Do It Better is his consultancy: agent work for individuals and small
+businesses built on privacy, data sovereignty and per-case customisation, rather
+than the deterministic workflow tooling most agencies sell. It has no clients
+yet and the page says so. He argues that hand-wired workflows date badly as
+models and harnesses improve, and that open weights and open primitives are the
+precondition for a machine its owner can actually shape.
 
 ## Note on affiliation
 
