@@ -1,6 +1,6 @@
 FROM nginx:1.27-alpine
 COPY index.html /usr/share/nginx/html/index.html
-COPY javier-sketch.png /usr/share/nginx/html/javier-sketch.png
+COPY javier-sketch.jpg /usr/share/nginx/html/javier-sketch.jpg
 COPY llms.txt /usr/share/nginx/html/llms.txt
 COPY robots.txt /usr/share/nginx/html/robots.txt
 COPY sitemap.xml /usr/share/nginx/html/sitemap.xml

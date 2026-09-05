@@ -57,7 +57,7 @@
   .lead-in a:hover{text-decoration:underline;text-underline-offset:4px}
 
   p{margin:0 0 20px;max-width:62ch}
-  .u{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px}
+  .u{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:rgba(13,120,173,.42)}
 
   ul{margin:0 0 20px;padding-left:22px;max-width:62ch}
   li{margin-bottom:16px}
@@ -128,9 +128,9 @@
       <div>
         <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span>, writing from Aberdeen. For ten years at Apple Retail I worked where a technical system meets somebody who depends on it and cannot repair it themselves. I run open agent systems now, and the interesting problems sit on the same seam.</p>
 
-        <p>I am not a research engineer. What I have is operational: I run these systems every day, I break them fairly often, and I can usually say precisely which assumption failed. That competence is easy to undervalue from inside a lab, where progress is legible as a benchmark. Adoption is settled in the half hour after something breaks, when the user decides whether to open it again.</p>
+        <p>I am not a research engineer. What I have is <span class="u">operational</span>: I run these systems every day, I break them fairly often, and I can usually say precisely which assumption failed. That competence is easy to undervalue from inside a lab, where progress is legible as a benchmark. Adoption is settled in the <span class="u">half hour after something breaks</span>, when the user decides whether to open it again.</p>
 
-        <p><span class="lead-in">One conviction</span> has held through every role I have had, which is that <span class="u">leading is serving</span>. It meant the same thing at a repair bench, teaching somebody else to work that bench, and running a shop floor: the only honest measure is whether the person you are responsible for leaves with more capacity than they arrived with. Software gets the same test. Does the person end up more capable, or only more reliant.</p>
+        <p><span class="lead-in">One conviction</span> has held through every role I have had, which is that <span class="u">leading is serving</span>. It meant the same thing at a repair bench, teaching somebody else to work that bench, and running a shop floor: the only honest measure is whether the person you are responsible for leaves with <span class="u">more capacity</span> than they arrived with. Software gets the same test. Does the person end up more capable, or only more reliant.</p>
 
         <p><span class="lead-in">What I would like to do</span> at Nous is technical support engineering: the work where somebody has to be technical, patient and a competent writer at once, and where a user's broken situation becomes either a fix or a clear account of why it is not one. Ten years of exactly that at Apple is the part of my background that transfers without translation.</p>
 
@@ -139,7 +139,7 @@
       <div>
         <p class="cvbox"><a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>&#8595; Download CV (PDF)</a></p>
         <div class="portrait">
-          <img src="/javier-sketch.png" alt="Pencil-sketch portrait of Javier Ponz" width="900" height="956" />
+          <img src="/javier-sketch.jpg" alt="Pencil-sketch portrait of Javier Ponz" width="720" height="960" />
         </div>
         <div class="meta">
           <div>Output 01</div>
@@ -160,11 +160,11 @@
 
         <p>Agents change what the trade costs. An agent's usefulness is bounded by the surface it can reach, and on a sealed appliance that surface is conversation and very little else.</p>
 
-        <p>Two efforts seem to me to be converging on this from opposite ends. Hermes and MCP decompose capability into things you can inspect: a skill is a Markdown file, a tool is a server you can read. Omarchy approaches from the system side, treating the desktop as configuration its owner is expected to edit, and describing itself as an OS for the age of agents. Between them sits the machine I would like to use, one that is <span class="u">proactive and shapeable by the person living in it</span>.</p>
+        <p>Two efforts seem to me to be converging on this from opposite ends. Hermes and MCP decompose capability into things you can inspect: a skill is a Markdown file, a tool is a server you can read. Omarchy approaches from the system side, treating the desktop as configuration its owner is expected to edit, and describing itself as an OS for the age of agents. Between them sits the machine I would like to use, one that is <span class="u">proactive and shapeable</span> by the person living in it.</p>
 
-        <p><span class="lead-in">I did not arrive here from ideology.</span> I grew up on Windows, because that is what a PC gamer had, then spent a decade on macOS because that was the company I worked for, and used both daily throughout. I am learning Arch and Fedora now, and running Omarchy, and the reason is not novelty. Those closed platforms spent that decade getting steadily worse for the people living inside them, and I would rather own the machine I work on.</p>
+        <p><span class="lead-in">I did not arrive here from ideology.</span> I grew up on Windows, because that is what a PC gamer had, then spent a decade on macOS because that was the company I worked for, and used both daily throughout. I am learning Arch and Fedora now, and running Omarchy, and the reason is not novelty. Those closed platforms spent that decade getting steadily worse for the people living inside them, and I would rather <span class="u">own the machine I work on</span>.</p>
 
-        <p>You cannot build a malleable machine on a stack you are forbidden to read, and whoever holds the primitives sets the ceiling on how far the agent may help. Open weights and open primitives are what keep that ceiling in the owner's hands, which is the practical reason I care about the position Nous has taken, beyond agreeing with it.</p>
+        <p>You cannot build a malleable machine on a stack you are forbidden to read, and whoever holds the primitives sets the ceiling on how far the agent may help. <span class="u">Open weights and open primitives</span> are what keep that ceiling in the owner's hands, which is the practical reason I care about the position Nous has taken, beyond agreeing with it.</p>
 
         
       </div>
@@ -188,7 +188,7 @@
       <li><span class="lead-in">An MCP server</span> I wrote for local Markdown vaults, with a filesystem-safety layer and tests covering the path-traversal cases that layer exists to refuse. <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">hermes-pkm-toolkit</a></li>
       <li><span class="lead-in">A skill pack</span> of thirty decision models, written to be read by an agent rather than by a person. <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">mental-models-toolkit</a></li>
       <li><span class="lead-in">A nightly newspaper</span> for Aberdeen, adapted from an open Hermes project, in which the data desks compute every figure in Python so that the model is never in a position to invent one. <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">aberdeen-daily</a></li>
-      <li><span class="lead-in">Local inference on my own hardware</span> — llama.cpp serving a quantised open-weights model from an RTX 5090 in this machine, exposed as an API and wired into Hermes. I have also run Ollama and LM Studio. Nothing in that loop leaves the house, which is most of the point of it.</li>
+      <li><span class="lead-in">Local inference on my own hardware</span> — llama.cpp serving a quantised open-weights model from an RTX 5090 in this machine, exposed as an API and wired into Hermes. I have also run Ollama and LM Studio. Nothing in that loop <span class="u">leaves the house</span>, which is most of the point of it.</li>
       <li><span class="lead-in">A small web application</span> in production, deployed by me with Docker, Traefik and TLS, behind a release gate that refuses to publish when a check comes back red. <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a></li>
     </ul>
     <p>I break these regularly, and the failure traces are the part I find most instructive.</p>
@@ -206,7 +206,7 @@
         <div>
           <p class="tl-what">Founder, Machines Do It Better</p>
           <p class="tl-where">Aberdeen, Scotland · independent</p>
-          <p class="tl-body">An agent consultancy for individuals and small businesses, built on privacy, data sovereignty and customisation to a specific use case rather than the deterministic workflow tooling most agencies are selling. My bet is that hand-wired workflows date badly as models and harnesses improve, and that the durable offer is helping people own their own capability. No clients yet: this is the bet, stated as a bet. Also publishing an editorial newsletter on AI, robotics and fintech.</p>
+          <p class="tl-body">An agent consultancy for individuals and small businesses, built on privacy, data sovereignty and customisation to a specific use case rather than the deterministic workflow tooling most agencies are selling. My bet is that hand-wired workflows date badly as models and harnesses improve, and that the durable offer is helping people own their own capability. <span class="u">No clients yet</span>: this is the bet, stated as a bet. Also publishing an editorial newsletter on AI, robotics and fintech.</p>
         </div>
       </div>
 
