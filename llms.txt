@@ -36,6 +36,12 @@
 
 Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, llama.cpp, Ollama, LM Studio, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux (Arch, Fedora, Omarchy), GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift, Cursor, Claude Code.
 
+## Currently learning (stated separately from what he operates)
+
+vLLM, and a self-hosted homelab on Proxmox: a NAS beneath the hypervisor,
+virtualisation, basic networking, Pi-hole. The page marks these as learning
+rather than as capability, deliberately.
+
 ## Position he argues from
 
 Machines Do It Better is his consultancy: agent work for individuals and small
