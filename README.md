@@ -1,7 +1,7 @@
 # An open application to Nous Research
 
 A single-page, personal application, published on my own domain at
-[nouscandidate.technoir.cloud](https://nouscandidate.technoir.cloud/).
+[nousresearch.technoir.cloud](https://nousresearch.technoir.cloud/).
 
 **Not affiliated with Nous Research.** No logo, no endorsement, no claim of
 any relationship. Their careers page is at <https://nousresearch.com/careers>.
