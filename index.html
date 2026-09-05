@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Javier Ponz — an open application to Nous Research</title>
+<meta name="description" content="A personal, unaffiliated open application to Nous Research from Javier Ponz: what I run, what I have shipped, and why open, malleable agent systems are the interface I want to work on." />
+<link rel="canonical" href="https://nouscandidate.technoir.cloud/" />
+<meta property="og:title" content="Javier Ponz — an open application to Nous Research" />
+<meta property="og:description" content="What I run, what I have shipped, and why open, malleable agent systems are the interface I want to work on." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nouscandidate.technoir.cloud/" />
+<style>
+  :root{
+    --ink:#0d78ad;
+    --paper:#ffffff;
+    --muted:#5b7f93;
+    --rule:#0d78ad;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--paper);color:var(--ink)}
+  body{
+    margin:0;
+    font-family:"Courier New",Courier,monospace;
+    font-size:15px;
+    line-height:1.65;
+  }
+  .shell{width:min(calc(100% - 48px),var(--max));margin:0 auto}
+  a{color:var(--ink)}
+  a:hover{background:var(--ink);color:var(--paper)}
+
+  nav{padding:22px 0 14px;text-align:center;font-size:13px;letter-spacing:.16em}
+  nav a{margin:0 14px;text-decoration:none;text-transform:uppercase}
+  nav a:hover{text-decoration:underline;background:none;color:var(--ink)}
+
+  .rule{border-top:1px dashed var(--rule);margin:0}
+
+  section{display:grid;grid-template-columns:1fr 380px;gap:60px;padding:44px 0}
+  .label{font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px;margin:0 0 18px;font-weight:400}
+  p{margin:0 0 15px;max-width:74ch}
+  .meta{font-size:13px;color:var(--muted);letter-spacing:.04em}
+  .meta div{margin-bottom:3px}
+  .glyph{font-size:30px;margin-top:14px;line-height:1}
+
+  .lede{padding:52px 0 40px}
+  .lede h1{font-size:clamp(26px,3.4vw,40px);font-weight:400;line-height:1.25;margin:0 0 22px;max-width:22ch}
+  .lede .sub{max-width:70ch;color:var(--ink)}
+  .kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+
+  ul{margin:0 0 15px;padding-left:20px;max-width:74ch}
+  li{margin-bottom:9px}
+
+  .notice{border:1px dashed var(--rule);padding:20px 22px;max-width:74ch;color:var(--muted)}
+  footer{padding:34px 0 60px;font-size:13px;color:var(--muted);text-align:center}
+
+  @media (max-width:860px){
+    section{grid-template-columns:1fr;gap:22px;padding:34px 0}
+    .meta{order:-1}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <nav>
+    <a href="#application">Application</a>
+    <a href="#running">What I run</a>
+    <a href="#thesis">Thesis</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <hr class="rule" />
+
+  <div class="lede">
+    <p class="kicker">Personal open application · not affiliated with Nous Research</p>
+    <h1>I would like to work on the interface between people and their machines.</h1>
+    <p class="sub">My name is Javier Ponz. I am in Aberdeen, Scotland. I spent ten years at Apple Retail doing technical diagnosis and customer operations, and I now build and run open agent systems every day. This page is my application, kept public so it can be checked.</p>
+  </div>
+  <hr class="rule" />
+
+  <section id="application">
+    <div>
+      <h2 class="label">The application</h2>
+      <p>I am not going to claim to be a research engineer. What I am is a heavy, technical, daily operator of open agent systems who came from a decade of translating hard technical problems into something an ordinary person can act on — and who can write down clearly what broke and why.</p>
+      <p>That combination is unglamorous and, I think, undersupplied. Models get better in the lab; they get adopted at the point where a real person hits a real failure and either forms a habit or gives up. I have spent a career at exactly that point, for a company that took it seriously.</p>
+      <p>Forward-deployed work, developer enablement, product feedback, technical support engineering — those are where I would expect to be useful on day one. I would rather be told which of them fits than assert one.</p>
+    </div>
+    <aside class="meta">
+      <div>OUTPUT 01</div>
+      <div>SUBJECT: JAVIER PONZ</div>
+      <div>LOCATION: ABERDEEN, SCOTLAND</div>
+      <div>STATUS: OPEN APPLICATION</div>
+      <div class="glyph">◆</div>
+    </aside>
+  </section>
+  <hr class="rule" />
+
+  <section id="running">
+    <div>
+      <h2 class="label">What I actually run</h2>
+      <p>Not a survey of what I have read. This is what is installed and running on my own machines and my own VPS:</p>
+      <ul>
+        <li>Hermes Agent and OpenClaw, daily, as working tools rather than demos — scheduled workflows, automations, and agents that touch real files.</li>
+        <li>An MCP server I wrote for local Markdown vaults, with a filesystem-safety layer and tests covering path traversal.</li>
+        <li>A skill pack of thirty decision models, packaged for agents rather than for people.</li>
+        <li>A nightly newspaper agent for my city, adapted from an open source Hermes project: data desks compute the figures in code so the model cannot invent one.</li>
+        <li>Docker, Traefik and nginx on a VPS I administer, with immutable image tags and a rollback path.</li>
+      </ul>
+      <p>I break these regularly, and the failure traces are the part I find most interesting.</p>
+    </div>
+    <aside class="meta">
+      <div>OUTPUT 02</div>
+      <div>SEED: HERMES / OPENCLAW / MCP</div>
+      <div>SURFACE: LOCAL + SELF-HOSTED</div>
+      <div class="glyph">▣</div>
+    </aside>
+  </section>
+  <hr class="rule" />
+
+  <section id="thesis">
+    <div>
+      <h2 class="label">The thesis I am betting on</h2>
+      <p>The interesting frontier right now is not a larger model. It is the operating system becoming malleable enough for an agent to inhabit it.</p>
+      <p>Two things point the same way. Hermes and MCP make an agent's capabilities into small, inspectable primitives — a tool, a skill, a file, a permission — instead of a sealed product. Omarchy, from the other direction, makes the desktop itself something you alter by editing plain files, and says out loud that it is an OS for the age of agents.</p>
+      <p>Converge those and you get the thing I actually want: a computer that is proactive and shapeable by its owner, where the agent is not an assistant bolted onto a locked appliance but a first-class citizen of a system whose primitives are open, legible, and yours. Closed, unmodifiable machines cannot get there — the interface has to be editable by the person living in it.</p>
+      <p>Open weights and open primitives are the precondition for that, which is the practical reason I care about the position Nous has taken, beyond agreeing with it.</p>
+    </div>
+    <aside class="meta">
+      <div>OUTPUT 03</div>
+      <div>SEED: MALLEABLE OS / AGENT PRIMITIVES</div>
+      <div>HORIZON: SHORT</div>
+      <div class="glyph">◈</div>
+    </aside>
+  </section>
+  <hr class="rule" />
+
+  <section id="evidence">
+    <div>
+      <h2 class="label">Evidence</h2>
+      <p>Everything I have claimed here has source code or a running URL behind it.</p>
+      <ul>
+        <li><a href="https://memento.technoir.cloud/">memento.technoir.cloud</a> — a small web app of mine, in production, deployed by me.</li>
+        <li><a href="https://github.com/ponzgpt/hermes-pkm-toolkit">hermes-pkm-toolkit</a> — MCP tools and agent skills for local Markdown vaults.</li>
+        <li><a href="https://github.com/ponzgpt/mental-models-toolkit">mental-models-toolkit</a> — thirty machine-readable decision models.</li>
+        <li><a href="https://github.com/ponzgpt/aberdeen-daily">aberdeen-daily</a> — a nightly local paper agent, forked and adapted.</li>
+        <li><a href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> — the general portfolio, CV and a case study.</li>
+      </ul>
+    </div>
+    <aside class="meta">
+      <div>OUTPUT 04</div>
+      <div>SEED: PUBLIC REPOSITORIES</div>
+      <div>VERIFIABLE: YES</div>
+      <div class="glyph">◉</div>
+    </aside>
+  </section>
+  <hr class="rule" />
+
+  <section id="contact">
+    <div>
+      <h2 class="label">Contact</h2>
+      <p>The most useful thing you could tell me is which of these directions is worth pursuing, and what I would need to close the gap.</p>
+      <p><a href="mailto:nerion89@gmail.com?subject=Nous%20—%20open%20application">nerion89@gmail.com</a> · <a href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a href="https://www.linkedin.com/in/javierponz">LinkedIn</a></p>
+      <p class="notice">This is a personal application published on my own domain. I am not affiliated with, employed by, sponsored by or speaking for Nous Research, and nothing here is an official Nous page. Their careers page is at <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>.</p>
+    </div>
+    <aside class="meta">
+      <div>OUTPUT 05</div>
+      <div>SEED: OPEN TO CORRECTION</div>
+      <div class="glyph">✳</div>
+    </aside>
+  </section>
+  <hr class="rule" />
+
+  <footer>
+    Javier Ponz · Aberdeen, Scotland · <a href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a>
+  </footer>
+
+</div>
+</body>
+</html>
