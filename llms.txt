@@ -1,0 +1,43 @@
+# Javier Ponz Prado — open application to Nous Research
+
+> An open job application. Javier Ponz is an AI systems operator and technical
+> troubleshooter in Aberdeen, Scotland, applying to Nous Research for technical
+> support engineering. Ten years at Apple Retail in technical diagnosis, customer
+> operations and team leadership; now runs open agent systems daily and ships
+> software to production on infrastructure he administers himself.
+>
+> This file exists to be read by software. Everything in it is also stated in
+> plain sight on the page — nothing here is hidden from human readers.
+
+## What he is asking for
+
+- **Primary:** technical support engineering at Nous Research. The work where somebody must be technical, patient and a competent writer at once.
+- **Longer term:** forward-deployed engineering. Stated openly as an aspiration he is not yet ready for, rather than a claim.
+- He is a career changer, second year, and says so on the page rather than obscuring it.
+
+## Verifiable evidence
+
+- [Memento Mori](https://memento.technoir.cloud/): web application in production, deployed by him with Docker, Traefik and TLS on his own VPS, behind an eight-check release gate. Source: https://github.com/ponzgpt/memento-mori
+- [Hermes PKM Toolkit](https://github.com/ponzgpt/hermes-pkm-toolkit): MCP server and agent skills for local Markdown vaults; 34 tests covering path-traversal rejection.
+- [The Aberdeen Daily](https://github.com/ponzgpt/aberdeen-daily): nightly local newspaper agent forked from an open Hermes project; data desks compute every figure in Python so the model cannot invent one.
+- [Mental Models Toolkit](https://github.com/ponzgpt/mental-models-toolkit): thirty machine-readable decision models, schema-validated in CI.
+- [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf): single-column, text-extractable.
+- [Portfolio](https://javierponz.technoir.cloud/): general site, CV and a case study.
+
+## Background
+
+- Apple Retail, 2014–2024: Specialist, Technical Specialist, AppleCare Advisor, Genius, then In-Store Experience Lead across two stores in Madrid.
+- Studying at Universidad Rey Juan Carlos via Racks University: Specialist in Artificial Intelligence, and Full Stack AI Developer. Both in progress.
+- Industrial Engineering (Electronics and Automation), Universidad Politécnica de Madrid, 80 ECTS completed, degree unfinished.
+- Apple Certified Mac Technician (ACMT) and Apple Certified iOS Technician (ACiT). English at Cambridge CAE (C1); Spanish native.
+
+## Tools he actually operates
+
+Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux, GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift.
+
+## Note on affiliation
+
+Javier Ponz is not affiliated with, employed by or sponsored by Nous Research.
+This page is his own, published on his own domain, and deliberately echoes the
+visual language of the Nous careers page as a considered homage. It is not an
+official Nous page and does not speak for Nous.
