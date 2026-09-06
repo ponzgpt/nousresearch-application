@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Javier Ponz — an open application to Nous Research</title>
-<meta name="description" content="An open application to Nous Research from Javier Ponz: the thesis I work from, the systems I run daily, and the decade of technical service behind them." />
+<meta name="description" content="An open application to Nous Research from Javier Ponz: why I want this work, how I work, and the ten years of technical service behind it." />
 <link rel="canonical" href="https://nousresearch.technoir.cloud/" />
 <meta property="og:title" content="Javier Ponz — an open application to Nous Research" />
-<meta property="og:description" content="The thesis I work from, the systems I run daily, and the decade of technical service behind them." />
+<meta property="og:description" content="Why I want this work, how I work, and the ten years of technical service behind it." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://nousresearch.technoir.cloud/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,104 +18,112 @@
     --ink:#0d78ad;
     --paper:#ffffff;
     --grey:#64727b;
-    --max:1180px;
+    --max:1100px;
     --serif:"EB Garamond",Georgia,"Times New Roman",serif;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --mono:"Courier New",Courier,monospace;
   }
   *{box-sizing:border-box}
   html{background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
-  body{margin:0;font-family:var(--sans);font-weight:700;font-size:17px;line-height:1.5}
+  body{margin:0;font-family:var(--sans);font-weight:700;font-size:15.5px;line-height:1.55}
   .shell{width:min(calc(100% - 48px),var(--max));margin:0 auto}
   a{color:var(--ink)}
 
   .navbar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
-  nav{padding:18px 0 14px;text-align:center}
+  nav{padding:30px 0 18px;text-align:center}
   nav a{
-    font-family:var(--serif);font-weight:500;font-size:19px;letter-spacing:.03em;
-    text-transform:uppercase;text-decoration:none;margin:0 18px;display:inline-block;line-height:2;
+    font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
+    text-transform:uppercase;text-decoration:none;margin:0 20px;display:inline-block;line-height:1.9;
   }
   nav a:hover{text-decoration:underline;text-underline-offset:4px}
   nav a.home{text-decoration:underline;text-underline-offset:4px}
 
   .rule{border:0;border-top:2px dashed var(--ink);margin:0;opacity:.9}
 
-  .block{
-    display:inline-block;background:var(--ink);color:var(--paper);
-    font-family:var(--sans);font-weight:700;font-size:clamp(28px,4vw,44px);
-    letter-spacing:.01em;padding:2px 12px 6px;margin:0 0 40px;
+  /* Kills the "is this an official Nous page?" question in the first second. */
+  .disclaimer{
+    font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--grey);margin:0 0 22px;
   }
 
-  section{padding:52px 0 58px;scroll-margin-top:96px}
-  .cols{display:grid;grid-template-columns:1fr 310px;gap:60px;align-items:start}
+  .block{
+    display:inline-block;background:var(--ink);color:var(--paper);
+    font-family:var(--sans);font-weight:700;font-size:clamp(21px,2.1vw,30px);
+    letter-spacing:.01em;padding:2px 10px 5px;margin:0 0 62px;
+  }
+
+  section{padding:56px 0 62px;scroll-margin-top:92px}
+  #application{padding-top:52px}
+  .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
 
   .lead-in{
-    font-family:var(--serif);font-weight:600;font-size:1.55em;
+    font-family:var(--serif);font-weight:600;font-size:1.6em;
     letter-spacing:.01em;text-transform:uppercase;line-height:1;
   }
   .lead-in a{text-decoration:none}
   .lead-in a:hover{text-decoration:underline;text-underline-offset:4px}
 
-  p{margin:0 0 20px;max-width:62ch}
+  p{margin:0 0 22px;max-width:90ch}
   .u{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:rgba(13,120,173,.42);transition:text-decoration-color .15s,background-color .15s}
   .u:hover{text-decoration-color:var(--ink);background:rgba(13,120,173,.07)}
 
-  ul{margin:0 0 20px;padding-left:22px;max-width:62ch}
-  li{margin-bottom:16px}
+  ul{margin:0 0 22px;padding-left:22px;max-width:90ch}
+  li{margin-bottom:14px}
 
   .mono-head{
-    font-family:var(--mono);font-weight:700;font-size:clamp(20px,2.4vw,27px);
-    letter-spacing:.06em;text-transform:uppercase;text-decoration:underline;
-    text-underline-offset:6px;text-decoration-thickness:2px;margin:0 0 26px;
+    font-family:var(--mono);font-weight:700;font-size:clamp(19px,2vw,24px);
+    letter-spacing:.08em;text-transform:uppercase;margin:0 0 30px;
   }
+  .mono-head .hw{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+  .mono-head .sub{font-family:var(--sans);font-weight:700;font-size:.62em;letter-spacing:0;text-transform:none;color:var(--grey);margin-left:14px}
 
-  .portrait{border:1px solid rgba(13,120,173,.45);border-radius:12px;overflow:hidden;background:#fff;padding:20px 18px 10px}
+  .portrait{border:1px solid rgba(13,120,173,.45);border-radius:12px;overflow:hidden;background:#fff;padding:16px 14px 8px}
   .portrait img{display:block;width:100%;height:auto}
-  .portrait-cap{font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.08em;color:var(--grey);text-transform:uppercase;margin:10px 0 22px;text-align:center}
 
-  .cvbox{margin:0 0 18px}
-  .cvlink{display:block;text-align:center;border:2px solid var(--ink);padding:12px 16px;text-decoration:none;font-weight:700;font-size:15px}
+  .cvbox{margin:0 0 18px;max-width:none}
+  .cvlink{display:block;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
   .cvlink:hover{background:var(--ink);color:var(--paper)}
-  .meta{font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase}
-  .meta div{margin-bottom:4px}
 
   /* timeline */
   .tl{max-width:none}
-  .tl-row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
+  .tl-row{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
   .tl-row:last-child{border-bottom:1px dashed var(--ink)}
   .tl-when{font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;padding-top:4px}
-  .tl-what{font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.15;text-transform:uppercase;margin:0 0 6px}
+  .tl-kind{display:block;margin-top:6px;font-size:11px;letter-spacing:.14em;color:var(--ink);opacity:.75}
+  .tl-what{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.15;text-transform:uppercase;margin:0 0 6px}
   .tl-what a{text-decoration:none}
   .tl-what a:hover{text-decoration:underline;text-underline-offset:4px}
-  .tl-where{font-weight:700;font-size:15px;color:var(--grey);margin:0 0 8px}
-  .tl-body{font-weight:500;font-size:15.5px;line-height:1.5;margin:0;max-width:70ch}
-  .tag{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--grey);color:var(--grey);padding:2px 7px;margin-left:8px;vertical-align:3px;white-space:nowrap}
+  .tl-where{font-weight:700;font-size:14px;color:var(--grey);margin:0 0 8px}
+  .tl-body{font-weight:500;font-size:15px;line-height:1.5;margin:0;max-width:78ch}
 
-  .notice{border:2px dashed var(--ink);padding:22px 24px;max-width:62ch;font-weight:500;font-size:15px;line-height:1.55}
+  .notice{border:2px dashed var(--ink);padding:20px 22px;max-width:70ch;font-weight:500;font-size:14.5px;line-height:1.55}
 
   footer{padding:34px 0 64px;font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-align:center;text-transform:uppercase}
   footer a{color:var(--grey)}
 
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
-    .portrait{max-width:320px}
-    nav{padding:12px 0 10px}
-    nav a{margin:0 9px;font-size:15px;line-height:1.75}
-    section{scroll-margin-top:112px}
-    section{padding:40px 0 44px}
+    .portrait{max-width:300px}
+    .cvbox{max-width:300px}
+    nav{padding:14px 0 10px}
+    nav a{margin:0 9px;font-size:14px;line-height:1.8}
+    section{padding:40px 0 44px;scroll-margin-top:106px}
+    #application{padding-top:34px}
     .tl-row{grid-template-columns:1fr;gap:8px}
+    .tl-kind{display:inline;margin:0 0 0 12px}
+    .mono-head .sub{display:block;margin:8px 0 0}
   }
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Javier Ponz Prado", "jobTitle": "AI systems and agent operations", "description": "Ten years of technical diagnosis and customer operations at Apple Retail; now operating open agent systems daily and shipping software to production. Applying to Nous Research for technical support engineering.", "email": "nerion89@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Aberdeen", "addressCountry": "GB"}, "url": "https://javierponz.technoir.cloud/", "sameAs": ["https://github.com/ponzgpt", "https://www.linkedin.com/in/javierponz"], "seeks": {"@type": "Demand", "name": "Technical Support Engineering at Nous Research"}, "knowsAbout": ["Hermes Agent", "OpenClaw", "Model Context Protocol", "MCP server development", "agent workflows", "technical support", "technical troubleshooting", "Docker", "Traefik", "nginx", "Linux", "VPS administration", "Python", "JavaScript", "TypeScript", "Astro", "Swift", "CI/CD"], "knowsLanguage": ["es", "en"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Javier Ponz Prado", "jobTitle": "AI systems and agent operations", "description": "Ten years of technical diagnosis and customer operations at Apple Retail; now operating open agent systems daily and shipping software to production. Applying to Nous Research for technical support engineering.", "email": "nerion89@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Aberdeen", "addressCountry": "GB"}, "url": "https://javierponz.technoir.cloud/", "sameAs": ["https://github.com/ponzgpt", "https://www.linkedin.com/in/javierponz"], "seeks": {"@type": "Demand", "name": "Technical Support Engineering at Nous Research"}, "knowsAbout": ["Hermes Agent", "OpenClaw", "Model Context Protocol", "agent workflows", "technical support", "technical troubleshooting", "llama.cpp", "local inference", "Docker", "Traefik", "nginx", "Linux", "VPS administration", "Python", "JavaScript", "TypeScript", "Astro", "Swift", "CI/CD"], "knowsLanguage": ["es", "en"]}</script>
 </head>
 <body>
 <div class="navbar">
   <div class="shell">
     <nav>
       <a class="home" href="https://javierponz.technoir.cloud/">Javier Ponz</a>
-      <a href="#thesis">Thesis</a>
-      <a href="#running">What I Run</a>
-      <a href="#timeline">Timeline</a>
+      <a href="#why">Why</a>
+      <a href="#how">How</a>
+      <a href="#record">Record</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -124,12 +132,13 @@
 <div class="shell">
 
   <section id="application">
+    <p class="disclaimer">An independent application · not a Nous Research page</p>
     <h1 class="block">APPLICATION</h1>
     <div class="cols">
       <div>
         <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — ex-Apple Genius, now building agent systems in Aberdeen. For ten years my job was <span class="u">turning complicated technology into something a person could actually use</span>: six and a half years at the Genius Bar diagnosing hardware and software failures, AppleCare calls through the first COVID months, and two stints leading in-store experience across Madrid. I do the same thing now with AI agents.</p>
 
-        <p>I am not a research engineer. I run Hermes Agent and OpenClaw daily, serve a quantised open-weights model from an <span class="u">RTX 5090 in this room</span>, break things fairly often, and can usually say which assumption failed. Adoption is settled in the <span class="u">half hour after something breaks</span>, when the user decides whether to open it again. That half hour is where I spent a decade.</p>
+        <p>I am not a research engineer. I run Hermes Agent daily, serve a quantised open-weights model from an <span class="u">RTX 5090 in this room</span>, break things fairly often, and can usually say which assumption failed. Adoption is settled in the <span class="u">half hour after something breaks</span>, when the user decides whether to open it again. That half hour is where I spent a decade.</p>
 
         <p><span class="lead-in">What I would like to do</span> at Nous is <span class="u">technical support engineering</span>: the work where somebody has to be technical, patient and a competent writer at once, and where a user's broken situation becomes either a fix or a clear account of why it is not one. Ten years of exactly that at Apple is the part of my background that transfers without translation.</p>
 
@@ -142,68 +151,70 @@
         <div class="portrait">
           <img src="/javier-sketch.jpg" alt="Pencil-sketch portrait of Javier Ponz" width="720" height="960" />
         </div>
-        <div class="meta">
-          <div>Output 01</div>
-          <div>Subject: Javier Ponz</div>
-          <div>Location: Aberdeen, Scotland</div>
-          <div>Seed: leading is serving</div>
-        </div>
       </div>
     </div>
   </section>
   <hr class="rule" />
 
-  <section id="thesis">
-    <h2 class="mono-head">The thesis I work from</h2>
-    <div class="cols">
-      <div>
-        <p><span class="lead-in">An operating system</span> malleable enough for an agent to inhabit strikes me as a more interesting problem than a larger model, and probably a nearer one. Most personal computers are appliances: quick, sealed, arranged according to decisions somebody else made years ago and cannot easily revisit. For a long time that trade was reasonable, since the alternative was a machine you maintained rather than used.</p>
+  <section id="why">
+    <h2 class="mono-head"><span class="hw">Why</span><span class="sub">— the problem I would like to be near</span></h2>
 
-        <p>Agents change what the trade costs. An agent's usefulness is bounded by the surface it can reach, and on a sealed appliance that surface is conversation and very little else.</p>
+    <p><span class="lead-in">An operating system</span> malleable enough for an agent to inhabit strikes me as a more interesting problem than a larger model, and probably a nearer one. Most personal computers are appliances: quick, sealed, arranged according to decisions somebody else made years ago and cannot easily revisit. For a long time that trade was reasonable, since the alternative was a machine you maintained rather than used.</p>
 
-        <p>Two efforts seem to me to be converging on this from opposite ends. Hermes and MCP decompose capability into things you can inspect: a skill is a Markdown file, a tool is a server you can read. Omarchy approaches from the system side, treating the desktop as configuration its owner is expected to edit, and describing itself as an OS for the age of agents. Between them sits the machine I would like to use, one that is <span class="u">proactive and shapeable</span> by the person living in it.</p>
+    <p>Agents change what the trade costs. An agent's usefulness is bounded by the surface it can reach, and on a sealed appliance that surface is conversation and very little else.</p>
 
-        <p><span class="lead-in">I did not arrive here from ideology.</span> I grew up on Windows, because that is what a PC gamer had, then spent a decade on macOS because that was the company I worked for, and used both daily throughout. I am learning Arch and Fedora now, and running Omarchy, and the reason is not novelty. Those closed platforms spent that decade getting steadily worse for the people living inside them, and I would rather <span class="u">own the machine I work on</span>.</p>
+    <p>Two efforts seem to me to be converging on this from opposite ends. Hermes and MCP decompose capability into things you can inspect: a skill is a Markdown file, a tool is a server you can read. Omarchy approaches from the system side, treating the desktop as configuration its owner is expected to edit, and describing itself as an OS for the age of agents. Between them sits the machine I would like to use, one that is <span class="u">proactive and shapeable</span> by the person living in it.</p>
 
-        <p>You cannot build a malleable machine on a stack you are forbidden to read, and whoever holds the primitives sets the ceiling on how far the agent may help. <span class="u">Open weights and open primitives</span> are what keep that ceiling in the owner's hands, which is the practical reason I care about the position Nous has taken, beyond agreeing with it.</p>
+    <p><span class="lead-in">I did not arrive here from ideology.</span> I grew up on Windows, because that is what a PC gamer had, then spent a decade on macOS because that was the company I worked for, and used both daily throughout. I am learning Arch and Fedora now, and running Omarchy, and the reason is not novelty. Those closed platforms spent that decade getting steadily worse for the people living inside them, and I would rather <span class="u">own the machine I work on</span>.</p>
 
-        
-      </div>
-      <div>
-        <div class="meta">
-          <div>Output 02</div>
-          <div>Seed: malleable OS</div>
-          <div>Seed: agent primitives</div>
-          <div>Horizon: short</div>
-        </div>
-      </div>
-    </div>
+    <p>You cannot build a malleable machine on a stack you are forbidden to read, and whoever holds the primitives sets the ceiling on how far the agent may help. <span class="u">Open weights and open primitives</span> are what keep that ceiling in the owner's hands, which is the practical reason I care about the position Nous has taken, beyond agreeing with it.</p>
   </section>
   <hr class="rule" />
 
-  <section id="running">
-    <h2 class="mono-head">What I actually run</h2>
-    <p>Not a reading list. This is what is installed and running on my own machines and on a VPS I administer. Links where there is source.</p>
+  <section id="how">
+    <h2 class="mono-head"><span class="hw">How</span><span class="sub">— what the practice actually looks like</span></h2>
+
+    <p><span class="lead-in">I came to this through OpenClaw.</span> It was the first agent I ran seriously and it did the job I gave it. What changed my mind about the category was finding Hermes — not the model, the harness. Skills are Markdown files I can open and edit. Tools are servers I can read. The loop means the setup gets better through use rather than through me reconfiguring it every week. It took a few weeks of daily use before I was confident that difference mattered as much as I thought, and I have been more right about it than I expected: when I started I was explaining to people what Hermes was, and <span class="u">that is no longer the conversation</span>.</p>
+
+    <p>Reading which tool is worth someone's time, early, and being able to say why, is close to the same work as reading what is actually wrong with a machine. Both are mostly about refusing to accept the first plausible story.</p>
+
+    <p><span class="lead-in">Running now</span>, on my own machines and on a VPS I administer:</p>
     <ul>
-      <li><span class="lead-in">Hermes Agent and OpenClaw</span>, daily, as working tools rather than demonstrations: scheduled workflows, automations, and agents with permission to touch real files.</li>
-      <li><span class="lead-in">An MCP server</span> I wrote for local Markdown vaults, with a filesystem-safety layer and tests covering the path-traversal cases that layer exists to refuse. <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">hermes-pkm-toolkit</a></li>
-      <li><span class="lead-in">A skill pack</span> of thirty decision models, written to be read by an agent rather than by a person. <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">mental-models-toolkit</a></li>
-      <li><span class="lead-in">A nightly newspaper</span> for Aberdeen, adapted from an open Hermes project, in which the data desks compute every figure in Python so that the model is never in a position to invent one. <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">aberdeen-daily</a></li>
-      <li><span class="lead-in">Local inference on my own hardware</span> — llama.cpp serving a quantised open-weights model from an RTX 5090 in this machine, exposed as an API and wired into Hermes. I have also run Ollama and LM Studio. Nothing in that loop <span class="u">leaves the house</span>, which is most of the point of it.</li>
-      <li><span class="lead-in">A small web application</span> in production, deployed by me with Docker, Traefik and TLS, behind a release gate that refuses to publish when a check comes back red. <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a></li>
+      <li><span class="lead-in">Hermes, daily</span>, as a working tool rather than a demonstration: scheduled workflows, automations, and agents with permission to touch real files.</li>
+      <li><span class="lead-in">Local inference</span> — llama.cpp serving a quantised open-weights model from an RTX 5090 in this machine, exposed as an API and wired into Hermes. I have also run Ollama and LM Studio. Nothing in that loop <span class="u">leaves the house</span>, which is most of the point of it.</li>
+      <li><span class="lead-in">A small web application</span> in production, deployed by me with Docker, Traefik and TLS, behind a release gate that refuses to publish when a check comes back red. That one is mine end to end. <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a></li>
     </ul>
-    <p>I break these regularly, and the failure traces are the part I find most instructive.</p>
 
-    <p><span class="lead-in">And what I am learning</span>, kept separate from the list above because the distinction matters: vLLM, and a homelab I am building on Proxmox — a NAS beneath the hypervisor, the virtualisation and networking that come with it, Pi-hole at the edge. None of it is something I would sell yet. It is the argument in the previous section tested on my own hardware, at my own expense, where a failure costs nobody but me.</p>
+    <p><span class="lead-in">Being exact about the rest of the GitHub account</span>, because you will look and I would rather say it first. The <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">MCP server for Markdown vaults</a> and the <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">thirty-model skill pack</a> were specified by me and written by Hermes from that specification; the design and the contents are mine, the implementation is not, and I could not walk you through either line by line. <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">The Aberdeen newspaper</a> is a fork of an open Hermes project adapted to my city — one commit of seventeen is mine. I keep them public because directing an agent to build something usable is a real skill and the one I am practising, but it is not the same claim as writing it, and the two should not be listed as if they were.</p>
+
+    <p><span class="lead-in">And what I am learning</span>, kept separate on purpose: vLLM, and a homelab I am building on Proxmox — a NAS beneath the hypervisor, the virtualisation and networking that come with it, Pi-hole at the edge. None of it is something I would sell yet. It is the argument in the previous section tested on my own hardware, at my own expense, where a failure costs nobody but me.</p>
   </section>
   <hr class="rule" />
 
-  <section id="timeline">
-    <h2 class="mono-head">Timeline</h2>
+  <section id="record">
+    <h2 class="mono-head"><span class="hw">Record</span><span class="sub">— in order, most recent first</span></h2>
     <div class="tl">
 
       <div class="tl-row">
-        <div class="tl-when">2024 — now</div>
+        <div class="tl-when">2026<span class="tl-kind">Project</span></div>
+        <div>
+          <p class="tl-what"><a href="https://memento.technoir.cloud/">Memento Mori</a></p>
+          <p class="tl-where">Personal project · live in production</p>
+          <p class="tl-body">A Spanish-language web application built on World Bank life-expectancy data, with no accounts, no backend and no analytics. Deployed on my own VPS with an eight-step release gate and cross-platform CI on Linux, macOS and Windows. A native macOS menu-bar companion in Swift ships alongside it.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">2026<span class="tl-kind">Project</span></div>
+        <div>
+          <p class="tl-what">Agent tooling, published</p>
+          <p class="tl-where">Personal projects · MIT · specified by me, largely agent-written</p>
+          <p class="tl-body">An <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">MCP server</a> for local Markdown vaults, a <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">skill pack</a> of thirty machine-readable decision models, and <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">a nightly local newspaper</a> forked from an open Hermes project. See the note in the previous section for who wrote what.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Aug 2024 — now<span class="tl-kind">Work</span></div>
         <div>
           <p class="tl-what">Founder, Machines Do It Better</p>
           <p class="tl-where">Aberdeen, Scotland · independent</p>
@@ -212,7 +223,7 @@
       </div>
 
       <div class="tl-row">
-        <div class="tl-when">2024 — 2026</div>
+        <div class="tl-when">Oct 2024 — 2026<span class="tl-kind">Study</span></div>
         <div>
           <p class="tl-what">Specialist in Artificial Intelligence · Full Stack AI Developer</p>
           <p class="tl-where">Universidad Rey Juan Carlos, via Racks University · in progress</p>
@@ -221,34 +232,16 @@
       </div>
 
       <div class="tl-row">
-        <div class="tl-when">2026</div>
+        <div class="tl-when">Feb — Aug 2023<br />Feb — Aug 2024<span class="tl-kind">Work</span></div>
         <div>
-          <p class="tl-what"><a href="https://memento.technoir.cloud/">Memento Mori</a><span class="tag">shipped</span></p>
-          <p class="tl-where">Personal project · live in production</p>
-          <p class="tl-body">A Spanish-language web application built on World Bank life-expectancy data, with no accounts, no backend and no analytics. Deployed on my own VPS with an eight-step release gate and cross-platform CI.</p>
-        </div>
-      </div>
-
-      <div class="tl-row">
-        <div class="tl-when">2026</div>
-        <div>
-          <p class="tl-what"><a href="https://github.com/ponzgpt/hermes-pkm-toolkit">Hermes PKM Toolkit</a> · <a href="https://github.com/ponzgpt/mental-models-toolkit">Mental Models Toolkit</a><span class="tag">open source</span></p>
-          <p class="tl-where">Personal projects · MIT</p>
-          <p class="tl-body">An MCP server and agent skills for local Markdown vaults, tested against path-traversal attempts; and thirty machine-readable decision models packaged as a skill pack.</p>
-        </div>
-      </div>
-
-      <div class="tl-row">
-        <div class="tl-when">Feb — Aug 2023<br />Feb — Aug 2024</div>
-        <div>
-          <p class="tl-what">Lead In-Store Experience<span class="tag">secondment ×2</span></p>
-          <p class="tl-where">Apple Retail · Xanadú, then Parquesur · Madrid</p>
+          <p class="tl-what">Lead In-Store Experience</p>
+          <p class="tl-where">Apple Retail · Xanadú, then Parquesur · Madrid · two secondments</p>
           <p class="tl-body">Two seven-month leadership secondments taken while holding the Genius role. Ran floor experience for the store: planning, resourcing, events, maintenance coordination and the situations that fit no procedure. Led by removing obstacles rather than issuing instructions, then went back to the bench.</p>
         </div>
       </div>
 
       <div class="tl-row">
-        <div class="tl-when">Mar 2018 — Aug 2024</div>
+        <div class="tl-when">Mar 2018 — Aug 2024<span class="tl-kind">Work</span></div>
         <div>
           <p class="tl-what">Genius</p>
           <p class="tl-where">Apple Retail · Parquesur, Leganés · Madrid</p>
@@ -257,16 +250,16 @@
       </div>
 
       <div class="tl-row">
-        <div class="tl-when">Mar — Jun 2020</div>
+        <div class="tl-when">Mar — Jun 2020<span class="tl-kind">Work</span></div>
         <div>
-          <p class="tl-what">AppleCare Support Advisor<span class="tag">volunteering</span></p>
-          <p class="tl-where">Apple · remote, during COVID</p>
+          <p class="tl-what">AppleCare Support Advisor</p>
+          <p class="tl-where">Apple · remote, during COVID · volunteering</p>
           <p class="tl-body">Concurrent remote cases under structured troubleshooting and documentation standards, working without a floor around me.</p>
         </div>
       </div>
 
       <div class="tl-row">
-        <div class="tl-when">Sep 2014 — Feb 2018</div>
+        <div class="tl-when">Sep 2014 — Feb 2018<span class="tl-kind">Work</span></div>
         <div>
           <p class="tl-what">Technical Specialist, then Specialist</p>
           <p class="tl-where">Apple Retail · Parquesur, Madrid</p>
@@ -279,7 +272,7 @@
   <hr class="rule" />
 
   <section id="contact">
-    <h2 class="mono-head">Contact</h2>
+    <h2 class="mono-head"><span class="hw">Contact</span></h2>
     <p>The most useful reply would tell me which of these directions is worth pursuing and what stands between me and being obviously qualified for it. I would rather close a specific gap than guess at one.</p>
 
     <p>Your careers page offers long months of complete focus and constant danger, with honor and glory in the event of success. I have read that page more than once. I would take the trade.</p>

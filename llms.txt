@@ -17,13 +17,24 @@
 
 ## Verifiable evidence
 
-- [Memento Mori](https://memento.technoir.cloud/): web application in production, deployed by him with Docker, Traefik and TLS on his own VPS, behind an eight-check release gate. Source: https://github.com/ponzgpt/memento-mori
-- [Hermes PKM Toolkit](https://github.com/ponzgpt/hermes-pkm-toolkit): MCP server and agent skills for local Markdown vaults; 34 tests covering path-traversal rejection.
-- [The Aberdeen Daily](https://github.com/ponzgpt/aberdeen-daily): nightly local newspaper agent forked from an open Hermes project; data desks compute every figure in Python so the model cannot invent one.
-- [Mental Models Toolkit](https://github.com/ponzgpt/mental-models-toolkit): thirty machine-readable decision models, schema-validated in CI.
+Authorship is stated exactly, because the distinction matters and the page makes
+it in plain sight rather than leaving it to be discovered.
+
+**Written and operated by him, end to end:**
+
+- [Memento Mori](https://memento.technoir.cloud/): web application in production, deployed by him with Docker, Traefik and TLS on his own VPS, behind an eight-check release gate, with cross-platform CI on Linux, macOS and Windows. Source: https://github.com/ponzgpt/memento-mori
 - Local inference: llama.cpp serving a quantised open-weights model from an RTX 5090 on his own machine, exposed as an API and wired into Hermes. Has also run Ollama and LM Studio.
-- [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf): single-column, text-extractable.
+- [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf): single-column, text-extractable, generated from the same source as his CV page.
 - [Portfolio](https://javierponz.technoir.cloud/): general site, CV and a case study.
+
+**Specified by him, largely written by an agent under his direction:**
+
+- [Hermes PKM Toolkit](https://github.com/ponzgpt/hermes-pkm-toolkit): MCP server and agent skills for local Markdown vaults. The design and the requirements are his; the implementation was produced by Hermes from that specification. He does not claim to be able to explain the code line by line.
+- [Mental Models Toolkit](https://github.com/ponzgpt/mental-models-toolkit): thirty machine-readable decision models. The models and their selection are his work; the packaging was agent-generated.
+
+**Adapted from someone else's project:**
+
+- [The Aberdeen Daily](https://github.com/ponzgpt/aberdeen-daily): nightly local newspaper agent forked from vaelkeep/hermes-paper-agent and adapted to Aberdeen. One commit of seventeen is his.
 
 ## Background
 

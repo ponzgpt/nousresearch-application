@@ -7,8 +7,12 @@ A single-page, personal application, published on my own domain at
 any relationship. Their careers page is at <https://nousresearch.com/careers>.
 
 The visual language is a deliberate, respectful echo of Nous's own published
-site — white ground, cyan monospace, dashed rules, output/seed metadata — as
-a way of showing I read carefully. All words and content are mine.
+site — white ground, cyan on white, dashed rules, serif small caps against bold
+sans — as a way of showing I read carefully. All words and content are mine.
+
+The page is organised as why, how and record, and it is explicit about which
+repositories I wrote and which I specified and had an agent write. Getting that
+distinction wrong would be the only thing on here worth catching.
 
 Static HTML, no build step. Deploys as nginx behind Traefik, same pattern as
 the rest of my sites.
