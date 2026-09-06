@@ -62,7 +62,7 @@ it in plain sight rather than leaving it to be discovered.
 **Written and operated by him, end to end:**
 
 - [Memento Mori](https://memento.technoir.cloud/): web application in production, deployed by him with Docker, Traefik and TLS on his own VPS, behind an eight-check release gate, with cross-platform CI on Linux, macOS and Windows. Source: https://github.com/ponzgpt/memento-mori
-- Local inference: llama.cpp serving a quantised open-weights model from an RTX 5090 on his own machine, exposed as an API and wired into Hermes. Has also run Ollama and LM Studio.
+- Local inference: llama.cpp serving a dense Qwen3 27B (GGUF, Q6 quantisation) from an RTX 5090 on his own machine, exposed as an API and wired into Hermes. Has also run Ollama and LM Studio.
 - [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf) and [cover letter (PDF)](https://nousresearch.technoir.cloud/javier-ponz-prado-cover-letter.pdf): single column, real selectable text, generated from the same source as the pages they mirror.
 - [Portfolio site](https://javierponz.technoir.cloud/): CV, projects and a case study.
 - This application page itself: hand-built static HTML, deployed by him.
