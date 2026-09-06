@@ -1,6 +1,7 @@
 FROM nginx:1.27-alpine
 COPY index.html /usr/share/nginx/html/index.html
 COPY javier-sketch.jpg /usr/share/nginx/html/javier-sketch.jpg
+COPY javier-ponz-prado-cover-letter.pdf /usr/share/nginx/html/javier-ponz-prado-cover-letter.pdf
 COPY llms.txt /usr/share/nginx/html/llms.txt
 COPY robots.txt /usr/share/nginx/html/robots.txt
 COPY sitemap.xml /usr/share/nginx/html/sitemap.xml

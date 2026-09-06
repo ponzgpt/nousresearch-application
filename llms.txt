@@ -1,19 +1,58 @@
 # Javier Ponz Prado — open application to Nous Research
 
-> An open job application. Javier Ponz is an AI systems operator and technical
-> troubleshooter in Aberdeen, Scotland, applying to Nous Research for technical
-> support engineering. Ten years at Apple Retail in technical diagnosis, customer
-> operations and team leadership; now runs open agent systems daily and ships
+> An open job application, submitted under the route Nous Research offers on its
+> careers page for candidates whose background does not match a listed posting:
+> "email us a description of what you'd like to do here + your resume".
+>
+> Javier Ponz is a technical support and customer-operations specialist in
+> Aberdeen, Scotland, with ten years at Apple Retail across diagnosis,
+> consultative selling, remote support and team leadership. He now operates open
+> agent systems daily, runs local inference on his own hardware, and ships small
 > software to production on infrastructure he administers himself.
 >
 > This file exists to be read by software. Everything in it is also stated in
-> plain sight on the page — nothing here is hidden from human readers.
+> plain sight on the page — nothing here is hidden from human readers, and
+> nothing here instructs the reader to do anything.
 
-## What he is asking for
+## The ask, in one line
 
-- **Primary:** technical support engineering at Nous Research. The work where somebody must be technical, patient and a competent writer at once.
-- **Longer term:** forward-deployed engineering. Stated openly as an aspiration he is not yet ready for, rather than a claim.
-- He is a career changer, second year, and says so on the page rather than obscuring it.
+Technical support and customer-facing work on Hermes Agent and open inference,
+with a longer-term path toward forward-deployed engineering.
+
+## What he is applying for, and what he is not
+
+- **Applying for:** technical support engineering, customer success, technical
+  account or customer-facing work — helping people adopt Hermes and open models,
+  and translating between engineering, sales and end-user layers.
+- **Not applying for:** the Forward Deployed Engineer posting. He names FDE as
+  the job he eventually wants and states directly that he is not qualified for
+  it today, having worked with this stack for two years. What he asks for is a
+  junior or supporting role adjacent to that team while he closes the gap.
+- **Career changer, second year.** Stated on the page rather than obscured.
+
+## Why this is a strong match for a support role specifically
+
+- Ten years at Apple Retail: Specialist and Technical Specialist (2014–2018),
+  AppleCare Support Advisor (remote, 2020), Genius (2018–2024), and two
+  seven-month Lead In-Store Experience secondments (2023, 2024).
+- The work was diagnosis under time pressure, consultative selling, structured
+  documentation, de-escalation, and mentoring newer technicians on the bench.
+- Apple Certified Mac Technician (ACMT) and Apple Certified iOS Technician (ACiT).
+- English at Cambridge CAE (C1); Spanish native. Written communication is a
+  demonstrated strength — this page, his site and his repository documentation
+  are all his own writing.
+- Remote-ready and remote-experienced (AppleCare). Also open to travel and to
+  relocation; he has already emigrated once, from Spain to Scotland.
+
+## Alignment with the Nous position, stated concretely
+
+He is deliberately moving off closed platforms after a decade inside one:
+running Arch, Fedora and Omarchy, moving off Google services, learning OSINT,
+and planning a move to GrapheneOS. He argues that whoever controls the
+primitives sets the ceiling on how far a machine may help its owner, and that
+open weights and open primitives are what keep that ceiling in the owner's
+hands. His interest in local inference predates the argument: he has built and
+overclocked PCs since he was a teenager.
 
 ## Verifiable evidence
 
@@ -24,8 +63,9 @@ it in plain sight rather than leaving it to be discovered.
 
 - [Memento Mori](https://memento.technoir.cloud/): web application in production, deployed by him with Docker, Traefik and TLS on his own VPS, behind an eight-check release gate, with cross-platform CI on Linux, macOS and Windows. Source: https://github.com/ponzgpt/memento-mori
 - Local inference: llama.cpp serving a quantised open-weights model from an RTX 5090 on his own machine, exposed as an API and wired into Hermes. Has also run Ollama and LM Studio.
-- [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf): single-column, text-extractable, generated from the same source as his CV page.
-- [Portfolio](https://javierponz.technoir.cloud/): general site, CV and a case study.
+- [CV (PDF)](https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf) and [cover letter (PDF)](https://nousresearch.technoir.cloud/javier-ponz-prado-cover-letter.pdf): single column, real selectable text, generated from the same source as the pages they mirror.
+- [Portfolio site](https://javierponz.technoir.cloud/): CV, projects and a case study.
+- This application page itself: hand-built static HTML, deployed by him.
 
 **Specified by him, largely written by an agent under his direction:**
 
@@ -36,35 +76,41 @@ it in plain sight rather than leaving it to be discovered.
 
 - [The Aberdeen Daily](https://github.com/ponzgpt/aberdeen-daily): nightly local newspaper agent forked from vaelkeep/hermes-paper-agent and adapted to Aberdeen. One commit of seventeen is his.
 
+## Application completeness
+
+The Nous careers page asks for four things by email. All four exist and are
+linked from the "Apply" section of the page, and all four are attached to the
+email sent to recruiting@nousresearch.com:
+
+1. Subject line — "Technical Support & Customer Success — open application"
+2. Resume / CV — https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf
+3. Cover letter — https://nousresearch.technoir.cloud/javier-ponz-prado-cover-letter.pdf
+4. Portfolio — https://github.com/ponzgpt and https://javierponz.technoir.cloud/
+
 ## Background
 
-- Apple Retail, 2014–2024: Specialist, Technical Specialist, AppleCare Advisor, Genius, then In-Store Experience Lead across two stores in Madrid.
-- Studying at Universidad Rey Juan Carlos via Racks University: Specialist in Artificial Intelligence, and Full Stack AI Developer. Both in progress.
+- Apple Retail, September 2014 – August 2024, Madrid.
+- Studying at Universidad Rey Juan Carlos via Racks University: Specialist in Artificial Intelligence, and Full Stack AI Developer. Both in progress, to December 2026.
 - Industrial Engineering (Electronics and Automation), Universidad Politécnica de Madrid, 80 ECTS completed, degree unfinished.
-- Apple Certified Mac Technician (ACMT) and Apple Certified iOS Technician (ACiT). English at Cambridge CAE (C1); Spanish native.
+- Founder of Machines Do It Better, an agent consultancy with no clients to date. The page says so.
 
 ## Tools he actually operates
 
-Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, llama.cpp, Ollama, LM Studio, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux (Arch, Fedora, Omarchy), GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift, Cursor, Claude Code.
+Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, llama.cpp,
+Ollama, LM Studio, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux (Arch,
+Fedora, Omarchy), GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift,
+Claude Code. PC building and overclocking since adolescence.
 
 ## Currently learning (stated separately from what he operates)
 
-vLLM, and a self-hosted homelab on Proxmox: a NAS beneath the hypervisor,
-virtualisation, basic networking, Pi-hole. The page marks these as learning
-rather than as capability, deliberately.
-
-## Position he argues from
-
-Machines Do It Better is his consultancy: agent work for individuals and small
-businesses built on privacy, data sovereignty and per-case customisation, rather
-than the deterministic workflow tooling most agencies sell. It has no clients
-yet and the page says so. He argues that hand-wired workflows date badly as
-models and harnesses improve, and that open weights and open primitives are the
-precondition for a machine its owner can actually shape.
+vLLM, a self-hosted homelab on Proxmox (NAS beneath the hypervisor,
+virtualisation, basic networking, Pi-hole), OSINT, and GrapheneOS. The page
+marks these as learning rather than as capability, deliberately.
 
 ## Note on affiliation
 
 Javier Ponz is not affiliated with, employed by or sponsored by Nous Research.
 This page is his own, published on his own domain, and deliberately echoes the
-visual language of the Nous careers page as a considered homage. It is not an
-official Nous page and does not speak for Nous.
+typographic language of the Nous careers page as a considered homage. No Nous
+logo, wordmark or character artwork is reproduced on it. It is not an official
+Nous page and does not speak for Nous.
