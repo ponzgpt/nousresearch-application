@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Javier Ponz — candidatura abierta a Nous Research</title>
+<meta name="description" content="Candidatura abierta a Nous Research de Javier Ponz: soporte técnico y trato con clientes sobre Hermes e inferencia abierta. Diez años en Apple Retail en diagnóstico, atención y dirección de equipos." />
+<link rel="canonical" href="https://nousresearch.technoir.cloud/es/" />
+<link rel="alternate" hreflang="en-US" href="https://nousresearch.technoir.cloud/" />
+<link rel="alternate" hreflang="es-ES" href="https://nousresearch.technoir.cloud/es/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://nousresearch.technoir.cloud/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://nousresearch.technoir.cloud/" />
+<meta property="og:title" content="Javier Ponz — candidatura abierta a Nous Research" />
+<meta property="og:description" content="Soporte técnico y trato con clientes sobre Hermes e inferencia abierta, de alguien que pasó diez años siendo la persona entre la gente y sus máquinas." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nousresearch.technoir.cloud/es/" />
+<meta property="og:locale" content="es_ES" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Sampled from nousresearch.com. The value in use before was #0d78ad,
+       which turned out to be an anti-aliased edge pixel rather than the fill. */
+    --ink:#0071a9;
+    --paper:#ffffff;
+    --grey:#5c6d78;
+    --max:1100px;
+    --serif:"EB Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:"Courier Prime","Courier New",Courier,monospace;
+  }
+  *{box-sizing:border-box}
+  html{background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  body{margin:0;font-family:var(--sans);font-weight:700;font-size:15.5px;line-height:1.55}
+  .shell{width:min(calc(100% - 48px),var(--max));margin:0 auto}
+  a{color:var(--ink)}
+
+  .navbar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
+  nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+  nav a{
+    font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
+    text-transform:uppercase;text-decoration:none;margin:0 10px;display:inline-block;line-height:1.9;
+  }
+  nav a:hover{text-decoration:underline;text-underline-offset:4px}
+  nav a.home{text-decoration:underline;text-underline-offset:4px}
+
+  /* language picker — plain links, so it works with JavaScript off and a
+     crawler can follow it to the translated page */
+  .lang{position:relative;margin-left:10px}
+  .lang summary{
+    list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+    font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.08em;
+    border:1.5px solid var(--ink);padding:4px 9px;color:var(--ink);
+  }
+  .lang summary::-webkit-details-marker{display:none}
+  .lang summary:hover{background:var(--ink);color:var(--paper)}
+  .langmenu{
+    position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:172px;
+    background:var(--paper);border:1.5px solid var(--ink);padding:4px;text-align:left;
+  }
+  .langmenu a{
+    display:block;padding:8px 10px;text-decoration:none;font-family:var(--mono);
+    font-weight:400;font-size:13px;letter-spacing:.04em;text-transform:none;margin:0;
+  }
+  .langmenu a:hover{background:rgba(0,113,169,.09);text-decoration:none}
+  .langmenu a[aria-current="true"]{font-weight:700}
+  .langmenu a[aria-current="true"]::after{content:" \2713"}
+  .langmenu small{display:block;color:var(--grey);font-size:11px;letter-spacing:.06em}
+
+  .rule{border:0;border-top:2px dashed var(--ink);margin:0;opacity:.9}
+
+  .disclaimer{
+    font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--grey);margin:0 0 22px;
+  }
+
+  .block{
+    display:inline-block;background:var(--ink);color:var(--paper);
+    font-family:var(--sans);font-weight:700;font-size:clamp(21px,2.1vw,30px);
+    letter-spacing:.01em;padding:2px 10px 5px;margin:0 0 62px;
+  }
+
+  section{padding:56px 0 62px;scroll-margin-top:92px}
+  #application{padding-top:52px}
+  .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
+
+  .lead-in{
+    font-family:var(--serif);font-weight:600;font-size:1.6em;
+    letter-spacing:.01em;text-transform:uppercase;line-height:1;
+  }
+  .lead-in a{text-decoration:none}
+  .lead-in a:hover{text-decoration:underline;text-underline-offset:4px}
+
+  p{margin:0 0 22px;max-width:90ch}
+  .u{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:2px;text-decoration-color:rgba(0,113,169,.42);transition:text-decoration-color .15s,background-color .15s}
+  .u:hover{text-decoration-color:var(--ink);background:rgba(0,113,169,.07)}
+
+  ul{margin:0 0 22px;padding-left:22px;max-width:90ch}
+  li{margin-bottom:14px}
+
+  .mono-head{
+    font-family:var(--mono);font-weight:700;font-size:clamp(19px,2vw,24px);
+    letter-spacing:.08em;text-transform:uppercase;margin:0 0 30px;
+  }
+  .mono-head .hw{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+  .mono-head .sub{font-family:var(--sans);font-weight:700;font-size:.62em;letter-spacing:0;text-transform:none;color:var(--grey);margin-left:14px}
+
+  .portrait{border:1px solid rgba(0,113,169,.45);border-radius:12px;overflow:hidden;background:#fff;padding:16px 14px 8px}
+  .portrait img{display:block;width:100%;height:auto}
+
+  .cvbox{margin:0 0 12px;max-width:none}
+  .cvlink{display:block;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
+  .cvlink:hover{background:var(--ink);color:var(--paper)}
+
+  /* the four things their careers page asks an applicant to send */
+  .checklist{border:2px dashed var(--ink);padding:6px 26px 8px;margin:0 0 26px;max-width:90ch}
+  .ck{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:16px 0;border-bottom:1px dashed rgba(0,113,169,.4)}
+  .ck:last-child{border-bottom:0}
+  .ck dt{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);padding-top:2px}
+  .ck dd{margin:0;font-size:15px;overflow-wrap:anywhere}
+  .ck dd .sub{display:block;color:var(--grey);font-weight:500;font-size:13.5px;margin-top:3px}
+
+  .tl{max-width:none}
+  .tl-row{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
+  .tl-row:last-child{border-bottom:1px dashed var(--ink)}
+  .tl-row>*{min-width:0}
+  .tl-when{font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;padding-top:4px}
+  .tl-kind{display:block;margin-top:6px;font-size:11px;letter-spacing:.14em;color:var(--ink);opacity:.75}
+  .tl-what{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.15;text-transform:uppercase;margin:0 0 6px}
+  .tl-what a{text-decoration:none}
+  .tl-what a:hover{text-decoration:underline;text-underline-offset:4px}
+  .tl-where{font-weight:700;font-size:14px;color:var(--grey);margin:0 0 8px}
+  .tl-body{font-weight:500;font-size:15px;line-height:1.5;margin:0;max-width:78ch;overflow-wrap:anywhere}
+
+  .notice{border:2px dashed var(--ink);padding:20px 22px;max-width:70ch;font-weight:500;font-size:14.5px;line-height:1.55}
+
+  footer{padding:34px 0 64px;font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-align:center;text-transform:uppercase}
+  footer a{color:var(--grey)}
+
+  @media (max-width:900px){
+    .cols{grid-template-columns:1fr;gap:36px}
+    .portrait{max-width:300px}
+    .cvbox{max-width:300px}
+    nav{padding:14px 0 10px}
+    nav a{margin:0 7px;font-size:14px;line-height:1.8}
+    section{padding:40px 0 44px;scroll-margin-top:106px}
+    #application{padding-top:34px}
+    .tl-row{grid-template-columns:1fr;gap:8px}
+    .tl-kind{display:inline;margin:0 0 0 12px}
+    .mono-head .sub{display:block;margin:8px 0 0}
+    .ck{grid-template-columns:1fr;gap:6px}
+    .checklist{padding:6px 18px 8px}
+  }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Javier Ponz Prado","jobTitle":"Technical support and agent operations","description":"Candidatura abierta a Nous Research de Javier Ponz: soporte técnico y trato con clientes sobre Hermes e inferencia abierta. Diez años en Apple Retail en diagnóstico, atención y dirección de equipos.","email":"nerion89@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Aberdeen","addressCountry":"GB"},"url":"https://javierponz.technoir.cloud/","sameAs":["https://github.com/ponzgpt","https://www.linkedin.com/in/javierponz"],"seeks":{"@type":"Demand","name":"Technical support engineering / customer success at Nous Research"},"knowsAbout":["Hermes Agent","OpenClaw","Model Context Protocol","agent workflows","technical support","customer success","technical troubleshooting","llama.cpp","local inference","open weights","Omarchy","Arch Linux","Fedora","GrapheneOS","OSINT","Docker","Traefik","nginx","Linux","VPS administration","Python","JavaScript","TypeScript","Astro","Swift","CI/CD","PC hardware","overclocking"],"knowsLanguage":["es","en"],"inLanguage":"es-ES"}</script>
+</head>
+<body>
+<div class="navbar">
+  <div class="shell">
+    <nav>
+      <a class="home" href="https://javierponz.technoir.cloud/">Javier Ponz</a>
+      <a href="#why">Por qué</a>
+      <a href="#how">Cómo</a>
+      <a href="#record">Trayectoria</a>
+      <a href="#apply">Solicitud</a>
+      <a href="#contact">Contacto</a>
+      <details class="lang">
+        <summary aria-label="Language">ES <span aria-hidden="true">&#9662;</span></summary>
+        <div class="langmenu">
+          <a href="/" hreflang="en-US" lang="en-US">EN<small>English</small></a>
+          <a href="/es/" hreflang="es-ES" lang="es-ES" aria-current="true">ES<small>Español</small></a>
+          <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文<small>简体中文</small></a>
+        </div>
+      </details>
+    </nav>
+  </div>
+</div>
+
+<div class="shell">
+
+  <section id="application">
+    <p class="disclaimer">Candidatura independiente · no es una página de Nous Research</p>
+    <h1 class="block">CANDIDATURA</h1>
+    <div class="cols">
+      <div>
+        <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.</p>
+
+        <p><span class="lead-in">Lo que me gustaría hacer</span> en Nous es <span class="u">soporte técnico y trabajo de cara al cliente</span>: ayudar a que la gente adopte Hermes de verdad y ejecute modelos abiertos, y convertir una situación rota en un arreglo o en una explicación clara de por qué no lo es. Pasé diez años en Apple Retail siendo la persona entre la gente y sus máquinas: diagnóstico en el Genius Bar, llamadas de AppleCare durante los primeros meses de la COVID, vender a personas que aún no sabían qué necesitaban, y dos etapas dirigiendo la experiencia en tienda en Madrid. Me llenaría de orgullo ser esa interfaz para Nous.</p>
+
+        <p>Lo concreto que se me da bien es <span class="u">traducir entre capas</span>: lo que quiere decir el ingeniero, lo que prometió la venta y lo que la persona que tienes delante tiene de verdad en su pantalla. Eso es un solo trabajo, no tres, y la mayoría de los fallos de soporte son fallos de traducción, no fallos técnicos.</p>
+
+        <p><span class="lead-in">El puesto que quiero a la larga</span> es <span class="u">ingeniería desplegada en cliente</span>, y lo digo sin rodeos: hoy no estoy cualificado para él. Llevo dos años aprendiendo esta pila. No me presentaría a la oferta de FDE; lo que me gustaría es un puesto júnior o de apoyo cerca de ese trabajo, asumiendo carga real de soporte y siendo útil al equipo de FDE mientras cierro la distancia. Aprendo rápido delante de un problema real. Es el único entorno en el que he aprendido algo.</p>
+
+        <p><span class="lead-in">Sobre dónde trabajo.</span> El remoto me encaja y estoy montado para ello. También viajo sin problema, y me plantearía mudarme: ya dejé mi país una vez, para venir a Escocia, con mi pareja. Mudarme por un trabajo que importa es una decisión que ya he tomado.</p>
+      </div>
+      <div>
+        <p class="cvbox"><a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>&#8595; Descargar el CV (PDF)</a></p>
+        <p class="cvbox"><a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>&#8595; Carta de presentación (PDF)</a></p>
+        <div class="portrait">
+          <img src="/javier-sketch.jpg" alt="Retrato a lápiz de Javier Ponz" width="720" height="960" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule" />
+
+  <section id="why">
+    <h2 class="mono-head"><span class="hw">Por qué</span><span class="sub">— por qué Nous, y por qué no los demás</span></h2>
+    <p><span class="lead-in">Un sistema operativo</span> lo bastante moldeable como para que un agente pueda habitarlo me parece un problema más interesante que un modelo más grande, y probablemente más cercano. La mayoría de los ordenadores personales son electrodomésticos: rápidos, sellados, ordenados según decisiones que tomó otro hace años y que no se pueden revisar con facilidad. Durante mucho tiempo ese trato fue razonable, porque la alternativa era una máquina que mantenías en vez de usar.</p>
+
+    <p>Los agentes cambian lo que cuesta ese trato. La utilidad de un agente está limitada por la superficie que alcanza, y en un aparato sellado esa superficie es la conversación y poco más.</p>
+
+    <p>Dos esfuerzos me parece que están convergiendo en esto desde extremos opuestos. Hermes y MCP descomponen la capacidad en cosas que puedes inspeccionar: una habilidad es un fichero Markdown, una herramienta es un servidor que puedes leer. Omarchy llega por el lado del sistema, tratando el escritorio como configuración que se espera que su dueño edite, y describiéndose como un SO para la era de los agentes. Entre los dos está la máquina que me gustaría usar: una que sea <span class="u">proactiva y moldeable</span> por quien vive dentro de ella.</p>
+
+    <p><span class="lead-in">No he llegado aquí por ideología.</span> Crecí con Windows, porque era lo que tenía un jugador de PC. Después pasé una década dentro de Apple, que es lo mismo que decir una década siendo muy bueno en una plataforma que no era mía. Ahora estoy desmontando ambas cosas a propósito: uso Arch, Fedora y Omarchy, estoy saliendo de los servicios de Google, me estoy documentando sobre OSINT para entender qué llevo veinte años filtrando, y tengo previsto pasarme a GrapheneOS en el móvil. Es lento, a ratos incómodo, y no tengo ninguna intención de parar.</p>
+
+    <p>No lo hago porque el código abierto esté de moda. Lo hago porque vi cómo esas plataformas empeoraban de forma sostenida para quienes vivían dentro, y lo vi desde lo bastante cerca como para ver cómo se tomaban las decisiones. <span class="u">Quien tiene los primitivos pone el techo</span> de hasta dónde puede ayudarte la máquina, y en una pila cerrada ese techo es la hoja de ruta de producto de otro. Los pesos abiertos y los primitivos abiertos son lo que lo mantiene en manos del dueño.</p>
+
+    <p>Esa es la razón práctica por la que quiero trabajar en Nous y no en una empresa que me pagaría más por hacer lo contrario. Si la inferencia abierta va a ser una opción real para gente corriente y para empresas pequeñas, alguien tiene que hacer el trabajo poco lucido de <span class="u">volverla adoptable</span>: responder preguntas, dejar el arreglo por escrito, quedarse con la persona hasta que funcione. Me gustaría que ese fuera mi trabajo.</p>
+  </section>
+  <hr class="rule" />
+
+  <section id="how">
+    <h2 class="mono-head"><span class="hw">Cómo</span><span class="sub">— cómo es el trabajo en la práctica</span></h2>
+    <p><span class="lead-in">Llegué a esto por OpenClaw.</span> Fue el primer agente que usé en serio y cumplió con lo que le pedí. Lo que me cambió la idea de la categoría fue encontrar Hermes: no el modelo, el armazón. Las habilidades son ficheros Markdown que puedo abrir y editar. Las herramientas son servidores que puedo leer. El bucle hace que la configuración mejore con el uso, en lugar de que yo la rehaga cada semana. Tardé unas semanas de uso diario en estar seguro de que esa diferencia importaba tanto como creía, y he acertado más de lo que esperaba: cuando empecé, explicaba a la gente qué era Hermes, y <span class="u">esa ya no es la conversación</span>.</p>
+
+    <p>Leer pronto qué herramienta merece el tiempo de alguien, y saber decir por qué, es casi el mismo trabajo que leer qué le pasa de verdad a una máquina. Las dos cosas consisten sobre todo en negarse a aceptar la primera explicación plausible.</p>
+
+    <p><span class="lead-in">Funcionando ahora</span>, en mis propios equipos y en un VPS que administro:</p>
+    <ul>
+      <li><span class="lead-in">Hermes, a diario</span>, como herramienta de trabajo y no como demostración: flujos programados, automatizaciones y agentes con permiso para tocar ficheros reales.</li>
+      <li><span class="lead-in">Inferencia local</span> — llama.cpp sirviendo un Qwen3 27B denso, en GGUF a Q6, desde una RTX 5090 de esta máquina, expuesto como API y conectado a Hermes. También he usado Ollama y LM Studio. Nada de ese circuito <span class="u">sale de casa</span>, que es casi todo el sentido de hacerlo.</li>
+      <li><span class="lead-in">Omarchy</span> como sistema principal, junto a Arch y Fedora. Es la otra mitad del argumento de la sección anterior, y el primer escritorio que uso que espera que lo edites en vez de que lo aguantes.</li>
+      <li><span class="lead-in">Una aplicación web pequeña</span> en producción, desplegada por mí con Docker, Traefik y TLS, detrás de una puerta de publicación que se niega a publicar cuando una comprobación sale en rojo. Esa es mía de principio a fin. <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a></li>
+    </ul>
+
+    <p><span class="lead-in">La mitad de hardware</span> viene de mucho antes que el software. Monto y ajusto ordenadores desde adolescente: primero para juegos, después por el gusto de sacarle a una pieza el último dos por ciento con overclocking, que es donde aprendí que una máquina es una negociación entre el silicio y el software que le pides que ejecute. La 5090 de esta habitación es el mismo interés, ya crecido. También es la razón de que la inferencia local me atrajera antes de tener ningún argumento a favor: quería saber qué podía dar de sí mi propio equipo.</p>
+
+    <p>La otra cosa que me dejó una década en Apple es poca tolerancia al trabajo feo. Allí lo bello y lo útil nunca estuvieron enfrentados, y no creo que aquí lo estén tampoco: vuestro propio manual de marca defiende esa idea mejor de lo que yo podría, y es una de las razones de que esta candidatura tenga el aspecto que tiene.</p>
+
+    <p><span class="lead-in">Y lo que estoy aprendiendo</span>, separado a propósito: vLLM, y un homelab que estoy montando con Proxmox — un NAS bajo el hipervisor, la virtualización y la red que vienen con ello, y Pi-hole en el borde. Nada de eso es algo que vendería todavía. Es el argumento de la sección anterior puesto a prueba en mi propio equipo, a mi propia costa, donde un fallo no le cuesta nada a nadie más que a mí.</p>
+
+    <p><span class="lead-in">Siendo exacto sobre la cuenta de GitHub</span>, porque vais a mirarla y prefiero decirlo yo primero. El <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">servidor MCP para carpetas de Markdown</a> y el <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">paquete de treinta modelos</a> los especifiqué yo y los escribió Hermes a partir de esa especificación; el diseño y el contenido son míos, la implementación no, y no podría recorreros ninguno de los dos línea a línea. <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">El periódico de Aberdeen</a> es una bifurcación de un proyecto abierto de Hermes adaptada a mi ciudad: uno de diecisiete commits es mío. Los mantengo públicos porque dirigir a un agente para que construya algo utilizable es una habilidad real y es la que estoy practicando, pero no es la misma afirmación que haberlo escrito, y las dos cosas no deberían ir en la misma lista.</p>
+  </section>
+  <hr class="rule" />
+
+  <section id="record">
+    <h2 class="mono-head"><span class="hw">Trayectoria</span><span class="sub">— en orden, lo más reciente primero</span></h2>
+    <div class="tl">
+
+      <div class="tl-row">
+        <div class="tl-when">2026<span class="tl-kind">Proyecto</span></div>
+        <div>
+          <p class="tl-what"><a href="https://memento.technoir.cloud/">Memento Mori</a></p>
+          <p class="tl-where">Proyecto personal · en producción</p>
+          <p class="tl-body">Una aplicación web en español construida sobre datos de esperanza de vida del Banco Mundial, sin cuentas, sin servidor y sin analítica. Desplegada en un VPS mío con una puerta de publicación de ocho pasos e integración continua en Linux, macOS y Windows. La acompaña una aplicación nativa de barra de menús de macOS escrita en Swift.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">2026<span class="tl-kind">Proyecto</span></div>
+        <div>
+          <p class="tl-what">Utilidades de agentes, publicadas</p>
+          <p class="tl-where">Proyectos personales · MIT · especificados por mí, escritos en gran parte por un agente</p>
+          <p class="tl-body">Un <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">servidor MCP</a> para carpetas locales de Markdown, un <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">paquete</a> de treinta modelos de decisión legibles por máquina, y <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">un periódico local nocturno</a> bifurcado de un proyecto abierto de Hermes. En la sección anterior está la nota sobre quién escribió qué.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Ago 2024 — actualidad<span class="tl-kind">Empleo</span></div>
+        <div>
+          <p class="tl-what">Fundador, Machines Do It Better</p>
+          <p class="tl-where">Aberdeen, Escocia · por cuenta propia</p>
+          <p class="tl-body">Una consultora de agentes para particulares y pequeñas empresas, basada en la privacidad, la soberanía de los datos y la adaptación a un caso de uso concreto, en lugar de las herramientas de flujo determinista que vende la mayoría de las agencias. Mi apuesta es que los flujos cableados a mano envejecen mal según mejoran los modelos y los armazones, y que la oferta duradera es ayudar a que la gente sea dueña de su propia capacidad. <span class="u">Todavía sin clientes</span>: esa es la apuesta, dicha como apuesta. También publico <a class="u" href="https://machinesdoitbetter.beehiiv.com">un boletín editorial</a> sobre IA, robótica y tecnología financiera.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Oct 2024 — 2026<span class="tl-kind">Estudios</span></div>
+        <div>
+          <p class="tl-what">Especialista en Inteligencia Artificial · Desarrollador Full Stack de IA</p>
+          <p class="tl-where">Universidad Rey Juan Carlos, a través de Racks University · en curso</p>
+          <p class="tl-body">Dos programas cursados en paralelo al trabajo de abajo. Antes: Ingeniería Industrial (Electrónica y Automática) en la Universidad Politécnica de Madrid, 80 ECTS superados, carrera sin terminar.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Feb — Ago 2023<br />Feb — Ago 2024<span class="tl-kind">Empleo</span></div>
+        <div>
+          <p class="tl-what">Responsable de experiencia en tienda</p>
+          <p class="tl-where">Apple Retail · Xanadú y después Parquesur · Madrid · dos comisiones de servicio</p>
+          <p class="tl-body">Dos comisiones de siete meses asumidas sin dejar el puesto de Genius. Dirigí la experiencia de sala de la tienda: planificación, recursos, eventos, coordinación de mantenimiento y las situaciones que no encajan en ningún procedimiento. Lideré despejando obstáculos en vez de dando instrucciones, y después volví al banco de trabajo.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Mar 2018 — Ago 2024<span class="tl-kind">Empleo</span></div>
+        <div>
+          <p class="tl-what">Genius</p>
+          <p class="tl-where">Apple Retail · Parquesur, Leganés · Madrid</p>
+          <p class="tl-body">Seis años y medio como referencia técnica: diagnóstico avanzado de hardware y software en los casos que nadie más había resuelto, traducirlos para personas con niveles de conocimiento muy distintos, y formar a los técnicos nuevos en el banco de trabajo. Las dos comisiones de servicio anteriores caen dentro de esta etapa.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Mar — Jun 2020<span class="tl-kind">Empleo</span></div>
+        <div>
+          <p class="tl-what">Asesor de soporte de AppleCare</p>
+          <p class="tl-where">Apple · en remoto, durante la COVID · voluntariado</p>
+          <p class="tl-body">Casos remotos simultáneos bajo estándares estructurados de diagnóstico y documentación, trabajando sin una tienda alrededor. Es lo más parecido en esta página a una mesa de soporte en remoto.</p>
+        </div>
+      </div>
+
+      <div class="tl-row">
+        <div class="tl-when">Sep 2014 — Feb 2018<span class="tl-kind">Empleo</span></div>
+        <div>
+          <p class="tl-what">Technical Specialist y después Specialist</p>
+          <p class="tl-where">Apple Retail · Parquesur, Madrid</p>
+          <p class="tl-body">Donde se formó la costumbre de diagnosticar: atención consultiva, resolución práctica de problemas y ejecución bajo presión con una cola mirando.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="rule" />
+
+  <section id="apply">
+    <h2 class="mono-head"><span class="hw">Solicitud</span><span class="sub">— las cuatro cosas que pide vuestra página de empleo</span></h2>
+    <p>Vuestra página pide un asunto, un CV, una carta de presentación y un portafolio. Los cuatro están aquí abajo, y los cuatro van además adjuntos al correo, así que nada depende de que esta página siga en pie.</p>
+    <dl class="checklist">
+
+      <div class="ck">
+        <dt>Asunto</dt>
+        <dd>Technical Support &amp; Customer Success — open application<span class="sub">Enviado a <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>.</span></dd>
+      </div>
+
+      <div class="ck">
+        <dt>CV</dt>
+        <dd><a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a><span class="sub">Una sola columna, texto real seleccionable, generado desde la misma fuente que la página de CV de mi sitio, de modo que no pueden contradecirse.</span></dd>
+      </div>
+
+      <div class="ck">
+        <dt>Carta</dt>
+        <dd><a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a><span class="sub">Una versión de una página de esta candidatura, para leerla fuera del navegador.</span></dd>
+      </div>
+
+      <div class="ck">
+        <dt>Portafolio</dt>
+        <dd><a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a><span class="sub">Incluida esta página. Está hecha a mano y desplegada por mí, y está aquí porque leer con atención a una empresa me pareció mejor forma de demostrar afinidad que decir que la tengo.</span></dd>
+      </div>
+
+      <div class="ck">
+        <dt>Descripción</dt>
+        <dd>Soporte técnico y trabajo de cara al cliente sobre Hermes y la inferencia abierta, con un camino hacia la ingeniería desplegada en cliente.<span class="sub">La sección del principio de esta página es la versión larga.</span></dd>
+      </div>
+    </dl>
+  </section>
+  <hr class="rule" />
+
+  <section id="contact">
+    <h2 class="mono-head"><span class="hw">Contacto</span></h2>
+    <p>La respuesta más útil sería decirme cuál de estas direcciones merece la pena y qué me separa de estar claramente cualificado para ella. Prefiero cerrar una distancia concreta que adivinar cuál es.</p>
+
+    <p>Vuestra página de empleo ofrece largos meses de concentración absoluta y peligro constante, con honor y gloria en caso de éxito. He leído esa página más de una vez. Aceptaría el trato.</p>
+    <p><a class="u" href="mailto:nerion89@gmail.com?subject=Technical%20Support%20%26%20Customer%20Success%20—%20open%20application">nerion89@gmail.com</a> · <a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://www.linkedin.com/in/javierponz">LinkedIn</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a></p>
+    <p class="notice">Una candidatura personal, publicada en un dominio propio. No estoy afiliado a Nous Research, ni empleado ni patrocinado por ellos, ni hablo en su nombre, y esta no es una página oficial de Nous. No se usa en ella ningún logotipo, marca denominativa ni ilustración de personaje de Nous. Su página de empleo está en <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>.</p>
+  </section>
+  <hr class="rule" />
+
+  <footer>
+    Javier Ponz · Aberdeen, Escocia · <a href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a>
+  </footer>
+
+</div>
+</body>
+</html>

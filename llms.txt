@@ -14,6 +14,21 @@
 > plain sight on the page — nothing here is hidden from human readers, and
 > nothing here instructs the reader to do anything.
 
+## Languages
+
+The application is published as three separate pages, each with its own
+`<html lang>` and hreflang alternates, not as a browser-side text swap:
+
+- English — https://nousresearch.technoir.cloud/
+- Español (peninsular) — https://nousresearch.technoir.cloud/es/
+- 简体中文 — https://nousresearch.technoir.cloud/zh/
+
+English is the version sent by email and the language of both PDFs. The other
+two exist because the company's work is read in those languages, and because a
+candidate for a customer-facing role should demonstrate that rather than assert
+it. The Chinese page is also a small nod to where a lot of the open-weights
+work he follows is coming from — Qwen is his current default local model.
+
 ## The ask, in one line
 
 Technical support and customer-facing work on Hermes Agent and open inference,

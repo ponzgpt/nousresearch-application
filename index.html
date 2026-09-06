@@ -1,15 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Javier Ponz — an open application to Nous Research</title>
 <meta name="description" content="An open application to Nous Research from Javier Ponz: technical support and customer-facing work on Hermes and open inference. Ten years at Apple Retail in diagnosis, support and team leadership." />
 <link rel="canonical" href="https://nousresearch.technoir.cloud/" />
+<link rel="alternate" hreflang="en-US" href="https://nousresearch.technoir.cloud/" />
+<link rel="alternate" hreflang="es-ES" href="https://nousresearch.technoir.cloud/es/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://nousresearch.technoir.cloud/zh/" />
+<link rel="alternate" hreflang="x-default" href="https://nousresearch.technoir.cloud/" />
 <meta property="og:title" content="Javier Ponz — an open application to Nous Research" />
 <meta property="og:description" content="Technical support and customer-facing work on Hermes and open inference, from someone who spent ten years being the human between people and their machines." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://nousresearch.technoir.cloud/" />
+<meta property="og:locale" content="en_US" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
@@ -32,13 +37,36 @@
   a{color:var(--ink)}
 
   .navbar{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
-  nav{padding:30px 0 18px;text-align:center}
+  nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
   nav a{
     font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
-    text-transform:uppercase;text-decoration:none;margin:0 16px;display:inline-block;line-height:1.9;
+    text-transform:uppercase;text-decoration:none;margin:0 10px;display:inline-block;line-height:1.9;
   }
   nav a:hover{text-decoration:underline;text-underline-offset:4px}
   nav a.home{text-decoration:underline;text-underline-offset:4px}
+
+  /* language picker — plain links, so it works with JavaScript off and a
+     crawler can follow it to the translated page */
+  .lang{position:relative;margin-left:10px}
+  .lang summary{
+    list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+    font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.08em;
+    border:1.5px solid var(--ink);padding:4px 9px;color:var(--ink);
+  }
+  .lang summary::-webkit-details-marker{display:none}
+  .lang summary:hover{background:var(--ink);color:var(--paper)}
+  .langmenu{
+    position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:172px;
+    background:var(--paper);border:1.5px solid var(--ink);padding:4px;text-align:left;
+  }
+  .langmenu a{
+    display:block;padding:8px 10px;text-decoration:none;font-family:var(--mono);
+    font-weight:400;font-size:13px;letter-spacing:.04em;text-transform:none;margin:0;
+  }
+  .langmenu a:hover{background:rgba(0,113,169,.09);text-decoration:none}
+  .langmenu a[aria-current="true"]{font-weight:700}
+  .langmenu a[aria-current="true"]::after{content:" \2713"}
+  .langmenu small{display:block;color:var(--grey);font-size:11px;letter-spacing:.06em}
 
   .rule{border:0;border-top:2px dashed var(--ink);margin:0;opacity:.9}
 
@@ -90,20 +118,20 @@
   .ck{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:16px 0;border-bottom:1px dashed rgba(0,113,169,.4)}
   .ck:last-child{border-bottom:0}
   .ck dt{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);padding-top:2px}
-  .ck dd{margin:0;font-size:15px}
+  .ck dd{margin:0;font-size:15px;overflow-wrap:anywhere}
   .ck dd .sub{display:block;color:var(--grey);font-weight:500;font-size:13.5px;margin-top:3px}
 
-  /* timeline */
   .tl{max-width:none}
   .tl-row{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
   .tl-row:last-child{border-bottom:1px dashed var(--ink)}
+  .tl-row>*{min-width:0}
   .tl-when{font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-transform:uppercase;padding-top:4px}
   .tl-kind{display:block;margin-top:6px;font-size:11px;letter-spacing:.14em;color:var(--ink);opacity:.75}
   .tl-what{font-family:var(--serif);font-weight:600;font-size:22px;line-height:1.15;text-transform:uppercase;margin:0 0 6px}
   .tl-what a{text-decoration:none}
   .tl-what a:hover{text-decoration:underline;text-underline-offset:4px}
   .tl-where{font-weight:700;font-size:14px;color:var(--grey);margin:0 0 8px}
-  .tl-body{font-weight:500;font-size:15px;line-height:1.5;margin:0;max-width:78ch}
+  .tl-body{font-weight:500;font-size:15px;line-height:1.5;margin:0;max-width:78ch;overflow-wrap:anywhere}
 
   .notice{border:2px dashed var(--ink);padding:20px 22px;max-width:70ch;font-weight:500;font-size:14.5px;line-height:1.55}
 
@@ -115,7 +143,7 @@
     .portrait{max-width:300px}
     .cvbox{max-width:300px}
     nav{padding:14px 0 10px}
-    nav a{margin:0 8px;font-size:14px;line-height:1.8}
+    nav a{margin:0 7px;font-size:14px;line-height:1.8}
     section{padding:40px 0 44px;scroll-margin-top:106px}
     #application{padding-top:34px}
     .tl-row{grid-template-columns:1fr;gap:8px}
@@ -125,7 +153,7 @@
     .checklist{padding:6px 18px 8px}
   }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Javier Ponz Prado","jobTitle":"Technical support and agent operations","description":"Ten years of technical diagnosis, customer operations and team leadership at Apple Retail; now operating open agent systems daily and shipping software to production. Applying to Nous Research for technical support and customer-facing work on Hermes and open inference.","email":"nerion89@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Aberdeen","addressCountry":"GB"},"url":"https://javierponz.technoir.cloud/","sameAs":["https://github.com/ponzgpt","https://www.linkedin.com/in/javierponz"],"seeks":{"@type":"Demand","name":"Technical support engineering / customer success at Nous Research"},"knowsAbout":["Hermes Agent","OpenClaw","Model Context Protocol","agent workflows","technical support","customer success","technical troubleshooting","llama.cpp","local inference","open weights","Omarchy","Arch Linux","Fedora","GrapheneOS","OSINT","Docker","Traefik","nginx","Linux","VPS administration","Python","JavaScript","TypeScript","Astro","Swift","CI/CD","PC hardware","overclocking"],"knowsLanguage":["es","en"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Javier Ponz Prado","jobTitle":"Technical support and agent operations","description":"An open application to Nous Research from Javier Ponz: technical support and customer-facing work on Hermes and open inference. Ten years at Apple Retail in diagnosis, support and team leadership.","email":"nerion89@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Aberdeen","addressCountry":"GB"},"url":"https://javierponz.technoir.cloud/","sameAs":["https://github.com/ponzgpt","https://www.linkedin.com/in/javierponz"],"seeks":{"@type":"Demand","name":"Technical support engineering / customer success at Nous Research"},"knowsAbout":["Hermes Agent","OpenClaw","Model Context Protocol","agent workflows","technical support","customer success","technical troubleshooting","llama.cpp","local inference","open weights","Omarchy","Arch Linux","Fedora","GrapheneOS","OSINT","Docker","Traefik","nginx","Linux","VPS administration","Python","JavaScript","TypeScript","Astro","Swift","CI/CD","PC hardware","overclocking"],"knowsLanguage":["es","en"],"inLanguage":"en-US"}</script>
 </head>
 <body>
 <div class="navbar">
@@ -137,6 +165,14 @@
       <a href="#record">Record</a>
       <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
+      <details class="lang">
+        <summary aria-label="Language">EN <span aria-hidden="true">&#9662;</span></summary>
+        <div class="langmenu">
+          <a href="/" hreflang="en-US" lang="en-US" aria-current="true">EN<small>English</small></a>
+          <a href="/es/" hreflang="es-ES" lang="es-ES">ES<small>Español</small></a>
+          <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文<small>简体中文</small></a>
+        </div>
+      </details>
     </nav>
   </div>
 </div>
@@ -171,7 +207,6 @@
 
   <section id="why">
     <h2 class="mono-head"><span class="hw">Why</span><span class="sub">— why Nous, and why not the others</span></h2>
-
     <p><span class="lead-in">An operating system</span> malleable enough for an agent to inhabit strikes me as a more interesting problem than a larger model, and probably a nearer one. Most personal computers are appliances: quick, sealed, arranged according to decisions somebody else made years ago and cannot easily revisit. For a long time that trade was reasonable, since the alternative was a machine you maintained rather than used.</p>
 
     <p>Agents change what the trade costs. An agent's usefulness is bounded by the surface it can reach, and on a sealed appliance that surface is conversation and very little else.</p>
@@ -188,7 +223,6 @@
 
   <section id="how">
     <h2 class="mono-head"><span class="hw">How</span><span class="sub">— what the practice actually looks like</span></h2>
-
     <p><span class="lead-in">I came to this through OpenClaw.</span> It was the first agent I ran seriously and it did the job I gave it. What changed my mind about the category was finding Hermes — not the model, the harness. Skills are Markdown files I can open and edit. Tools are servers I can read. The loop means the setup gets better through use rather than through me reconfiguring it every week. It took a few weeks of daily use before I was confident that difference mattered as much as I thought, and I have been more right about it than I expected: when I started I was explaining to people what Hermes was, and <span class="u">that is no longer the conversation</span>.</p>
 
     <p>Reading which tool is worth someone's time, early, and being able to say why, is close to the same work as reading what is actually wrong with a machine. Both are mostly about refusing to accept the first plausible story.</p>
@@ -286,7 +320,6 @@
           <p class="tl-body">Where the diagnostic habit was formed: consultative selling, practical problem solving, and execution under pressure with a queue watching.</p>
         </div>
       </div>
-
     </div>
   </section>
   <hr class="rule" />
@@ -295,30 +328,30 @@
     <h2 class="mono-head"><span class="hw">Apply</span><span class="sub">— the four things your careers page asks for</span></h2>
     <p>Your page asks for a subject line, a CV, a cover letter and a portfolio. All four are below, and all four are attached to the email as well, so nothing depends on this page staying up.</p>
     <dl class="checklist">
+
       <div class="ck">
         <dt>Subject</dt>
-        <dd>Technical Support &amp; Customer Success — open application
-          <span class="sub">Sent to <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>.</span></dd>
+        <dd>Technical Support &amp; Customer Success — open application<span class="sub">Sent to <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>.</span></dd>
       </div>
+
       <div class="ck">
         <dt>Resume / CV</dt>
-        <dd><a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a>
-          <span class="sub">Single column, real selectable text, generated from the same source as the CV page on my site so the two cannot disagree.</span></dd>
+        <dd><a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a><span class="sub">Single column, real selectable text, generated from the same source as the CV page on my site so the two cannot disagree.</span></dd>
       </div>
+
       <div class="ck">
         <dt>Cover letter</dt>
-        <dd><a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a>
-          <span class="sub">A one-page version of this application, for reading away from a browser.</span></dd>
+        <dd><a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a><span class="sub">A one-page version of this application, for reading away from a browser.</span></dd>
       </div>
+
       <div class="ck">
         <dt>Portfolio</dt>
-        <dd><a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a>
-          <span class="sub">Including this page. It is hand-built, deployed by me, and it is here because reading a company carefully seemed like a better way to show alignment than saying I was aligned.</span></dd>
+        <dd><a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a><span class="sub">Including this page. It is hand-built, deployed by me, and it is here because reading a company carefully seemed like a better way to show alignment than saying I was aligned.</span></dd>
       </div>
+
       <div class="ck">
         <dt>Description</dt>
-        <dd>Technical support and customer-facing work on Hermes and open inference, with a path toward forward-deployed engineering.
-          <span class="sub">The section at the top of this page is the long form of it.</span></dd>
+        <dd>Technical support and customer-facing work on Hermes and open inference, with a path toward forward-deployed engineering.<span class="sub">The section at the top of this page is the long form of it.</span></dd>
       </div>
     </dl>
   </section>
