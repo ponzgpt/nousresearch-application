@@ -58,6 +58,24 @@ const styles = `
   nav a:hover{text-decoration:underline;text-underline-offset:4px}
   nav a.home{text-decoration:underline;text-underline-offset:4px}
 
+  /* mobile-only menu button and popup — matches the "..." icon and full-screen
+     menu on nousresearch.com below their own mobile breakpoint */
+  .menu-btn{
+    display:none;position:fixed;top:16px;right:16px;z-index:40;
+    width:40px;height:40px;border:0;border-radius:10%;background:#e0e0e0;color:var(--ink);
+    align-items:center;justify-content:center;font-size:20px;letter-spacing:1px;line-height:1;cursor:pointer;
+  }
+  .menu-overlay{position:fixed;inset:0;z-index:50;background:var(--paper);overflow-y:auto;padding:72px 28px 40px}
+  .menu-overlay[hidden]{display:none}
+  .menu-close{position:fixed;top:12px;right:18px;z-index:51;background:none;border:0;padding:8px;font-size:30px;line-height:1;color:var(--ink);cursor:pointer}
+  .menu-brand{font-family:var(--headmono);font-weight:700;font-size:20px;letter-spacing:.02em;text-transform:uppercase;text-decoration:underline;text-underline-offset:6px;margin:0}
+  .menu-tag{font-family:var(--headmono);font-weight:400;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);margin:16px 0}
+  .menu-rule{border:0;border-top:1px dashed var(--ink);margin:0 0 20px;opacity:.9}
+  .menu-links{display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:22px;margin:0 0 30px;padding:0;text-align:left}
+  .menu-links a{display:block;margin:0;font-family:var(--headmono);font-weight:700;font-size:19px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+  .menu-links a:hover{text-decoration:underline}
+  .menu-links a[aria-current="true"]{text-decoration:underline}
+
   /* language picker — plain links, so it works with JavaScript off and a
      crawler can follow it to the translated page */
   .lang{position:relative;margin-left:10px}
@@ -92,6 +110,13 @@ const styles = `
   section{padding:56px 0 62px;scroll-margin-top:92px}
   #application{padding-top:52px}
   .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
+  /* explicit placement so the portrait sits beside the first two paragraphs on
+     desktop, but the mobile media query below can drop it back into reading
+     order — right after the second paragraph, like the portrait on
+     nousresearch.com/careers — without duplicating any markup */
+  .cols>.intro-text{grid-column:1;grid-row:1}
+  .cols>.portrait-block{grid-column:2;grid-row:1/3}
+  .cols>.rolelist{grid-column:1;grid-row:2}
 
   .lead-in{
     font-family:var(--serif);font-weight:600;font-size:1.6em;
@@ -121,6 +146,15 @@ const styles = `
   .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
   .cvlink:hover{background:var(--ink);color:var(--paper)}
 
+  /* condensed "what I want" list, in the same badge + title + one-liner shape
+     as the "OPEN ROLES" list on nousresearch.com/careers, values sampled from
+     its .badge/.role-title/.role-description */
+  .rolelist{margin:8px 0 0;max-width:78ch}
+  .role-item{padding:12px 0;border-bottom:1px dotted var(--ink)}
+  .role-title{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;margin:0}
+  .badge{display:inline-block;background:#007bff;color:#fff;padding:2px 6px;border-radius:1px;font-weight:700;font-size:10px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+  .role-body{margin:6px 0 0;font-size:15px;line-height:1.5}
+
   .tl{max-width:none}
   .tl-row{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
   .tl-row:last-child{border-bottom:1px dashed var(--ink)}
@@ -146,12 +180,13 @@ const styles = `
   footer a{color:var(--grey)}
 
   @media (max-width:900px){
-    .cols{grid-template-columns:1fr;gap:36px}
+    .navbar{display:none}
+    .menu-btn{display:flex}
+    .cols{grid-template-columns:1fr;gap:0}
+    .cols>.intro-text,.cols>.portrait-block,.cols>.rolelist{grid-column:1;grid-row:auto;margin-bottom:36px}
     .portrait{max-width:300px}
     .cvrow{max-width:300px}
-    nav{padding:14px 0 10px}
-    nav a{margin:0 7px;font-size:14px;line-height:1.8}
-    section{padding:40px 0 44px;scroll-margin-top:106px}
+    section{padding:40px 0 44px;scroll-margin-top:16px}
     #application{padding-top:34px}
     .tl-row{grid-template-columns:1fr;gap:8px}
     .tl-kind{display:inline;margin:0 0 0 12px}
@@ -195,6 +230,17 @@ function render(lang) {
   const alternates = langs.map((l) =>
     `<link rel="alternate" hreflang="${l.html}" href="${SITE}${l.dir ? `/${l.dir}` : '/'}" />`).join('\n');
 
+  const menuLangs = langs.map((l) => {
+    const to = l.dir ? `/${l.dir}` : '/';
+    return `<a href="${to}" hreflang="${l.html}" lang="${l.html}"${l.code === lang.code ? ' aria-current="true"' : ''}>${l.label}</a>`;
+  }).join('\n        ');
+
+  const roleList = c.application.roles.map((r) => `
+      <div class="role-item">
+        <div class="role-title"><span class="badge">${r.badge}</span>${r.title}</div>
+        <p class="role-body">${r.body}</p>
+      </div>`).join('\n');
+
   const timeline = c.record.rows.map((r) => `
       <div class="tl-row">
         <div class="tl-when">${r.when}<span class="tl-kind">${c.record.kinds[r.kind]}</span></div>
@@ -227,6 +273,29 @@ ${alternates}
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body>
+<button class="menu-btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menuOverlay" aria-expanded="false" aria-label="Menu">&#8226;&#8226;&#8226;</button>
+
+<div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">&times;</button>
+  <p class="menu-brand">Javier Ponz</p>
+  <p class="menu-tag">${c.menuTag}</p>
+  <hr class="menu-rule" />
+  <nav class="menu-links">
+    ${navLinks}
+  </nav>
+  <hr class="menu-rule" />
+  <nav class="menu-links">
+    <a href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>${c.cvBtn}</a>
+    <a href="/javier-ponz-prado-cover-letter.pdf" download>${c.clBtn}</a>
+    <a href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a>
+    <a href="https://github.com/ponzgpt">github.com/ponzgpt</a>
+  </nav>
+  <hr class="menu-rule" />
+  <nav class="menu-links">
+    ${menuLangs}
+  </nav>
+</div>
+
 <div class="navbar">
   <div class="shell">
     <nav>
@@ -247,10 +316,11 @@ ${alternates}
   <section id="application">
     <h1 class="block">${c.block}</h1>
     <div class="cols">
-      <div>
-${c.application.map((p) => `        <p>${p}</p>`).join('\n\n')}
+      <div class="intro-text">
+        <p>${c.application.mission}</p>
+        <p>${c.application.bio}</p>
       </div>
-      <div>
+      <div class="portrait-block">
         <div class="portrait">
           <img src="/javier-sketch.jpg" alt="${c.portraitAlt}" width="720" height="960" />
         </div>
@@ -258,6 +328,9 @@ ${c.application.map((p) => `        <p>${p}</p>`).join('\n\n')}
           <a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>${c.cvBtn}</a>
           <a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>${c.clBtn}</a>
         </div>
+      </div>
+      <div class="rolelist">
+${roleList}
       </div>
     </div>
   </section>
@@ -306,6 +379,21 @@ ${c.contact.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var btn = document.getElementById('menuBtn');
+  var overlay = document.getElementById('menuOverlay');
+  var close = document.getElementById('menuClose');
+  function open() { overlay.hidden = false; document.body.style.overflow = 'hidden'; btn.setAttribute('aria-expanded', 'true'); }
+  function shut() { overlay.hidden = true; document.body.style.overflow = ''; btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('click', open);
+  close.addEventListener('click', shut);
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) shut(); });
+  overlay.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', shut); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') shut(); });
+})();
+</script>
 </body>
 </html>
 `;

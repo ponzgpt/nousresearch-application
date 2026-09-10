@@ -26,18 +26,20 @@ export const content = {
     desc: 'An open application to Nous Research from Javier Ponz: technical support and customer-facing work on Hermes and open inference. Ten years at Apple Retail in diagnosis, support and team leadership.',
     ogDesc: 'Technical support and customer-facing work on Hermes and open inference, from someone who spent ten years being the human between people and their machines.',
     nav: ['Why', 'How', 'Record', 'Contact'],
+    menuTag: 'Technical support, open inference',
     block: 'APPLICATION',
     cvBtn: '&#8595; CV',
     clBtn: '&#8595; CL',
     portraitAlt: 'Pencil-sketch portrait of Javier Ponz',
-    application: [
-      `${L('My mission')} is the same one on your careers page, read from the support side instead of the research side: powerful AI only reaches the many if somebody is willing to sit with the ones who do not yet know how to use it. That is not a coincidence of phrasing. It is the reason I am writing this page instead of a different one.`,
-      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Apple Genius, now building agent systems in Aberdeen. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.`,
-      `${L('What I would like to do')} at Nous is ${U('technical support and customer-facing work')}: helping people actually adopt Hermes and run open models, and turning a broken situation into either a fix or a clear account of why it is not one. Ten years at Apple Retail were spent being the human between people and their machines — diagnosis at the Genius Bar, AppleCare calls through the first COVID months, selling to people who did not yet know what they needed, and two stints leading in-store experience across Madrid. I would be proud to be that interface for Nous.`,
-      `The specific thing I am good at is ${U('translating between layers')}: what the engineer means, what the sale promised, and what the person in front of you actually has on their screen. That is one job, not three, and most support failures are a translation failure rather than a technical one.`,
-      `${L('The job I want eventually')} is ${U('forward-deployed engineering')}, and I will say plainly that I am not qualified for it today. I have been learning this stack for two years. I would not put myself forward for the FDE posting; what I would like is a junior or supporting role near that work — carrying real support load, and being useful to the FDE team while I close the gap. I learn fast in front of a live problem. That is the only environment I have ever learned anything in.`,
-      `${L('On where I work.')} Remote suits me and I am set up for it. I am also happy to travel, and I would consider relocating: I already left my country once, for Scotland, with my partner. Moving for work that matters is a decision I have made before.`
-    ],
+    application: {
+      mission: `${L('My mission')} is the same one on your careers page, read from the support side instead of the research side: powerful AI only reaches the many if somebody is willing to sit with the ones who do not yet know how to use it. That is not a coincidence of phrasing. It is the reason I am writing this page instead of a different one.`,
+      bio: `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Apple Genius, now building agent systems in Aberdeen. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.`,
+      roles: [
+        { badge: 'Support', title: 'Technical support and customer-facing work', body: 'Helping people actually adopt Hermes and run open models — translating between what the engineer means, what the sale promised, and what is really on the screen. Ten years of that exact job at Apple Retail.' },
+        { badge: 'Not yet', title: 'Forward-deployed engineering', body: 'Two years into this stack, not ready for the FDE posting itself. I want a junior or supporting role near that work, carrying real support load while I close the gap.' },
+        { badge: 'Logistics', title: 'Remote, or willing to relocate', body: 'Set up to work remote, happy to travel, and I have moved countries for work before — for Scotland, with my partner.' }
+      ]
+    },
     why: { head: 'Why', sub: '— why Nous, and why not the others', paras: [
       `${L('An operating system')} malleable enough for an agent to inhabit strikes me as a more interesting problem than a larger model, and probably a nearer one. Most personal computers are appliances: quick, sealed, arranged according to decisions somebody else made years ago and cannot easily revisit. For a long time that trade was reasonable, since the alternative was a machine you maintained rather than used.`,
       `Agents change what the trade costs. An agent's usefulness is bounded by the surface it can reach, and on a sealed appliance that surface is conversation and very little else.`,
@@ -84,18 +86,20 @@ export const content = {
     desc: 'Candidatura abierta a Nous Research de Javier Ponz: soporte técnico y trato con clientes sobre Hermes e inferencia abierta. Diez años en Apple Retail en diagnóstico, atención y dirección de equipos.',
     ogDesc: 'Soporte técnico y trato con clientes sobre Hermes e inferencia abierta, de alguien que pasó diez años siendo la persona entre la gente y sus máquinas.',
     nav: ['Por qué', 'Cómo', 'Trayectoria', 'Contacto'],
+    menuTag: 'Soporte técnico, inferencia abierta',
     block: 'CANDIDATURA',
     cvBtn: '&#8595; CV',
     clBtn: '&#8595; CL',
     portraitAlt: 'Retrato a lápiz de Javier Ponz',
-    application: [
-      `${L('Mi misión')} es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.`,
-      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.`,
-      `${L('Lo que me gustaría hacer')} en Nous es ${U('soporte técnico y trabajo de cara al cliente')}: ayudar a que la gente adopte Hermes de verdad y ejecute modelos abiertos, y convertir una situación rota en un arreglo o en una explicación clara de por qué no lo es. Pasé diez años en Apple Retail siendo la persona entre la gente y sus máquinas: diagnóstico en el Genius Bar, llamadas de AppleCare durante los primeros meses de la COVID, vender a personas que aún no sabían qué necesitaban, y dos etapas dirigiendo la experiencia en tienda en Madrid. Me llenaría de orgullo ser esa interfaz para Nous.`,
-      `Lo concreto que se me da bien es ${U('traducir entre capas')}: lo que quiere decir el ingeniero, lo que prometió la venta y lo que la persona que tienes delante tiene de verdad en su pantalla. Eso es un solo trabajo, no tres, y la mayoría de los fallos de soporte son fallos de traducción, no fallos técnicos.`,
-      `${L('El puesto que quiero a la larga')} es ${U('ingeniería desplegada en cliente')}, y lo digo sin rodeos: hoy no estoy cualificado para él. Llevo dos años aprendiendo esta pila. No me presentaría a la oferta de FDE; lo que me gustaría es un puesto júnior o de apoyo cerca de ese trabajo, asumiendo carga real de soporte y siendo útil al equipo de FDE mientras cierro la distancia. Aprendo rápido delante de un problema real. Es el único entorno en el que he aprendido algo.`,
-      `${L('Sobre dónde trabajo.')} El remoto me encaja y estoy montado para ello. También viajo sin problema, y me plantearía mudarme: ya dejé mi país una vez, para venir a Escocia, con mi pareja. Mudarme por un trabajo que importa es una decisión que ya he tomado.`
-    ],
+    application: {
+      mission: `${L('Mi misión')} es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.`,
+      bio: `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.`,
+      roles: [
+        { badge: 'Soporte', title: 'Soporte técnico y trato con clientes', body: 'Ayudar a que la gente adopte Hermes de verdad y ejecute modelos abiertos: traducir entre lo que quiere decir el ingeniero, lo que prometió la venta y lo que hay de verdad en la pantalla. Diez años haciendo exactamente eso en Apple Retail.' },
+        { badge: 'Todavía no', title: 'Ingeniería desplegada en cliente', body: 'Dos años en esta pila, no estoy listo para la oferta de FDE en sí. Quiero un puesto júnior o de apoyo cerca de ese trabajo, asumiendo carga real de soporte mientras cierro la distancia.' },
+        { badge: 'Logística', title: 'En remoto, o dispuesto a mudarme', body: 'Montado para trabajar en remoto, viajo sin problema, y ya he cambiado de país por trabajo: a Escocia, con mi pareja.' }
+      ]
+    },
     why: { head: 'Por qué', sub: '— por qué Nous, y por qué no los demás', paras: [
       `${L('Un sistema operativo')} lo bastante moldeable como para que un agente pueda habitarlo me parece un problema más interesante que un modelo más grande, y probablemente más cercano. La mayoría de los ordenadores personales son electrodomésticos: rápidos, sellados, ordenados según decisiones que tomó otro hace años y que no se pueden revisar con facilidad. Durante mucho tiempo ese trato fue razonable, porque la alternativa era una máquina que mantenías en vez de usar.`,
       `Los agentes cambian lo que cuesta ese trato. La utilidad de un agente está limitada por la superficie que alcanza, y en un aparato sellado esa superficie es la conversación y poco más.`,
@@ -142,18 +146,20 @@ export const content = {
     desc: 'Javier Ponz 向 Nous Research 提交的公开求职：围绕 Hermes 与开放推理的技术支持与客户面向工作。在 Apple Retail 从事诊断、支持与团队管理十年。',
     ogDesc: '围绕 Hermes 与开放推理的技术支持与客户面向工作，来自一个用十年时间做“人与机器之间那个人”的人。',
     nav: ['为什么', '怎么做', '经历', '联系'],
+    menuTag: '技术支持，开放推理',
     block: '自荐信',
     cvBtn: '&#8595; 简历',
     clBtn: '&#8595; 求职信',
     portraitAlt: 'Javier Ponz 的铅笔素描肖像',
-    application: [
-      `${L('我的使命')}和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。`,
-      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。`,
-      `${L('我想做的')}是 Nous 的${U('技术支持与面向客户的工作')}：帮助人们真正用起 Hermes、跑起开放模型，并把一个坏掉的状况变成一个修复，或者一份说清楚“为什么修不了”的交代。我在 Apple Retail 的十年，就是在做人与机器之间的那个人——Genius Bar 的诊断、疫情最初几个月的 AppleCare 电话、向还不知道自己需要什么的人做销售，以及在马德里两段负责店内体验的经历。能成为 Nous 的那个接口，我会引以为荣。`,
-      `我具体擅长的是${U('在层与层之间做翻译')}：工程师的意思、销售的承诺，以及眼前这个人屏幕上真正显示的东西。这是一份工作，不是三份；而大多数支持上的失败是翻译失败，不是技术失败。`,
-      `${L('我最终想要的岗位')}是${U('前置部署工程（FDE）')}，而我直说：今天我还不够格。这套技术栈我学了两年。我不会去投 FDE 这个职位；我想要的是那份工作旁边的初级或支持性岗位——承担真实的支持负荷，在补上差距的同时对 FDE 团队有用。我在活生生的问题面前学得快。那是我唯一学会过东西的环境。`,
-      `${L('关于工作地点。')} 远程适合我，我也已经为此配置好了。我同样乐意出差，也会考虑搬迁：我已经为了苏格兰离开过一次自己的国家，和我的伴侣一起。为一份重要的工作搬家，这个决定我做过。`
-    ],
+    application: {
+      mission: `${L('我的使命')}和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。`,
+      bio: `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。`,
+      roles: [
+        { badge: '技术支持', title: '技术支持与面向客户的工作', body: '帮助人们真正用起 Hermes、跑起开放模型——在工程师的意思、销售的承诺和屏幕上真正显示的东西之间做翻译。我在 Apple Retail 做的正是这个，做了十年。' },
+        { badge: '还不行', title: '前置部署工程（FDE）', body: '这套技术栈我学了两年，还没准备好投 FDE 这个职位本身。我想要那份工作旁边的初级或支持性岗位，在补上差距的同时承担真实的支持负荷。' },
+        { badge: '安排', title: '远程优先，也愿意搬迁', body: '已经为远程工作做好准备，也乐意出差；我已经为了工作搬过一次家——去苏格兰，和我的伴侣一起。' }
+      ]
+    },
     why: { head: '为什么', sub: '— 为什么是 Nous，而不是别家', paras: [
       `${L('一个操作系统')}，可塑到足以让智能体住进去——在我看来这比更大的模型更有意思，也大概更近。大多数个人电脑是家电：快、封闭，按别人多年前做的决定排布，而那些决定不容易再回头改。很长一段时间这笔交易是合理的，因为另一种选择是一台你得维护而不是使用的机器。`,
       `智能体改变了这笔交易的代价。一个智能体的用处，被它能触及的界面所限；而在一台封闭的家电上，那个界面就是对话，几乎没有别的。`,
