@@ -19,16 +19,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
 <style>
+  @font-face{
+    /* Same variable font Nous uses for headings, self-hosted nowhere near
+       reliably enough on Google Fonts, so pulled from its own npm package. */
+    font-family:"Geist Mono";
+    src:url("https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-mono/GeistMono-Variable.woff2") format("woff2");
+    font-weight:100 900;
+    font-style:normal;
+    font-display:swap;
+  }
   :root{
-    /* Sampled from nousresearch.com. The value in use before was #0d78ad,
-       which turned out to be an anti-aliased edge pixel rather than the fill. */
-    --ink:#0071a9;
+    /* Sampled directly from the computed style of nousresearch.com/careers. */
+    --ink:#0171a9;
     --paper:#ffffff;
     --grey:#5c6d78;
     --max:1100px;
     --serif:"EB Garamond",Georgia,"Times New Roman",serif;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --mono:"Courier Prime","Courier New",Courier,monospace;
+    --headmono:"Geist Mono","Courier Prime",monospace;
   }
   *{box-sizing:border-box}
   html{background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
@@ -70,15 +79,10 @@
 
   .rule{border:0;border-top:2px dashed var(--ink);margin:0;opacity:.9}
 
-  .disclaimer{
-    font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.1em;
-    text-transform:uppercase;color:var(--grey);margin:0 0 22px;
-  }
-
   .block{
     display:inline-block;background:var(--ink);color:var(--paper);
-    font-family:var(--sans);font-weight:700;font-size:clamp(21px,2.1vw,30px);
-    letter-spacing:.01em;padding:2px 10px 5px;margin:0 0 62px;
+    font-family:var(--headmono);font-weight:600;font-size:clamp(24px,2.4vw,32px);
+    letter-spacing:-.05em;padding:0;margin:0 0 62px;
   }
 
   section{padding:56px 0 62px;scroll-margin-top:92px}
@@ -106,11 +110,11 @@
   .mono-head .hw{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
   .mono-head .sub{font-family:var(--sans);font-weight:700;font-size:.62em;letter-spacing:0;text-transform:none;color:var(--grey);margin-left:14px}
 
-  .portrait{border:1px solid rgba(0,113,169,.45);border-radius:12px;overflow:hidden;background:#fff;padding:16px 14px 8px}
-  .portrait img{display:block;width:100%;height:auto}
+  /* floating, unframed — matches the portrait on nousresearch.com/careers */
+  .portrait img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
 
-  .cvbox{margin:0 0 12px;max-width:none}
-  .cvlink{display:block;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
+  .cvrow{display:flex;gap:10px;margin:14px 0 0;max-width:none}
+  .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
   .cvlink:hover{background:var(--ink);color:var(--paper)}
 
   /* the four things their careers page asks an applicant to send */
@@ -141,7 +145,7 @@
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
     .portrait{max-width:300px}
-    .cvbox{max-width:300px}
+    .cvrow{max-width:300px}
     nav{padding:14px 0 10px}
     nav a{margin:0 7px;font-size:14px;line-height:1.8}
     section{padding:40px 0 44px;scroll-margin-top:106px}
@@ -180,10 +184,11 @@
 <div class="shell">
 
   <section id="application">
-    <p class="disclaimer">独立求职页面 · 并非 Nous Research 官方页面</p>
     <h1 class="block">自荐信</h1>
     <div class="cols">
       <div>
+        <p><span class="lead-in">我的使命</span>和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。</p>
+
         <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
 
         <p><span class="lead-in">我想做的</span>是 Nous 的<span class="u">技术支持与面向客户的工作</span>：帮助人们真正用起 Hermes、跑起开放模型，并把一个坏掉的状况变成一个修复，或者一份说清楚“为什么修不了”的交代。我在 Apple Retail 的十年，就是在做人与机器之间的那个人——Genius Bar 的诊断、疫情最初几个月的 AppleCare 电话、向还不知道自己需要什么的人做销售，以及在马德里两段负责店内体验的经历。能成为 Nous 的那个接口，我会引以为荣。</p>
@@ -195,10 +200,12 @@
         <p><span class="lead-in">关于工作地点。</span> 远程适合我，我也已经为此配置好了。我同样乐意出差，也会考虑搬迁：我已经为了苏格兰离开过一次自己的国家，和我的伴侣一起。为一份重要的工作搬家，这个决定我做过。</p>
       </div>
       <div>
-        <p class="cvbox"><a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>&#8595; 下载简历（PDF）</a></p>
-        <p class="cvbox"><a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>&#8595; 求职信（PDF）</a></p>
         <div class="portrait">
           <img src="/javier-sketch.jpg" alt="Javier Ponz 的铅笔素描肖像" width="720" height="960" />
+        </div>
+        <div class="cvrow">
+          <a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>&#8595; 简历</a>
+          <a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>&#8595; 求职信</a>
         </div>
       </div>
     </div>

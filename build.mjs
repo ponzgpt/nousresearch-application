@@ -23,16 +23,25 @@ const root = dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://nousresearch.technoir.cloud';
 
 const styles = `
+  @font-face{
+    /* Same variable font Nous uses for headings, self-hosted nowhere near
+       reliably enough on Google Fonts, so pulled from its own npm package. */
+    font-family:"Geist Mono";
+    src:url("https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-mono/GeistMono-Variable.woff2") format("woff2");
+    font-weight:100 900;
+    font-style:normal;
+    font-display:swap;
+  }
   :root{
-    /* Sampled from nousresearch.com. The value in use before was #0d78ad,
-       which turned out to be an anti-aliased edge pixel rather than the fill. */
-    --ink:#0071a9;
+    /* Sampled directly from the computed style of nousresearch.com/careers. */
+    --ink:#0171a9;
     --paper:#ffffff;
     --grey:#5c6d78;
     --max:1100px;
     --serif:"EB Garamond",Georgia,"Times New Roman",serif;
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --mono:"Courier Prime","Courier New",Courier,monospace;
+    --headmono:"Geist Mono","Courier Prime",monospace;
   }
   *{box-sizing:border-box}
   html{background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
@@ -74,15 +83,10 @@ const styles = `
 
   .rule{border:0;border-top:2px dashed var(--ink);margin:0;opacity:.9}
 
-  .disclaimer{
-    font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.1em;
-    text-transform:uppercase;color:var(--grey);margin:0 0 22px;
-  }
-
   .block{
     display:inline-block;background:var(--ink);color:var(--paper);
-    font-family:var(--sans);font-weight:700;font-size:clamp(21px,2.1vw,30px);
-    letter-spacing:.01em;padding:2px 10px 5px;margin:0 0 62px;
+    font-family:var(--headmono);font-weight:600;font-size:clamp(24px,2.4vw,32px);
+    letter-spacing:-.05em;padding:0;margin:0 0 62px;
   }
 
   section{padding:56px 0 62px;scroll-margin-top:92px}
@@ -110,11 +114,11 @@ const styles = `
   .mono-head .hw{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
   .mono-head .sub{font-family:var(--sans);font-weight:700;font-size:.62em;letter-spacing:0;text-transform:none;color:var(--grey);margin-left:14px}
 
-  .portrait{border:1px solid rgba(0,113,169,.45);border-radius:12px;overflow:hidden;background:#fff;padding:16px 14px 8px}
-  .portrait img{display:block;width:100%;height:auto}
+  /* floating, unframed — matches the portrait on nousresearch.com/careers */
+  .portrait img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
 
-  .cvbox{margin:0 0 12px;max-width:none}
-  .cvlink{display:block;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
+  .cvrow{display:flex;gap:10px;margin:14px 0 0;max-width:none}
+  .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
   .cvlink:hover{background:var(--ink);color:var(--paper)}
 
   /* the four things their careers page asks an applicant to send */
@@ -145,7 +149,7 @@ const styles = `
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
     .portrait{max-width:300px}
-    .cvbox{max-width:300px}
+    .cvrow{max-width:300px}
     nav{padding:14px 0 10px}
     nav a{margin:0 7px;font-size:14px;line-height:1.8}
     section{padding:40px 0 44px;scroll-margin-top:106px}
@@ -249,17 +253,18 @@ ${alternates}
 <div class="shell">
 
   <section id="application">
-    <p class="disclaimer">${c.disclaimer}</p>
     <h1 class="block">${c.block}</h1>
     <div class="cols">
       <div>
 ${c.application.map((p) => `        <p>${p}</p>`).join('\n\n')}
       </div>
       <div>
-        <p class="cvbox"><a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>${c.cvBtn}</a></p>
-        <p class="cvbox"><a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>${c.clBtn}</a></p>
         <div class="portrait">
           <img src="/javier-sketch.jpg" alt="${c.portraitAlt}" width="720" height="960" />
+        </div>
+        <div class="cvrow">
+          <a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>${c.cvBtn}</a>
+          <a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>${c.clBtn}</a>
         </div>
       </div>
     </div>
