@@ -117,14 +117,6 @@
   .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
   .cvlink:hover{background:var(--ink);color:var(--paper)}
 
-  /* the four things their careers page asks an applicant to send */
-  .checklist{border:2px dashed var(--ink);padding:6px 26px 8px;margin:0 0 26px;max-width:90ch}
-  .ck{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:16px 0;border-bottom:1px dashed rgba(0,113,169,.4)}
-  .ck:last-child{border-bottom:0}
-  .ck dt{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);padding-top:2px}
-  .ck dd{margin:0;font-size:15px;overflow-wrap:anywhere}
-  .ck dd .sub{display:block;color:var(--grey);font-weight:500;font-size:13.5px;margin-top:3px}
-
   .tl{max-width:none}
   .tl-row{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
   .tl-row:last-child{border-bottom:1px dashed var(--ink)}
@@ -137,7 +129,14 @@
   .tl-where{font-weight:700;font-size:14px;color:var(--grey);margin:0 0 8px}
   .tl-body{font-weight:500;font-size:15px;line-height:1.5;margin:0;max-width:78ch;overflow-wrap:anywhere}
 
-  .notice{border:2px dashed var(--ink);padding:20px 22px;max-width:70ch;font-weight:500;font-size:14.5px;line-height:1.55}
+  /* matches the "if nothing fits" callout on nousresearch.com/careers exactly */
+  .footnote{
+    display:flex;align-items:flex-start;max-width:70ch;
+    background:var(--ink);color:var(--paper);border-left:5px solid #00547e;border-radius:1px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);padding:.8rem 1.8rem;
+    font-family:var(--sans);font-weight:500;font-size:14.5px;line-height:1.6;letter-spacing:.02em;
+  }
+  .footnote .info-icon{width:20px;height:20px;min-width:20px;margin:3px 12px 0 0;flex-shrink:0}
 
   footer{padding:34px 0 64px;font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-align:center;text-transform:uppercase}
   footer a{color:var(--grey)}
@@ -153,8 +152,7 @@
     .tl-row{grid-template-columns:1fr;gap:8px}
     .tl-kind{display:inline;margin:0 0 0 12px}
     .mono-head .sub{display:block;margin:8px 0 0}
-    .ck{grid-template-columns:1fr;gap:6px}
-    .checklist{padding:6px 18px 8px}
+    .footnote{padding:.7rem 1.1rem}
   }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Javier Ponz Prado","jobTitle":"Technical support and agent operations","description":"An open application to Nous Research from Javier Ponz: technical support and customer-facing work on Hermes and open inference. Ten years at Apple Retail in diagnosis, support and team leadership.","email":"nerion89@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Aberdeen","addressCountry":"GB"},"url":"https://javierponz.technoir.cloud/","sameAs":["https://github.com/ponzgpt","https://www.linkedin.com/in/javierponz"],"seeks":{"@type":"Demand","name":"Technical support engineering / customer success at Nous Research"},"knowsAbout":["Hermes Agent","OpenClaw","Model Context Protocol","agent workflows","technical support","customer success","technical troubleshooting","llama.cpp","local inference","open weights","Omarchy","Arch Linux","Fedora","GrapheneOS","OSINT","Docker","Traefik","nginx","Linux","VPS administration","Python","JavaScript","TypeScript","Astro","Swift","CI/CD","PC hardware","overclocking"],"knowsLanguage":["es","en"],"inLanguage":"en-US"}</script>
@@ -167,7 +165,6 @@
       <a href="#why">Why</a>
       <a href="#how">How</a>
       <a href="#record">Record</a>
-      <a href="#apply">Apply</a>
       <a href="#contact">Contact</a>
       <details class="lang">
         <summary aria-label="Language">EN <span aria-hidden="true">&#9662;</span></summary>
@@ -331,46 +328,16 @@
   </section>
   <hr class="rule" />
 
-  <section id="apply">
-    <h2 class="mono-head"><span class="hw">Apply</span><span class="sub">— the four things your careers page asks for</span></h2>
-    <p>Your page asks for a subject line, a CV, a cover letter and a portfolio. All four are below, and all four are attached to the email as well, so nothing depends on this page staying up.</p>
-    <dl class="checklist">
-
-      <div class="ck">
-        <dt>Subject</dt>
-        <dd>Technical Support &amp; Customer Success — open application<span class="sub">Sent to <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>.</span></dd>
-      </div>
-
-      <div class="ck">
-        <dt>Resume / CV</dt>
-        <dd><a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a><span class="sub">Single column, real selectable text, generated from the same source as the CV page on my site so the two cannot disagree.</span></dd>
-      </div>
-
-      <div class="ck">
-        <dt>Cover letter</dt>
-        <dd><a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a><span class="sub">A one-page version of this application, for reading away from a browser.</span></dd>
-      </div>
-
-      <div class="ck">
-        <dt>Portfolio</dt>
-        <dd><a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a><span class="sub">Including this page. It is hand-built, deployed by me, and it is here because reading a company carefully seemed like a better way to show alignment than saying I was aligned.</span></dd>
-      </div>
-
-      <div class="ck">
-        <dt>Description</dt>
-        <dd>Technical support and customer-facing work on Hermes and open inference, with a path toward forward-deployed engineering.<span class="sub">The section at the top of this page is the long form of it.</span></dd>
-      </div>
-    </dl>
-  </section>
-  <hr class="rule" />
-
   <section id="contact">
     <h2 class="mono-head"><span class="hw">Contact</span></h2>
     <p>The most useful reply would tell me which of these directions is worth pursuing and what stands between me and being obviously qualified for it. I would rather close a specific gap than guess at one.</p>
 
     <p>Your careers page offers long months of complete focus and constant danger, with honor and glory in the event of success. I have read that page more than once. I would take the trade.</p>
     <p><a class="u" href="mailto:nerion89@gmail.com?subject=Technical%20Support%20%26%20Customer%20Success%20—%20open%20application">nerion89@gmail.com</a> · <a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://www.linkedin.com/in/javierponz">LinkedIn</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a></p>
-    <p class="notice">A personal application, published on a domain of my own. I am not affiliated with, employed by, sponsored by or speaking for Nous Research, and this is not an official Nous page. No Nous logo, wordmark or character artwork is used anywhere on it. Their careers page is at <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>.</p>
+    <div class="footnote">
+      <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+      <span>A personal application, published on a domain of my own. Not an official Nous Research page, and no Nous branding appears on it.</span>
+    </div>
   </section>
   <hr class="rule" />
 

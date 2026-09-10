@@ -121,14 +121,6 @@ const styles = `
   .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
   .cvlink:hover{background:var(--ink);color:var(--paper)}
 
-  /* the four things their careers page asks an applicant to send */
-  .checklist{border:2px dashed var(--ink);padding:6px 26px 8px;margin:0 0 26px;max-width:90ch}
-  .ck{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:16px 0;border-bottom:1px dashed rgba(0,113,169,.4)}
-  .ck:last-child{border-bottom:0}
-  .ck dt{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);padding-top:2px}
-  .ck dd{margin:0;font-size:15px;overflow-wrap:anywhere}
-  .ck dd .sub{display:block;color:var(--grey);font-weight:500;font-size:13.5px;margin-top:3px}
-
   .tl{max-width:none}
   .tl-row{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:18px 0;border-top:1px dashed var(--ink)}
   .tl-row:last-child{border-bottom:1px dashed var(--ink)}
@@ -141,7 +133,14 @@ const styles = `
   .tl-where{font-weight:700;font-size:14px;color:var(--grey);margin:0 0 8px}
   .tl-body{font-weight:500;font-size:15px;line-height:1.5;margin:0;max-width:78ch;overflow-wrap:anywhere}
 
-  .notice{border:2px dashed var(--ink);padding:20px 22px;max-width:70ch;font-weight:500;font-size:14.5px;line-height:1.55}
+  /* matches the "if nothing fits" callout on nousresearch.com/careers exactly */
+  .footnote{
+    display:flex;align-items:flex-start;max-width:70ch;
+    background:var(--ink);color:var(--paper);border-left:5px solid #00547e;border-radius:1px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);padding:.8rem 1.8rem;
+    font-family:var(--sans);font-weight:500;font-size:14.5px;line-height:1.6;letter-spacing:.02em;
+  }
+  .footnote .info-icon{width:20px;height:20px;min-width:20px;margin:3px 12px 0 0;flex-shrink:0}
 
   footer{padding:34px 0 64px;font-family:var(--mono);font-weight:400;font-size:13px;letter-spacing:.06em;color:var(--grey);text-align:center;text-transform:uppercase}
   footer a{color:var(--grey)}
@@ -157,12 +156,11 @@ const styles = `
     .tl-row{grid-template-columns:1fr;gap:8px}
     .tl-kind{display:inline;margin:0 0 0 12px}
     .mono-head .sub{display:block;margin:8px 0 0}
-    .ck{grid-template-columns:1fr;gap:6px}
-    .checklist{padding:6px 18px 8px}
+    .footnote{padding:.7rem 1.1rem}
   }
 `;
 
-const ids = ['why', 'how', 'record', 'apply', 'contact'];
+const ids = ['why', 'how', 'record', 'contact'];
 
 function render(lang) {
   const c = content[lang.code];
@@ -205,12 +203,6 @@ function render(lang) {
           <p class="tl-where">${r.where}</p>
           <p class="tl-body">${r.body}</p>
         </div>
-      </div>`).join('\n');
-
-  const checklist = c.apply.items.map((i) => `
-      <div class="ck">
-        <dt>${i.dt}</dt>
-        <dd>${i.dd}<span class="sub">${i.note}</span></dd>
       </div>`).join('\n');
 
   return `<!doctype html>
@@ -298,20 +290,14 @@ ${timeline}
   </section>
   <hr class="rule" />
 
-  <section id="apply">
-    <h2 class="mono-head"><span class="hw">${c.apply.head}</span><span class="sub">${c.apply.sub}</span></h2>
-    <p>${c.apply.intro}</p>
-    <dl class="checklist">
-${checklist}
-    </dl>
-  </section>
-  <hr class="rule" />
-
   <section id="contact">
     <h2 class="mono-head"><span class="hw">${c.contact.head}</span></h2>
 ${c.contact.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
     <p><a class="u" href="mailto:nerion89@gmail.com?subject=${c.contact.mailSubject}">nerion89@gmail.com</a> · <a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://www.linkedin.com/in/javierponz">LinkedIn</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a></p>
-    <p class="notice">${c.contact.notice}</p>
+    <div class="footnote">
+      <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+      <span>${c.contact.notice}</span>
+    </div>
   </section>
   <hr class="rule" />
 

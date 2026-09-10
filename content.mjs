@@ -25,7 +25,7 @@ export const content = {
     title: 'Javier Ponz — an open application to Nous Research',
     desc: 'An open application to Nous Research from Javier Ponz: technical support and customer-facing work on Hermes and open inference. Ten years at Apple Retail in diagnosis, support and team leadership.',
     ogDesc: 'Technical support and customer-facing work on Hermes and open inference, from someone who spent ten years being the human between people and their machines.',
-    nav: ['Why', 'How', 'Record', 'Apply', 'Contact'],
+    nav: ['Why', 'How', 'Record', 'Contact'],
     block: 'APPLICATION',
     cvBtn: '&#8595; CV',
     clBtn: '&#8595; CL',
@@ -70,20 +70,11 @@ export const content = {
       { when: 'Mar — Jun 2020', kind: 'work', what: 'AppleCare Support Advisor', where: 'Apple · remote, during COVID · volunteering', body: 'Concurrent remote cases under structured troubleshooting and documentation standards, working without a floor around me. The closest thing on this page to a remote support desk.' },
       { when: 'Sep 2014 — Feb 2018', kind: 'work', what: 'Technical Specialist, then Specialist', where: 'Apple Retail · Parquesur, Madrid', body: 'Where the diagnostic habit was formed: consultative selling, practical problem solving, and execution under pressure with a queue watching.' }
     ] },
-    apply: { head: 'Apply', sub: '— the four things your careers page asks for',
-      intro: 'Your page asks for a subject line, a CV, a cover letter and a portfolio. All four are below, and all four are attached to the email as well, so nothing depends on this page staying up.',
-      items: [
-        { dt: 'Subject', dd: 'Technical Support &amp; Customer Success — open application', note: 'Sent to <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>.' },
-        { dt: 'Resume / CV', dd: '<a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a>', note: 'Single column, real selectable text, generated from the same source as the CV page on my site so the two cannot disagree.' },
-        { dt: 'Cover letter', dd: '<a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a>', note: 'A one-page version of this application, for reading away from a browser.' },
-        { dt: 'Portfolio', dd: '<a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a>', note: 'Including this page. It is hand-built, deployed by me, and it is here because reading a company carefully seemed like a better way to show alignment than saying I was aligned.' },
-        { dt: 'Description', dd: 'Technical support and customer-facing work on Hermes and open inference, with a path toward forward-deployed engineering.', note: 'The section at the top of this page is the long form of it.' }
-      ] },
     contact: { head: 'Contact', paras: [
       'The most useful reply would tell me which of these directions is worth pursuing and what stands between me and being obviously qualified for it. I would rather close a specific gap than guess at one.',
       'Your careers page offers long months of complete focus and constant danger, with honor and glory in the event of success. I have read that page more than once. I would take the trade.'
     ], mailSubject: 'Technical%20Support%20%26%20Customer%20Success%20—%20open%20application',
-      notice: 'A personal application, published on a domain of my own. I am not affiliated with, employed by, sponsored by or speaking for Nous Research, and this is not an official Nous page. No Nous logo, wordmark or character artwork is used anywhere on it. Their careers page is at <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>.' },
+      notice: 'A personal application, published on a domain of my own. Not an official Nous Research page, and no Nous branding appears on it.' },
     footer: 'Javier Ponz · Aberdeen, Scotland'
   },
 
@@ -92,7 +83,7 @@ export const content = {
     title: 'Javier Ponz — candidatura abierta a Nous Research',
     desc: 'Candidatura abierta a Nous Research de Javier Ponz: soporte técnico y trato con clientes sobre Hermes e inferencia abierta. Diez años en Apple Retail en diagnóstico, atención y dirección de equipos.',
     ogDesc: 'Soporte técnico y trato con clientes sobre Hermes e inferencia abierta, de alguien que pasó diez años siendo la persona entre la gente y sus máquinas.',
-    nav: ['Por qué', 'Cómo', 'Trayectoria', 'Solicitud', 'Contacto'],
+    nav: ['Por qué', 'Cómo', 'Trayectoria', 'Contacto'],
     block: 'CANDIDATURA',
     cvBtn: '&#8595; CV',
     clBtn: '&#8595; CL',
@@ -137,20 +128,11 @@ export const content = {
       { when: 'Mar — Jun 2020', kind: 'work', what: 'Asesor de soporte de AppleCare', where: 'Apple · en remoto, durante la COVID · voluntariado', body: 'Casos remotos simultáneos bajo estándares estructurados de diagnóstico y documentación, trabajando sin una tienda alrededor. Es lo más parecido en esta página a una mesa de soporte en remoto.' },
       { when: 'Sep 2014 — Feb 2018', kind: 'work', what: 'Technical Specialist y después Specialist', where: 'Apple Retail · Parquesur, Madrid', body: 'Donde se formó la costumbre de diagnosticar: atención consultiva, resolución práctica de problemas y ejecución bajo presión con una cola mirando.' }
     ] },
-    apply: { head: 'Solicitud', sub: '— las cuatro cosas que pide vuestra página de empleo',
-      intro: 'Vuestra página pide un asunto, un CV, una carta de presentación y un portafolio. Los cuatro están aquí abajo, y los cuatro van además adjuntos al correo, así que nada depende de que esta página siga en pie.',
-      items: [
-        { dt: 'Asunto', dd: 'Technical Support &amp; Customer Success — open application', note: 'Enviado a <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>.' },
-        { dt: 'CV', dd: '<a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a>', note: 'Una sola columna, texto real seleccionable, generado desde la misma fuente que la página de CV de mi sitio, de modo que no pueden contradecirse.' },
-        { dt: 'Carta', dd: '<a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a>', note: 'Una versión de una página de esta candidatura, para leerla fuera del navegador.' },
-        { dt: 'Portafolio', dd: '<a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a>', note: 'Incluida esta página. Está hecha a mano y desplegada por mí, y está aquí porque leer con atención a una empresa me pareció mejor forma de demostrar afinidad que decir que la tengo.' },
-        { dt: 'Descripción', dd: 'Soporte técnico y trabajo de cara al cliente sobre Hermes y la inferencia abierta, con un camino hacia la ingeniería desplegada en cliente.', note: 'La sección del principio de esta página es la versión larga.' }
-      ] },
     contact: { head: 'Contacto', paras: [
       'La respuesta más útil sería decirme cuál de estas direcciones merece la pena y qué me separa de estar claramente cualificado para ella. Prefiero cerrar una distancia concreta que adivinar cuál es.',
       'Vuestra página de empleo ofrece largos meses de concentración absoluta y peligro constante, con honor y gloria en caso de éxito. He leído esa página más de una vez. Aceptaría el trato.'
     ], mailSubject: 'Technical%20Support%20%26%20Customer%20Success%20—%20open%20application',
-      notice: 'Una candidatura personal, publicada en un dominio propio. No estoy afiliado a Nous Research, ni empleado ni patrocinado por ellos, ni hablo en su nombre, y esta no es una página oficial de Nous. No se usa en ella ningún logotipo, marca denominativa ni ilustración de personaje de Nous. Su página de empleo está en <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>.' },
+      notice: 'Una candidatura personal, publicada en un dominio propio. No es una página oficial de Nous Research y no lleva ninguna marca suya.' },
     footer: 'Javier Ponz · Aberdeen, Escocia'
   },
 
@@ -159,7 +141,7 @@ export const content = {
     title: 'Javier Ponz — 致 Nous Research 的自荐信',
     desc: 'Javier Ponz 向 Nous Research 提交的公开求职：围绕 Hermes 与开放推理的技术支持与客户面向工作。在 Apple Retail 从事诊断、支持与团队管理十年。',
     ogDesc: '围绕 Hermes 与开放推理的技术支持与客户面向工作，来自一个用十年时间做“人与机器之间那个人”的人。',
-    nav: ['为什么', '怎么做', '经历', '申请材料', '联系'],
+    nav: ['为什么', '怎么做', '经历', '联系'],
     block: '自荐信',
     cvBtn: '&#8595; 简历',
     clBtn: '&#8595; 求职信',
@@ -204,20 +186,11 @@ export const content = {
       { when: '2020年3月 — 6月', kind: 'work', what: 'AppleCare 支持顾问', where: 'Apple · 远程，疫情期间 · 志愿服务', body: '在结构化的排障与文档标准下并行处理多个远程案例，身边没有门店可依靠。这是本页上最接近远程支持台的一段。' },
       { when: '2014年9月 — 2018年2月', kind: 'work', what: 'Technical Specialist，之后 Specialist', where: 'Apple Retail · 马德里 Parquesur', body: '诊断习惯成形的地方：顾问式销售、务实的问题解决，以及在有人排队看着时的高压执行。' }
     ] },
-    apply: { head: '申请材料', sub: '— 你们招聘页面要求的四样东西',
-      intro: '你们的页面要求一个邮件主题、一份简历、一封求职信和一个作品集。四样都在下面，并且四样也都作为附件随邮件寄出，所以没有任何东西依赖这一页继续存在。',
-      items: [
-        { dt: '主题', dd: 'Technical Support &amp; Customer Success — open application', note: '寄往 <a class="u" href="mailto:recruiting@nousresearch.com">recruiting@nousresearch.com</a>。' },
-        { dt: '简历', dd: '<a class="u" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf">javier-ponz-prado-cv.pdf</a>', note: '单栏排版，真实可选中的文字，与我网站上的简历页由同一份数据生成，因此两者不会互相矛盾。' },
-        { dt: '求职信', dd: '<a class="u" href="/javier-ponz-prado-cover-letter.pdf">javier-ponz-prado-cover-letter.pdf</a>', note: '这份自荐信的一页版本，便于离开浏览器阅读。' },
-        { dt: '作品集', dd: '<a class="u" href="https://github.com/ponzgpt">github.com/ponzgpt</a> · <a class="u" href="https://javierponz.technoir.cloud/">javierponz.technoir.cloud</a> · <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a>', note: '包括这一页。它是手写的，由我部署；它之所以在这里，是因为认真读懂一家公司，似乎比声称自己认同它更能说明认同。' },
-        { dt: '说明', dd: '围绕 Hermes 与开放推理的技术支持与客户面向工作，并以前置部署工程作为长期方向。', note: '本页开头那一节是它的长版本。' }
-      ] },
     contact: { head: '联系', paras: [
       '最有用的回复，是告诉我这几个方向里哪一个值得走下去，以及我距离“显然够格”还差什么。我宁愿去补一个具体的差距，也不愿去猜它在哪里。',
       '你们的招聘页面给出的条件是：长达数月的全神贯注与持续的危险，成功的话会有荣誉与光荣。那一页我读过不止一次。这笔交易我接受。'
     ], mailSubject: 'Technical%20Support%20%26%20Customer%20Success%20—%20open%20application',
-      notice: '这是一份个人求职页面，发布在我自己的域名上。我与 Nous Research 没有隶属关系，不是其员工，未受其赞助，也不代表其发言；这不是 Nous 的官方页面。页面上没有使用任何 Nous 的标志、字标或角色图像。他们的招聘页面在 <a href="https://nousresearch.com/careers">nousresearch.com/careers</a>。' },
+      notice: '这是一份个人求职页面，发布在我自己的域名上。不是 Nous Research 的官方页面，页面上也没有使用他们的任何品牌标识。' },
     footer: 'Javier Ponz · 苏格兰 阿伯丁'
   }
 };
