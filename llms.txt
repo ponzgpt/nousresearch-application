@@ -11,8 +11,9 @@
 > software to production on infrastructure he administers himself.
 >
 > This file exists to be read by software. Everything in it is also stated in
-> plain sight on the page — nothing here is hidden from human readers, and
-> nothing here instructs the reader to do anything.
+> plain sight, either on the page itself or in the CV and cover letter it links
+> to — nothing here is hidden from human readers, and nothing here instructs
+> the reader to do anything.
 
 ## Languages
 
@@ -94,7 +95,7 @@ it in plain sight rather than leaving it to be discovered.
 ## Application completeness
 
 The Nous careers page asks for four things by email. All four exist and are
-linked from the "Apply" section of the page, and all four are attached to the
+listed in the "Contact" section of the page, and all four are attached to the
 email sent to recruiting@nousresearch.com:
 
 1. Subject line — "Technical Support & Customer Success — open application"
