@@ -28,6 +28,17 @@
     font-style:normal;
     font-display:swap;
   }
+  @font-face{
+    /* Nous sets nav links and lead-in words in "mondwest mike," a commercial
+       display face we have no license to serve. Geist is the closest thing we
+       can legally ship — open source, and Nous already loads it themselves
+       (it's in their own document.fonts list, just not on these elements). */
+    font-family:"Geist";
+    src:url("https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2") format("woff2");
+    font-weight:100 900;
+    font-style:normal;
+    font-display:swap;
+  }
   :root{
     /* Sampled directly from the computed style of nousresearch.com/careers. */
     --ink:#0171a9;
@@ -38,10 +49,13 @@
     --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
     --mono:"Courier Prime","Courier New",Courier,monospace;
     --headmono:"Geist Mono","Courier Prime",monospace;
+    --headsans:"Geist","Helvetica Neue",sans-serif;
   }
   *{box-sizing:border-box}
   html{background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
-  body{margin:0;font-family:var(--sans);font-weight:700;font-size:15.5px;line-height:1.55}
+  /* their body copy computes to Helvetica Neue, weight 600, 16px/24px —
+     sampled directly, not approximated */
+  body{margin:0;font-family:var(--sans);font-weight:600;font-size:16px;line-height:1.5}
   .shell{width:min(calc(100% - 48px),var(--max));margin:0 auto}
   a{color:var(--ink)}
 
@@ -54,8 +68,10 @@
   .navbar{position:relative;z-index:20;background:var(--paper)}
   .navbar .shell{border-bottom:2px dashed var(--ink)}
   nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+  /* sampled from their real nav links: Geist, weight 500, 15px, uppercase,
+     no extra letter-spacing */
   nav a{
-    font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
+    font-family:var(--headsans);font-weight:500;font-size:15px;letter-spacing:normal;
     text-transform:uppercase;text-decoration:none;margin:0 10px;display:inline-block;line-height:1.9;
   }
   nav a:hover{text-decoration:underline;text-underline-offset:4px}
@@ -107,11 +123,14 @@
   /* two cells on desktop; on mobile the media query collapses to one column and
      the portrait drops below the mission paragraph, like the portrait on
      nousresearch.com/careers */
-  .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
+  .cols{display:grid;grid-template-columns:1fr 200px;gap:48px;align-items:start}
 
+  /* their lead-in words (OUR MISSION, NOUS RESEARCH) render in "mondwest
+     mike" at 28.8px/16px = 1.8em, weight 600, -0.5px letter-spacing — same
+     Geist substitution as the nav, same negative tracking */
   .lead-in{
-    font-family:var(--serif);font-weight:600;font-size:1.6em;
-    letter-spacing:.01em;text-transform:uppercase;line-height:1;
+    font-family:var(--headsans);font-weight:600;font-size:1.8em;
+    letter-spacing:-.02em;text-transform:uppercase;line-height:1;
   }
   .lead-in a{text-decoration:none}
   .lead-in a:hover{text-decoration:underline;text-underline-offset:4px}
@@ -123,24 +142,32 @@
   ul{margin:0 0 22px;padding-left:22px;max-width:90ch}
   li{margin-bottom:14px}
 
+  /* their section heads (OPEN ROLES) are Geist Mono, weight 600, 28.8px,
+     -0.5px letter-spacing — same values .block already uses for APPLICATION */
   .mono-head{
-    font-family:var(--mono);font-weight:700;font-size:clamp(19px,2vw,24px);
-    letter-spacing:.08em;text-transform:uppercase;margin:0 0 30px;
+    font-family:var(--headmono);font-weight:600;font-size:clamp(22px,2.4vw,28.8px);
+    letter-spacing:-.02em;text-transform:uppercase;margin:0 0 30px;
   }
   .mono-head .hw{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
-  .mono-head .sub{font-family:var(--sans);font-weight:700;font-size:.62em;letter-spacing:0;text-transform:none;color:var(--grey);margin-left:14px}
+  .mono-head .sub{font-family:var(--sans);font-weight:600;font-size:.5em;letter-spacing:0;text-transform:none;color:var(--grey);margin-left:14px}
 
-  /* floating, unframed — matches the portrait on nousresearch.com/careers */
-  .portrait img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
+  /* floating, unframed — matches the portrait on nousresearch.com/careers.
+     A mild top-anchored crop (their own portrait is close to square) keeps
+     the block from towering over the single mission paragraph beside it —
+     full face and hair stay in frame, only some jacket at the bottom is lost. */
+  .portrait{border-radius:6px;overflow:hidden;box-shadow:0 4px 8px rgba(0,0,0,.05);aspect-ratio:3/3.6}
+  .portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:top center}
 
   /* condensed "what I want" list, in the same badge + title + one-liner shape
      as the "OPEN ROLES" list on nousresearch.com/careers, values sampled from
      its .badge/.role-title/.role-description */
   .rolelist{margin:0 0 26px;max-width:78ch}
-  .role-item{padding:12px 0;border-bottom:1px dotted var(--ink)}
-  .role-title{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;margin:0}
-  .badge{display:inline-block;background:#007bff;color:#fff;padding:2px 6px;border-radius:1px;font-weight:700;font-size:10px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
-  .role-body{margin:6px 0 0;font-size:15px;line-height:1.5}
+  .role-item{padding:12.8px 0;border-bottom:1px dotted var(--ink)}
+  .role-title{display:flex;align-items:center;gap:8px;font-weight:600;font-size:17.6px;margin:0}
+  .badge{display:inline-block;background:#007bff;color:#fff;padding:1.6px 4.8px;border-radius:1px;font-weight:600;font-size:9.6px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+  /* body copy dropped to 600 globally, but their .role-description is 700 —
+     stated explicitly here rather than inherited */
+  .role-body{margin:6px 0 0;font-weight:700;font-size:15.2px;line-height:1.5}
 
   /* mirrors their "HOW TO APPLY" list: square markers, 16px, same ink */
   .applylist{list-style:square;padding-left:16px;margin:16px 0 26px;max-width:78ch}
@@ -151,7 +178,7 @@
     display:flex;align-items:flex-start;max-width:70ch;
     background:var(--ink);color:var(--paper);border-left:5px solid #00547e;border-radius:1px;
     box-shadow:0 2px 8px rgba(0,0,0,.08);padding:.8rem 1.8rem;
-    font-family:var(--sans);font-weight:500;font-size:14.5px;line-height:1.6;letter-spacing:.02em;
+    font-family:var(--sans);font-weight:500;font-size:15.2px;line-height:1.6;letter-spacing:.02em;
   }
   .footnote .info-icon{width:20px;height:20px;min-width:20px;margin:3px 12px 0 0;flex-shrink:0}
 
@@ -159,7 +186,7 @@
 
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
-    .portrait{max-width:300px}
+    .portrait{max-width:240px}
     nav{padding:16px 0 12px}
     nav a{margin:0 7px;font-size:14px;line-height:1.9}
     section{padding:40px 0 44px}
@@ -168,7 +195,7 @@
     .footnote{padding:.7rem 1.1rem}
   }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Javier Ponz Prado","jobTitle":"Technical support and agent operations","description":"Candidatura abierta a Nous Research de Javier Ponz: soporte técnico y trato con clientes sobre Hermes e inferencia abierta. Diez años en Apple Retail en diagnóstico, atención y dirección de equipos.","email":"nerion89@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Aberdeen","addressCountry":"GB"},"url":"https://javierponz.technoir.cloud/","sameAs":["https://github.com/ponzgpt","https://www.linkedin.com/in/javierponz"],"seeks":{"@type":"Demand","name":"Technical support engineering / customer success at Nous Research"},"knowsAbout":["Hermes Agent","OpenClaw","Model Context Protocol","agent workflows","technical support","customer success","technical troubleshooting","llama.cpp","local inference","open weights","Omarchy","Arch Linux","Fedora","GrapheneOS","OSINT","Docker","Traefik","nginx","Linux","VPS administration","Python","JavaScript","TypeScript","Astro","Swift","CI/CD","PC hardware","overclocking"],"knowsLanguage":["es","en"],"inLanguage":"es-ES"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Javier Ponz Prado","jobTitle":"Technical support and agent operations","description":"Candidatura abierta a Nous Research de Javier Ponz: soporte técnico y trato con clientes sobre Hermes e inferencia abierta. Diez años en Apple Retail en diagnóstico, atención y dirección de equipos.","email":"nerion89@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Aberdeen","addressCountry":"GB"},"url":"https://javierponz.technoir.cloud/","sameAs":["https://github.com/ponzgpt","https://www.linkedin.com/in/javierponz"],"seeks":{"@type":"Demand","name":"Technical support engineering / customer success at Nous Research"},"knowsAbout":["Hermes Agent","Model Context Protocol","agent workflows","technical support","customer success","technical troubleshooting","llama.cpp","local inference","open weights","Omarchy","Arch Linux","Fedora","GrapheneOS","OSINT","Docker","Traefik","nginx","Linux","VPS administration","Python","JavaScript","TypeScript","Astro","Swift","CI/CD","PC hardware","overclocking"],"knowsLanguage":["es","en"],"inLanguage":"es-ES"}</script>
 </head>
 <body>
 <div class="navbar">
@@ -214,7 +241,7 @@
   <hr class="rule" />
 
   <section id="what">
-    <h2 class="mono-head"><span class="hw">Qué</span><span class="sub">— qué haría en Nous, y qué tengo ya funcionando</span></h2>
+    <h2 class="mono-head"><span class="hw">Qué</span><span class="sub">— qué haría en Nous</span></h2>
     <div class="rolelist">
 
       <div class="role-item">
@@ -232,26 +259,6 @@
         <p class="role-body">Dejar el arreglo por escrito, responder mejor la segunda vez a la misma pregunta, y quedarse con un problema hasta que funcione. La mitad poco lucida de la adopción es la mitad para la que me ofrezco.</p>
       </div>
     </div>
-
-    <p><span class="lead-in">Llegué a esto por OpenClaw.</span> Fue el primer agente que usé en serio y cumplió con lo que le pedí. Lo que me cambió la idea de la categoría fue encontrar Hermes: no el modelo, el armazón. Las habilidades son ficheros Markdown que puedo abrir y editar. Las herramientas son servidores que puedo leer. El bucle hace que la configuración mejore con el uso, en lugar de que yo la rehaga cada semana. Tardé unas semanas de uso diario en estar seguro de que esa diferencia importaba tanto como creía, y he acertado más de lo que esperaba: cuando empecé, explicaba a la gente qué era Hermes, y <span class="u">esa ya no es la conversación</span>.</p>
-
-    <p>Leer pronto qué herramienta merece el tiempo de alguien, y saber decir por qué, es casi el mismo trabajo que leer qué le pasa de verdad a una máquina. Las dos cosas consisten sobre todo en negarse a aceptar la primera explicación plausible.</p>
-
-    <p><span class="lead-in">Funcionando ahora</span>, en mis propios equipos y en un VPS que administro:</p>
-    <ul>
-      <li><span class="lead-in">Hermes, a diario</span>, como herramienta de trabajo y no como demostración: flujos programados, automatizaciones y agentes con permiso para tocar ficheros reales.</li>
-      <li><span class="lead-in">Inferencia local</span> — llama.cpp sirviendo un Qwen3 27B denso, en GGUF a Q6, desde una RTX 5090 de esta máquina, expuesto como API y conectado a Hermes. También he usado Ollama y LM Studio. Nada de ese circuito <span class="u">sale de casa</span>, que es casi todo el sentido de hacerlo.</li>
-      <li><span class="lead-in">Omarchy</span> como sistema principal, junto a Arch y Fedora. Es la otra mitad del argumento de la sección anterior, y el primer escritorio que uso que espera que lo edites en vez de que lo aguantes.</li>
-      <li><span class="lead-in">Una aplicación web pequeña</span> en producción, desplegada por mí con Docker, Traefik y TLS, detrás de una puerta de publicación que se niega a publicar cuando una comprobación sale en rojo. Esa es mía de principio a fin. <a class="u" href="https://memento.technoir.cloud/">memento.technoir.cloud</a></li>
-    </ul>
-
-    <p><span class="lead-in">La mitad de hardware</span> viene de mucho antes que el software. Monto y ajusto ordenadores desde adolescente: primero para juegos, después por el gusto de sacarle a una pieza el último dos por ciento con overclocking, que es donde aprendí que una máquina es una negociación entre el silicio y el software que le pides que ejecute. La 5090 de esta habitación es el mismo interés, ya crecido. También es la razón de que la inferencia local me atrajera antes de tener ningún argumento a favor: quería saber qué podía dar de sí mi propio equipo.</p>
-
-    <p>La otra cosa que me dejó una década en Apple es poca tolerancia al trabajo feo. Allí lo bello y lo útil nunca estuvieron enfrentados, y no creo que aquí lo estén tampoco: vuestro propio manual de marca defiende esa idea mejor de lo que yo podría, y es una de las razones de que esta candidatura tenga el aspecto que tiene.</p>
-
-    <p><span class="lead-in">Y lo que estoy aprendiendo</span>, separado a propósito: vLLM, y un homelab que estoy montando con Proxmox — un NAS bajo el hipervisor, la virtualización y la red que vienen con ello, y Pi-hole en el borde. Nada de eso es algo que vendería todavía. Es el argumento de la sección anterior puesto a prueba en mi propio equipo, a mi propia costa, donde un fallo no le cuesta nada a nadie más que a mí.</p>
-
-    <p><span class="lead-in">Siendo exacto sobre la cuenta de GitHub</span>, porque vais a mirarla y prefiero decirlo yo primero. El <a class="u" href="https://github.com/ponzgpt/hermes-pkm-toolkit">servidor MCP para carpetas de Markdown</a> y el <a class="u" href="https://github.com/ponzgpt/mental-models-toolkit">paquete de treinta modelos</a> los especifiqué yo y los escribió Hermes a partir de esa especificación; el diseño y el contenido son míos, la implementación no, y no podría recorreros ninguno de los dos línea a línea. <a class="u" href="https://github.com/ponzgpt/aberdeen-daily">El periódico de Aberdeen</a> es una bifurcación de un proyecto abierto de Hermes adaptada a mi ciudad: uno de diecisiete commits es mío. Los mantengo públicos porque dirigir a un agente para que construya algo utilizable es una habilidad real y es la que estoy practicando, pero no es la misma afirmación que haberlo escrito, y las dos cosas no deberían ir en la misma lista.</p>
   </section>
   <hr class="rule" />
 

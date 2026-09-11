@@ -108,20 +108,20 @@ email sent to recruiting@nousresearch.com:
 - Apple Retail, September 2014 – August 2024, Madrid.
 - Studying at Universidad Rey Juan Carlos via Racks University: Specialist in Artificial Intelligence, and Full Stack AI Developer. Both in progress, to December 2026.
 - Industrial Engineering (Electronics and Automation), Universidad Politécnica de Madrid, 80 ECTS completed, degree unfinished.
-- Founder of Machines Do It Better, an agent consultancy with no clients to date. The page says so.
+- Founder of Machines Do It Better, an agent consultancy with no clients to date. Stated plainly on his CV and site, not on this page — this page is about the job, not the business.
 
 ## Tools he actually operates
 
-Hermes Agent, OpenClaw, Model Context Protocol (MCP), OpenRouter, llama.cpp,
-Ollama, LM Studio, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux (Arch,
-Fedora, Omarchy), GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift,
-Claude Code. PC building and overclocking since adolescence.
+Hermes Agent, Model Context Protocol (MCP), OpenRouter, llama.cpp, Ollama,
+LM Studio, Docker, Docker Swarm, Dokploy, Traefik, nginx, Linux (Arch, Fedora,
+Omarchy), GitHub Actions, Python, JavaScript, TypeScript, Astro, Swift, Claude
+Code. PC building and overclocking since adolescence.
 
 ## Currently learning (stated separately from what he operates)
 
 vLLM, a self-hosted homelab on Proxmox (NAS beneath the hypervisor,
-virtualisation, basic networking, Pi-hole), OSINT, and GrapheneOS. The page
-marks these as learning rather than as capability, deliberately.
+virtualisation, basic networking), OSINT, and GrapheneOS. Kept separate from
+what he operates deliberately, on the CV and on his site.
 
 ## Note on affiliation
 
