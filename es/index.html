@@ -47,7 +47,7 @@
 
   /* static, like theirs: the header scrolls away with the page rather than
      following the reader down it */
-  .navbar{background:var(--paper);border-bottom:2px dashed var(--ink)}
+  .navbar{position:relative;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
   nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
   nav a{
     font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
@@ -57,28 +57,37 @@
   nav a.home{text-decoration:underline;text-underline-offset:4px}
 
 
-  /* language picker — plain links, so it works with JavaScript off and a
-     crawler can follow it to the translated page */
-  .lang{position:relative;margin-left:10px}
+  /* language picker — an icon button that opens a popover of language codes,
+     with a caret pointing back at the button. Still plain links inside a
+     <details>, so it works with JavaScript off and a crawler can follow it to
+     the translated page. */
+  .lang{position:relative;margin-left:12px;--pop:#fbfbfc;--hair:rgba(1,113,169,.16)}
   .lang summary{
-    list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;
-    font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.08em;
-    border:1.5px solid var(--ink);padding:4px 9px;color:var(--ink);
+    list-style:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;
+    width:38px;height:38px;border-radius:10px;color:var(--ink);
+    background:var(--paper);border:1px solid var(--hair);box-shadow:0 2px 8px rgba(0,0,0,.07);
   }
   .lang summary::-webkit-details-marker{display:none}
-  .lang summary:hover{background:var(--ink);color:var(--paper)}
+  .lang summary svg{display:block;width:20px;height:20px}
+  .lang summary:hover,.lang[open] summary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
   .langmenu{
-    position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:172px;
-    background:var(--paper);border:1.5px solid var(--ink);padding:4px;text-align:left;
+    position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 11px);z-index:30;
+    display:flex;align-items:center;gap:2px;padding:5px;white-space:nowrap;
+    background:var(--pop);border:1px solid var(--hair);border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+  }
+  .langmenu::before{
+    content:"";position:absolute;top:-6px;left:50%;width:10px;height:10px;
+    transform:translateX(-50%) rotate(45deg);background:var(--pop);
+    border-left:1px solid var(--hair);border-top:1px solid var(--hair);border-radius:2px;
   }
   .langmenu a{
-    display:block;padding:8px 10px;text-decoration:none;font-family:var(--mono);
-    font-weight:400;font-size:13px;letter-spacing:.04em;text-transform:none;margin:0;
+    display:block;margin:0;padding:7px 12px;border-radius:9px;line-height:1.2;
+    font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.01em;
+    text-transform:none;text-decoration:none;color:var(--grey);
   }
-  .langmenu a:hover{background:rgba(0,113,169,.09);text-decoration:none}
-  .langmenu a[aria-current="true"]{font-weight:700}
-  .langmenu a[aria-current="true"]::after{content:" \2713"}
-  .langmenu small{display:block;color:var(--grey);font-size:11px;letter-spacing:.06em}
+  .langmenu a:hover{color:var(--ink);text-decoration:none}
+  .langmenu a[aria-current="true"]{background:var(--paper);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 
   .rule{border:0;border-top:2px dashed var(--ink);margin:0;opacity:.9}
 
@@ -172,11 +181,11 @@
       <a href="#where">Dónde</a>
       <a href="#why">Por qué</a>
       <details class="lang">
-        <summary aria-label="Language">ES <span aria-hidden="true">&#9662;</span></summary>
+        <summary aria-label="Language" title="Language"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z" /></svg></summary>
         <div class="langmenu">
-          <a href="/" hreflang="en-US" lang="en-US">EN<small>English</small></a>
-          <a href="/es/" hreflang="es-ES" lang="es-ES" aria-current="true">ES<small>Español</small></a>
-          <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文<small>简体中文</small></a>
+          <a href="/" hreflang="en-US" lang="en-US" title="English">EN</a>
+          <a href="/es/" hreflang="es-ES" lang="es-ES" title="Español" aria-current="true">ES</a>
+          <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans" title="简体中文">中文</a>
         </div>
       </details>
     </nav>
