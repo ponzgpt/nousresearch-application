@@ -30,9 +30,11 @@ export const content = {
     block: 'APPLICATION',
     portraitAlt: 'Pencil-sketch portrait of Javier Ponz',
     application: {
-      mission: `${L('My mission')} is the same one on your careers page, read from the support side instead of the research side: powerful AI only reaches the many if somebody is willing to sit with the ones who do not yet know how to use it. That is not a coincidence of phrasing. It is the reason I am writing this page instead of a different one.`,
-      bio: `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Apple Genius, now building agent systems in Aberdeen. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.`
+      mission: `${L('My mission')} is the same one on your careers page, read from the support side instead of the research side: powerful AI only reaches the many if somebody is willing to sit with the ones who do not yet know how to use it. That is not a coincidence of phrasing. It is the reason I am writing this page instead of a different one.`
     },
+    who: { head: 'Who', sub: '— the short version', paras: [
+      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Apple Genius, now building agent systems in Aberdeen. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.`
+    ] },
     what: { head: 'What', sub: '— what I would do at Nous, and what I already run', roles: [
       { badge: 'Support', title: 'Technical support and customer-facing work', body: 'Helping people actually adopt Hermes and run open models — translating between what the engineer means, what the sale promised, and what is really on the screen. Ten years of that exact job at Apple Retail.' },
       { badge: 'Not yet', title: 'Forward-deployed engineering', body: 'Two years into this stack, not ready for the FDE posting itself. I want a junior or supporting role near that work, carrying real support load while I close the gap.' },
@@ -94,9 +96,11 @@ export const content = {
     block: 'CANDIDATURA',
     portraitAlt: 'Retrato a lápiz de Javier Ponz',
     application: {
-      mission: `${L('Mi misión')} es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.`,
-      bio: `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.`
+      mission: `${L('Mi misión')} es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.`
     },
+    who: { head: 'Quién', sub: '— la versión corta', paras: [
+      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.`
+    ] },
     what: { head: 'Qué', sub: '— qué haría en Nous, y qué tengo ya funcionando', roles: [
       { badge: 'Soporte', title: 'Soporte técnico y trato con clientes', body: 'Ayudar a que la gente adopte Hermes de verdad y ejecute modelos abiertos: traducir entre lo que quiere decir el ingeniero, lo que prometió la venta y lo que hay de verdad en la pantalla. Diez años haciendo exactamente eso en Apple Retail.' },
       { badge: 'Todavía no', title: 'Ingeniería desplegada en cliente', body: 'Dos años en esta pila, no estoy listo para la oferta de FDE en sí. Quiero un puesto júnior o de apoyo cerca de ese trabajo, asumiendo carga real de soporte mientras cierro la distancia.' },
@@ -158,9 +162,11 @@ export const content = {
     block: '自荐信',
     portraitAlt: 'Javier Ponz 的铅笔素描肖像',
     application: {
-      mission: `${L('我的使命')}和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。`,
-      bio: `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。`
+      mission: `${L('我的使命')}和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。`
     },
+    who: { head: '谁', sub: '— 简短版', paras: [
+      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。`
+    ] },
     what: { head: '做什么', sub: '— 我想在 Nous 做什么，以及我手上已经在跑什么', roles: [
       { badge: '技术支持', title: '技术支持与面向客户的工作', body: '帮助人们真正用起 Hermes、跑起开放模型——在工程师的意思、销售的承诺和屏幕上真正显示的东西之间做翻译。我在 Apple Retail 做的正是这个，做了十年。' },
       { badge: '还不行', title: '前置部署工程（FDE）', body: '这套技术栈我学了两年，还没准备好投 FDE 这个职位本身。我想要那份工作旁边的初级或支持性岗位，在补上差距的同时承担真实的支持负荷。' },

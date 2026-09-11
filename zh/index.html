@@ -98,10 +98,10 @@
   }
 
   section{padding:56px 0 62px;scroll-margin-top:16px}
-  #who{padding-top:52px}
+  #application{padding-top:52px}
   /* two cells on desktop; on mobile the media query collapses to one column and
-     source order puts the portrait right after the second paragraph, like the
-     portrait on nousresearch.com/careers */
+     the portrait drops below the mission paragraph, like the portrait on
+     nousresearch.com/careers */
   .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
 
   .lead-in{
@@ -158,7 +158,7 @@
     nav{padding:16px 0 12px}
     nav a{margin:0 7px;font-size:14px;line-height:1.9}
     section{padding:40px 0 44px}
-    #who{padding-top:34px}
+    #application{padding-top:34px}
     .mono-head .sub{display:block;margin:8px 0 0}
     .footnote{padding:.7rem 1.1rem}
   }
@@ -189,17 +189,20 @@
 
 <div class="shell">
 
-  <section id="who">
+  <section id="application">
     <h1 class="block">自荐信</h1>
     <div class="cols">
-      <div class="intro-text">
-        <p><span class="lead-in">我的使命</span>和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。</p>
-        <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
-      </div>
+      <p><span class="lead-in">我的使命</span>和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。</p>
       <div class="portrait">
         <img src="/javier-sketch.jpg" alt="Javier Ponz 的铅笔素描肖像" width="720" height="960" />
       </div>
     </div>
+  </section>
+  <hr class="rule" />
+
+  <section id="who">
+    <h2 class="mono-head"><span class="hw">谁</span><span class="sub">— 简短版</span></h2>
+    <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
   </section>
   <hr class="rule" />
 

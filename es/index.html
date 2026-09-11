@@ -98,10 +98,10 @@
   }
 
   section{padding:56px 0 62px;scroll-margin-top:16px}
-  #who{padding-top:52px}
+  #application{padding-top:52px}
   /* two cells on desktop; on mobile the media query collapses to one column and
-     source order puts the portrait right after the second paragraph, like the
-     portrait on nousresearch.com/careers */
+     the portrait drops below the mission paragraph, like the portrait on
+     nousresearch.com/careers */
   .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
 
   .lead-in{
@@ -158,7 +158,7 @@
     nav{padding:16px 0 12px}
     nav a{margin:0 7px;font-size:14px;line-height:1.9}
     section{padding:40px 0 44px}
-    #who{padding-top:34px}
+    #application{padding-top:34px}
     .mono-head .sub{display:block;margin:8px 0 0}
     .footnote{padding:.7rem 1.1rem}
   }
@@ -189,17 +189,20 @@
 
 <div class="shell">
 
-  <section id="who">
+  <section id="application">
     <h1 class="block">CANDIDATURA</h1>
     <div class="cols">
-      <div class="intro-text">
-        <p><span class="lead-in">Mi misión</span> es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.</p>
-        <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.</p>
-      </div>
+      <p><span class="lead-in">Mi misión</span> es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.</p>
       <div class="portrait">
         <img src="/javier-sketch.jpg" alt="Retrato a lápiz de Javier Ponz" width="720" height="960" />
       </div>
     </div>
+  </section>
+  <hr class="rule" />
+
+  <section id="who">
+    <h2 class="mono-head"><span class="hw">Quién</span><span class="sub">— la versión corta</span></h2>
+    <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.</p>
   </section>
   <hr class="rule" />
 

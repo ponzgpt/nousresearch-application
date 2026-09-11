@@ -102,10 +102,10 @@ const styles = `
   }
 
   section{padding:56px 0 62px;scroll-margin-top:16px}
-  #who{padding-top:52px}
+  #application{padding-top:52px}
   /* two cells on desktop; on mobile the media query collapses to one column and
-     source order puts the portrait right after the second paragraph, like the
-     portrait on nousresearch.com/careers */
+     the portrait drops below the mission paragraph, like the portrait on
+     nousresearch.com/careers */
   .cols{display:grid;grid-template-columns:1fr 250px;gap:56px;align-items:start}
 
   .lead-in{
@@ -162,7 +162,7 @@ const styles = `
     nav{padding:16px 0 12px}
     nav a{margin:0 7px;font-size:14px;line-height:1.9}
     section{padding:40px 0 44px}
-    #who{padding-top:34px}
+    #application{padding-top:34px}
     .mono-head .sub{display:block;margin:8px 0 0}
     .footnote{padding:.7rem 1.1rem}
   }
@@ -253,17 +253,20 @@ ${alternates}
 
 <div class="shell">
 
-  <section id="who">
+  <section id="application">
     <h1 class="block">${c.block}</h1>
     <div class="cols">
-      <div class="intro-text">
-        <p>${c.application.mission}</p>
-        <p>${c.application.bio}</p>
-      </div>
+      <p>${c.application.mission}</p>
       <div class="portrait">
         <img src="/javier-sketch.jpg" alt="${c.portraitAlt}" width="720" height="960" />
       </div>
     </div>
+  </section>
+  <hr class="rule" />
+
+  <section id="who">
+    <h2 class="mono-head"><span class="hw">${c.who.head}</span><span class="sub">${c.who.sub}</span></h2>
+${c.who.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
   </section>
   <hr class="rule" />
 
