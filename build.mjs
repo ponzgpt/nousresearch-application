@@ -178,8 +178,10 @@ const styles = `
   .applylist li{margin:0 0 8px;font-size:16px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
 
   /* matches the "if nothing fits" callout on nousresearch.com/careers exactly */
+  /* no max-width — their real .custom-footnote rule doesn't cap it either,
+     it just fills the content column like everything else on the page */
   .footnote{
-    display:flex;align-items:flex-start;max-width:70ch;
+    display:flex;align-items:flex-start;
     background:var(--ink);color:var(--paper);border-left:5px solid #00547e;border-radius:1px;
     box-shadow:0 2px 8px rgba(0,0,0,.08);padding:.8rem 1.8rem;
     font-family:var(--sans);font-weight:500;font-size:15.2px;line-height:1.6;letter-spacing:.02em;

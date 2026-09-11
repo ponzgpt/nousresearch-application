@@ -32,17 +32,18 @@ export const content = {
     application: {
       mission: `${L('My mission')} is the same one on your careers page, read from the support side instead of the research side: powerful AI only reaches the many if somebody is willing to sit with the ones who do not yet know how to use it. That is not a coincidence of phrasing. It is the reason I am writing this page instead of a different one.`
     },
-    who: { head: 'Who', sub: '— the short version', paras: [
-      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Apple Genius, now building agent systems in Aberdeen. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.`,
+    who: { head: 'Who', sub: '— am I?', paras: [
+      `${L('Hi! I\'m <a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')}, an ex-Apple Genius from Madrid, Spain — now learning and building AI from Aberdeen, Scotland. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.`,
       `Twice within those ten years, seven months at a time, I stepped away from the bench to run store floor operations — planning, resourcing, events, the situations that fit no procedure. Both secondments left me with the same conviction: ${U('leading is serving')}. The job was never being the most capable person in the room. It was making the room work.`
     ] },
-    what: { head: 'What', sub: '— what I would do at Nous', roles: [
-      { badge: 'Support', title: 'Technical support and customer-facing work', body: 'Helping people actually adopt Hermes and run open models — translating between what the engineer means, what the sale promised, and what is really on the screen. Ten years of that exact job at Apple Retail.' },
-      { badge: 'Not yet', title: 'Forward-deployed engineering', body: 'Two years into this stack, not ready for the FDE posting itself. I want a junior or supporting role near that work, carrying real support load while I close the gap.' },
-      { badge: 'Groundwork', title: 'Whatever makes the first two possible', body: 'Writing the fix down, answering the same question better the second time, and staying with a problem until it runs. The unglamorous half of adoption is the half I am volunteering for.' }
+    what: { head: 'What', sub: '— what I would love to do at Nous', roles: [
+      { badge: 'Proven', title: 'Customer success and technical support', body: 'Ten years translating between what the engineer means, what the sale promised, and what is really on the screen. That translation work is what I have actually proven, over and over — not any single stack.' },
+      { badge: 'Moonshot', title: 'Forward-deployed engineering', body: 'The role that has my attention right now, and I will say it plainly: two years into this stack, I am not qualified for the FDE posting itself yet. I would rather say that than oversell it.' },
+      { badge: 'The bridge', title: 'What closes the gap between the two', body: 'Carrying real support load, writing the fix down, staying with a problem until it runs. That is how customer success work turns into FDE readiness, not a separate track from it.' }
     ] },
     when: { head: 'When', sub: '— availability', paras: [
       `${L('I can start immediately.')} There is no notice period to work through and no employer to leave gracefully. The consultancy is mine, which makes it the thing I would be setting aside rather than the thing I would be leaving. If the fit is right, the honest answer to when is ${U('whenever you want me')}.`,
+      `${L('I know how fortunate that makes me.')} Running my own consultancy these last two years has meant I could spend real time studying and experimenting instead of only shipping billable work — most of what is on this page came out of hours nobody was paying me for. I would bring Nous that same appetite, and give the work whatever time it actually needs.`,
       `I work from UK time: a full working day of overlap with Europe, and most of an afternoon with the American east coast. Ten years of retail and support ran on shifts rather than office hours, so ${U('moving my day')} to meet a team spread across time zones is a scheduling question and not an objection.`
     ] },
     where: { head: 'Where', sub: '— where I am, and how far I will go', paras: [
@@ -85,17 +86,18 @@ export const content = {
     application: {
       mission: `${L('Mi misión')} es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.`
     },
-    who: { head: 'Quién', sub: '— la versión corta', paras: [
-      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — ex-Genius de Apple, ahora construyendo sistemas de agentes en Aberdeen. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.`,
+    who: { head: 'Quién', sub: '— soy?', paras: [
+      `${L('¡Hola! Soy <a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')}, ex-Genius de Apple de Madrid, España — ahora aprendiendo y construyendo IA desde Aberdeen, Escocia. Vuestra página de empleo dice que, si nada de lo publicado encaja, envíe una descripción de lo que me gustaría hacer ahí. Esta página es esa descripción.`,
       `Dos veces, dentro de esos diez años, siete meses cada vez, dejé el banco de trabajo para dirigir la experiencia de sala de la tienda: planificación, recursos, eventos, las situaciones que no encajan en ningún procedimiento. De ambas comisiones salió la misma convicción: ${U('liderar es servir')}. El trabajo nunca fue ser la persona más capaz de la sala. Era hacer que la sala funcionara.`
     ] },
-    what: { head: 'Qué', sub: '— qué haría en Nous', roles: [
-      { badge: 'Soporte', title: 'Soporte técnico y trato con clientes', body: 'Ayudar a que la gente adopte Hermes de verdad y ejecute modelos abiertos: traducir entre lo que quiere decir el ingeniero, lo que prometió la venta y lo que hay de verdad en la pantalla. Diez años haciendo exactamente eso en Apple Retail.' },
-      { badge: 'Todavía no', title: 'Ingeniería desplegada en cliente', body: 'Dos años en esta pila, no estoy listo para la oferta de FDE en sí. Quiero un puesto júnior o de apoyo cerca de ese trabajo, asumiendo carga real de soporte mientras cierro la distancia.' },
-      { badge: 'Base', title: 'Lo que hace posibles las dos anteriores', body: 'Dejar el arreglo por escrito, responder mejor la segunda vez a la misma pregunta, y quedarse con un problema hasta que funcione. La mitad poco lucida de la adopción es la mitad para la que me ofrezco.' }
+    what: { head: 'Qué', sub: '— me encantaría hacer en Nous', roles: [
+      { badge: 'Demostrado', title: 'Éxito de cliente y soporte técnico', body: 'Diez años traduciendo entre lo que quiere decir el ingeniero, lo que prometió la venta y lo que hay de verdad en la pantalla. Ese trabajo de traducción es lo que tengo demostrado, una y otra vez, no una pila concreta.' },
+      { badge: 'Meta lejana', title: 'Ingeniería desplegada en cliente', body: 'El puesto que tiene ahora mismo toda mi atención, y lo digo sin rodeos: dos años en esta pila, todavía no estoy cualificado para la oferta de FDE en sí. Prefiero decirlo así a venderlo de más.' },
+      { badge: 'El puente', title: 'Lo que cierra la distancia entre las dos', body: 'Asumir carga real de soporte, dejar el arreglo por escrito, quedarme con un problema hasta que funcione. Así es como el éxito de cliente se convierte en estar listo para FDE, no una vía aparte.' }
     ] },
     when: { head: 'Cuándo', sub: '— disponibilidad', paras: [
       `${L('Puedo empezar de inmediato.')} No hay preaviso que cumplir ni empresa a la que dejar con elegancia. La consultora es mía, lo que la convierte en lo que apartaría, no en lo que dejaría atrás. Si encajo, la respuesta honesta a cuándo es ${U('cuando queráis')}.`,
+      `${L('Sé la suerte que tengo.')} Llevar mi propia consultora estos dos últimos años me ha dejado dedicar tiempo de verdad a estudiar y experimentar, no solo a entregar trabajo facturable: la mayor parte de lo que hay en esta página salió de horas que nadie me pagaba. Le daría a Nous ese mismo apetito, y el tiempo que el trabajo pida de verdad.`,
       `Trabajo en horario del Reino Unido: una jornada entera de solape con Europa y buena parte de una tarde con la costa este de Estados Unidos. Diez años de tienda y de soporte fueron por turnos y no por horario de oficina, así que ${U('mover mi día')} para coincidir con un equipo repartido por husos horarios es una cuestión de calendario y no una objeción.`
     ] },
     where: { head: 'Dónde', sub: '— dónde estoy, y hasta dónde me muevo', paras: [
@@ -138,17 +140,18 @@ export const content = {
     application: {
       mission: `${L('我的使命')}和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。`
     },
-    who: { head: '谁', sub: '— 简短版', paras: [
-      `${L('<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')} — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。`,
+    who: { head: '谁', sub: '— 是我？', paras: [
+      `${L('你好！我是<a href="https://javierponz.technoir.cloud/">Javier Ponz</a>')}，来自西班牙马德里的前苹果 Genius——现在在苏格兰阿伯丁学习并构建 AI。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。`,
       `在那十年里，我有两次、每次七个月，离开工作台去负责门店的卖场体验：规划、排班、活动，以及那些不符合任何流程的状况。两段借调得出的是同一个信念：${U('领导即服务')}。这份工作从来不是要成为房间里最有能力的人，而是让整个房间运转起来。`
     ] },
-    what: { head: '做什么', sub: '— 我想在 Nous 做什么', roles: [
-      { badge: '技术支持', title: '技术支持与面向客户的工作', body: '帮助人们真正用起 Hermes、跑起开放模型——在工程师的意思、销售的承诺和屏幕上真正显示的东西之间做翻译。我在 Apple Retail 做的正是这个，做了十年。' },
-      { badge: '还不行', title: '前置部署工程（FDE）', body: '这套技术栈我学了两年，还没准备好投 FDE 这个职位本身。我想要那份工作旁边的初级或支持性岗位，在补上差距的同时承担真实的支持负荷。' },
-      { badge: '打底', title: '让上面两件事成立的所有杂活', body: '把修法写下来，第二次被问到同一个问题时答得更好，陪着一个问题直到它跑通。采用过程中不体面的那一半，正是我主动要接的那一半。' }
+    what: { head: '做什么', sub: '— 我很想在 Nous 做的事', roles: [
+      { badge: '已证明', title: '客户成功与技术支持', body: '十年时间，在工程师的意思、销售的承诺和屏幕上真正显示的东西之间做翻译。这份翻译工作，而不是某一套具体的技术栈，才是我反复证明过的东西。' },
+      { badge: '登月计划', title: '前置部署工程（FDE）', body: '这是现在最吸引我的岗位，我直说：这套技术栈我才学了两年，还没有资格投 FDE 这个职位本身。比起把它吹得太满，我更愿意这样说清楚。' },
+      { badge: '桥梁', title: '把两者连起来的东西', body: '承担真实的支持负荷，把修法写下来，陪着一个问题直到它跑通。这就是客户成功的工作如何变成对 FDE 的准备，而不是另一条单独的路。' }
     ] },
     when: { head: '何时', sub: '— 到岗时间', paras: [
       `${L('我可以马上开始。')}没有需要走完的通知期，也没有需要体面告别的雇主。那家咨询工作室是我自己的，所以它是我会先放下的东西，而不是我要离开的东西。如果合适，关于“何时”最诚实的回答就是${U('你们想让我什么时候来都行')}。`,
+      `${L('我知道自己有多幸运。')}这两年经营自己的咨询工作室，让我能把真正的时间花在学习和实验上，而不只是交付按小时计费的工作——这一页上的大部分内容，都来自没人为之付钱的那些时间。我会把同样的这股劲头带给 Nous，把工作实际需要的时间全部给它。`,
       `我按英国时间工作：与欧洲有一整个工作日的重叠，与美国东岸有大半个下午。我做了十年零售与支持，靠的是排班而不是朝九晚五，所以为了配合分布在不同时区的团队而${U('挪动我的作息')}，是排班问题，不是反对意见。`
     ] },
     where: { head: '何地', sub: '— 我在哪里，以及我愿意走多远', paras: [

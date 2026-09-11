@@ -174,8 +174,10 @@
   .applylist li{margin:0 0 8px;font-size:16px;font-weight:600;line-height:1.5;overflow-wrap:anywhere}
 
   /* matches the "if nothing fits" callout on nousresearch.com/careers exactly */
+  /* no max-width — their real .custom-footnote rule doesn't cap it either,
+     it just fills the content column like everything else on the page */
   .footnote{
-    display:flex;align-items:flex-start;max-width:70ch;
+    display:flex;align-items:flex-start;
     background:var(--ink);color:var(--paper);border-left:5px solid #00547e;border-radius:1px;
     box-shadow:0 2px 8px rgba(0,0,0,.08);padding:.8rem 1.8rem;
     font-family:var(--sans);font-weight:500;font-size:15.2px;line-height:1.6;letter-spacing:.02em;
@@ -233,30 +235,30 @@
   <hr class="rule" />
 
   <section id="who">
-    <h2 class="mono-head"><span class="hw">谁</span><span class="sub">— 简短版</span></h2>
-    <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
+    <h2 class="mono-head"><span class="hw">谁</span><span class="sub">— 是我？</span></h2>
+    <p><span class="lead-in">你好！我是<a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span>，来自西班牙马德里的前苹果 Genius——现在在苏格兰阿伯丁学习并构建 AI。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
 
     <p>在那十年里，我有两次、每次七个月，离开工作台去负责门店的卖场体验：规划、排班、活动，以及那些不符合任何流程的状况。两段借调得出的是同一个信念：<span class="u">领导即服务</span>。这份工作从来不是要成为房间里最有能力的人，而是让整个房间运转起来。</p>
   </section>
   <hr class="rule" />
 
   <section id="what">
-    <h2 class="mono-head"><span class="hw">做什么</span><span class="sub">— 我想在 Nous 做什么</span></h2>
+    <h2 class="mono-head"><span class="hw">做什么</span><span class="sub">— 我很想在 Nous 做的事</span></h2>
     <div class="rolelist">
 
       <div class="role-item">
-        <div class="role-title"><span class="badge">技术支持</span>技术支持与面向客户的工作</div>
-        <p class="role-body">帮助人们真正用起 Hermes、跑起开放模型——在工程师的意思、销售的承诺和屏幕上真正显示的东西之间做翻译。我在 Apple Retail 做的正是这个，做了十年。</p>
+        <div class="role-title"><span class="badge">已证明</span>客户成功与技术支持</div>
+        <p class="role-body">十年时间，在工程师的意思、销售的承诺和屏幕上真正显示的东西之间做翻译。这份翻译工作，而不是某一套具体的技术栈，才是我反复证明过的东西。</p>
       </div>
 
       <div class="role-item">
-        <div class="role-title"><span class="badge">还不行</span>前置部署工程（FDE）</div>
-        <p class="role-body">这套技术栈我学了两年，还没准备好投 FDE 这个职位本身。我想要那份工作旁边的初级或支持性岗位，在补上差距的同时承担真实的支持负荷。</p>
+        <div class="role-title"><span class="badge">登月计划</span>前置部署工程（FDE）</div>
+        <p class="role-body">这是现在最吸引我的岗位，我直说：这套技术栈我才学了两年，还没有资格投 FDE 这个职位本身。比起把它吹得太满，我更愿意这样说清楚。</p>
       </div>
 
       <div class="role-item">
-        <div class="role-title"><span class="badge">打底</span>让上面两件事成立的所有杂活</div>
-        <p class="role-body">把修法写下来，第二次被问到同一个问题时答得更好，陪着一个问题直到它跑通。采用过程中不体面的那一半，正是我主动要接的那一半。</p>
+        <div class="role-title"><span class="badge">桥梁</span>把两者连起来的东西</div>
+        <p class="role-body">承担真实的支持负荷，把修法写下来，陪着一个问题直到它跑通。这就是客户成功的工作如何变成对 FDE 的准备，而不是另一条单独的路。</p>
       </div>
     </div>
   </section>
@@ -265,6 +267,8 @@
   <section id="when">
     <h2 class="mono-head"><span class="hw">何时</span><span class="sub">— 到岗时间</span></h2>
     <p><span class="lead-in">我可以马上开始。</span>没有需要走完的通知期，也没有需要体面告别的雇主。那家咨询工作室是我自己的，所以它是我会先放下的东西，而不是我要离开的东西。如果合适，关于“何时”最诚实的回答就是<span class="u">你们想让我什么时候来都行</span>。</p>
+
+    <p><span class="lead-in">我知道自己有多幸运。</span>这两年经营自己的咨询工作室，让我能把真正的时间花在学习和实验上，而不只是交付按小时计费的工作——这一页上的大部分内容，都来自没人为之付钱的那些时间。我会把同样的这股劲头带给 Nous，把工作实际需要的时间全部给它。</p>
 
     <p>我按英国时间工作：与欧洲有一整个工作日的重叠，与美国东岸有大半个下午。我做了十年零售与支持，靠的是排班而不是朝九晚五，所以为了配合分布在不同时区的团队而<span class="u">挪动我的作息</span>，是排班问题，不是反对意见。</p>
   </section>
