@@ -132,10 +132,6 @@ const styles = `
   /* floating, unframed — matches the portrait on nousresearch.com/careers */
   .portrait img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
 
-  .cvrow{display:flex;gap:10px;margin:14px 0 0;max-width:none}
-  .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
-  .cvlink:hover{background:var(--ink);color:var(--paper)}
-
   /* condensed "what I want" list, in the same badge + title + one-liner shape
      as the "OPEN ROLES" list on nousresearch.com/careers, values sampled from
      its .badge/.role-title/.role-description */
@@ -163,7 +159,6 @@ const styles = `
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
     .portrait{max-width:300px}
-    .cvrow{max-width:300px}
     nav{padding:16px 0 12px}
     nav a{margin:0 7px;font-size:14px;line-height:1.9}
     section{padding:40px 0 44px}
@@ -265,14 +260,8 @@ ${alternates}
         <p>${c.application.mission}</p>
         <p>${c.application.bio}</p>
       </div>
-      <div class="portrait-block">
-        <div class="portrait">
-          <img src="/javier-sketch.jpg" alt="${c.portraitAlt}" width="720" height="960" />
-        </div>
-        <div class="cvrow">
-          <a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>${c.cvBtn}</a>
-          <a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>${c.clBtn}</a>
-        </div>
+      <div class="portrait">
+        <img src="/javier-sketch.jpg" alt="${c.portraitAlt}" width="720" height="960" />
       </div>
     </div>
   </section>

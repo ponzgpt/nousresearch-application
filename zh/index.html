@@ -128,10 +128,6 @@
   /* floating, unframed — matches the portrait on nousresearch.com/careers */
   .portrait img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
 
-  .cvrow{display:flex;gap:10px;margin:14px 0 0;max-width:none}
-  .cvlink{display:block;flex:1;text-align:center;border:2px solid var(--ink);padding:11px 14px;text-decoration:none;font-weight:700;font-size:14px}
-  .cvlink:hover{background:var(--ink);color:var(--paper)}
-
   /* condensed "what I want" list, in the same badge + title + one-liner shape
      as the "OPEN ROLES" list on nousresearch.com/careers, values sampled from
      its .badge/.role-title/.role-description */
@@ -159,7 +155,6 @@
   @media (max-width:900px){
     .cols{grid-template-columns:1fr;gap:36px}
     .portrait{max-width:300px}
-    .cvrow{max-width:300px}
     nav{padding:16px 0 12px}
     nav a{margin:0 7px;font-size:14px;line-height:1.9}
     section{padding:40px 0 44px}
@@ -201,14 +196,8 @@
         <p><span class="lead-in">我的使命</span>和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。</p>
         <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
       </div>
-      <div class="portrait-block">
-        <div class="portrait">
-          <img src="/javier-sketch.jpg" alt="Javier Ponz 的铅笔素描肖像" width="720" height="960" />
-        </div>
-        <div class="cvrow">
-          <a class="cvlink" href="https://javierponz.technoir.cloud/javier-ponz-prado-cv.pdf" download>&#8595; 简历</a>
-          <a class="cvlink" href="/javier-ponz-prado-cover-letter.pdf" download>&#8595; 求职信</a>
-        </div>
+      <div class="portrait">
+        <img src="/javier-sketch.jpg" alt="Javier Ponz 的铅笔素描肖像" width="720" height="960" />
       </div>
     </div>
   </section>

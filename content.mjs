@@ -28,8 +28,6 @@ export const content = {
     home: 'Home',
     nav: ['Who', 'What', 'When', 'Where', 'Why'],
     block: 'APPLICATION',
-    cvBtn: '&#8595; CV',
-    clBtn: '&#8595; CL',
     portraitAlt: 'Pencil-sketch portrait of Javier Ponz',
     application: {
       mission: `${L('My mission')} is the same one on your careers page, read from the support side instead of the research side: powerful AI only reaches the many if somebody is willing to sit with the ones who do not yet know how to use it. That is not a coincidence of phrasing. It is the reason I am writing this page instead of a different one.`,
@@ -94,8 +92,6 @@ export const content = {
     home: 'Inicio',
     nav: ['Quién', 'Qué', 'Cuándo', 'Dónde', 'Por qué'],
     block: 'CANDIDATURA',
-    cvBtn: '&#8595; CV',
-    clBtn: '&#8595; CL',
     portraitAlt: 'Retrato a lápiz de Javier Ponz',
     application: {
       mission: `${L('Mi misión')} es la misma que aparece en vuestra página de empleo, leída desde el lado del soporte y no desde el de la investigación: la IA potente solo llega a la mayoría si alguien está dispuesto a sentarse con quienes todavía no saben usarla. No es una coincidencia de redacción. Es la razón por la que estoy escribiendo esta página y no otra.`,
@@ -160,8 +156,6 @@ export const content = {
     home: '主页',
     nav: ['谁', '做什么', '何时', '何地', '为什么'],
     block: '自荐信',
-    cvBtn: '&#8595; 简历',
-    clBtn: '&#8595; 求职信',
     portraitAlt: 'Javier Ponz 的铅笔素描肖像',
     application: {
       mission: `${L('我的使命')}和你们招聘页面上写的是同一件事，只是从支持这一端而不是研究这一端去读它：强大的 AI 只有在有人愿意坐下来陪那些还不会用它的人的时候，才会真正到达大多数人手里。这不是措辞上的巧合。这就是我在写这一页，而不是别的什么页面的原因。`,
