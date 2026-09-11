@@ -203,7 +203,7 @@ const styles = `
 `;
 
 // the five Ws, in order, as the page's sections and its whole navigation
-const ids = ['who', 'what', 'when', 'where', 'why'];
+const ids = ['who', 'what', 'built', 'why', 'where', 'when'];
 
 function render(lang) {
   const c = content[lang.code];
@@ -312,9 +312,15 @@ ${roleList}
   </section>
   <hr class="rule" />
 
-  <section id="when">
-    <h2 class="mono-head"><span class="hw">${c.when.head}</span><span class="sub">${c.when.sub}</span></h2>
-${c.when.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
+  <section id="built">
+    <h2 class="mono-head"><span class="hw">${c.built.head}</span><span class="sub">${c.built.sub}</span></h2>
+${c.built.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
+  </section>
+  <hr class="rule" />
+
+  <section id="why">
+    <h2 class="mono-head"><span class="hw">${c.why.head}</span><span class="sub">${c.why.sub}</span></h2>
+${c.why.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
   </section>
   <hr class="rule" />
 
@@ -324,9 +330,9 @@ ${c.where.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
   </section>
   <hr class="rule" />
 
-  <section id="why">
-    <h2 class="mono-head"><span class="hw">${c.why.head}</span><span class="sub">${c.why.sub}</span></h2>
-${c.why.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
+  <section id="when">
+    <h2 class="mono-head"><span class="hw">${c.when.head}</span><span class="sub">${c.when.sub}</span></h2>
+${c.when.paras.map((p) => `    <p>${p}</p>`).join('\n\n')}
   </section>
   <hr class="rule" />
 
