@@ -47,7 +47,12 @@
 
   /* static, like theirs: the header scrolls away with the page rather than
      following the reader down it */
-  .navbar{position:relative;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
+  /* the dashed rule sits on .shell, not the full-bleed .navbar, so its width
+     matches every other dashed rule on the page (and the one under CAREERS
+     on nousresearch.com, which is also inset to content width, not edge to
+     edge) */
+  .navbar{position:relative;z-index:20;background:var(--paper)}
+  .navbar .shell{border-bottom:2px dashed var(--ink)}
   nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
   nav a{
     font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
@@ -203,6 +208,8 @@
   <section id="who">
     <h2 class="mono-head"><span class="hw">谁</span><span class="sub">— 简短版</span></h2>
     <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — 前苹果 Genius，现在在阿伯丁构建智能体系统。你们的招聘页面写着：如果列出的岗位都不合适，就寄一份“我想在这里做什么”的说明。这一页就是那份说明。</p>
+
+    <p>在那十年里，我有两次、每次七个月，离开工作台去负责门店的卖场体验：规划、排班、活动，以及那些不符合任何流程的状况。两段借调得出的是同一个信念：<span class="u">领导即服务</span>。这份工作从来不是要成为房间里最有能力的人，而是让整个房间运转起来。</p>
   </section>
   <hr class="rule" />
 

@@ -51,7 +51,12 @@ const styles = `
 
   /* static, like theirs: the header scrolls away with the page rather than
      following the reader down it */
-  .navbar{position:relative;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
+  /* the dashed rule sits on .shell, not the full-bleed .navbar, so its width
+     matches every other dashed rule on the page (and the one under CAREERS
+     on nousresearch.com, which is also inset to content width, not edge to
+     edge) */
+  .navbar{position:relative;z-index:20;background:var(--paper)}
+  .navbar .shell{border-bottom:2px dashed var(--ink)}
   nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
   nav a{
     font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;

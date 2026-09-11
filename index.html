@@ -47,7 +47,12 @@
 
   /* static, like theirs: the header scrolls away with the page rather than
      following the reader down it */
-  .navbar{position:relative;z-index:20;background:var(--paper);border-bottom:2px dashed var(--ink)}
+  /* the dashed rule sits on .shell, not the full-bleed .navbar, so its width
+     matches every other dashed rule on the page (and the one under CAREERS
+     on nousresearch.com, which is also inset to content width, not edge to
+     edge) */
+  .navbar{position:relative;z-index:20;background:var(--paper)}
+  .navbar .shell{border-bottom:2px dashed var(--ink)}
   nav{padding:30px 0 18px;text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
   nav a{
     font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.05em;
@@ -203,6 +208,8 @@
   <section id="who">
     <h2 class="mono-head"><span class="hw">Who</span><span class="sub">— the short version</span></h2>
     <p><span class="lead-in"><a href="https://javierponz.technoir.cloud/">Javier Ponz</a></span> — ex-Apple Genius, now building agent systems in Aberdeen. Your careers page says that if nothing listed fits, send a description of what I would like to do here. This page is that description.</p>
+
+    <p>Twice within those ten years, seven months at a time, I stepped away from the bench to run store floor operations — planning, resourcing, events, the situations that fit no procedure. Both secondments left me with the same conviction: <span class="u">leading is serving</span>. The job was never being the most capable person in the room. It was making the room work.</p>
   </section>
   <hr class="rule" />
 
